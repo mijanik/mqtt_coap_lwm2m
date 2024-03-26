@@ -1,0 +1,15 @@
+../Drivers/CMSIS/Include/core_cm4.h:1933:34:__NVIC_SystemReset	4	static,ignoring_inline_asm
+../embenet_node_port/src/embenet_brt.c:47:10:openhdlc_crc	16	static
+../embenet_node_port/src/embenet_brt.c:96:6:EMBENET_BRT_Init	8	static
+../embenet_node_port/src/embenet_brt.c:107:6:EMBENET_BRT_Deinit	8	static
+../embenet_node_port/src/embenet_brt.c:117:6:EMBENET_BRT_Send	32	static
+../embenet_node_port/src/embenet_brt.c:136:8:EMBENET_BRT_Receive	32	static
+../embenet_node_port/src/embenet_brt.c:229:6:EMBENET_BRT_SendRaw	24	static
+../embenet_node_port/src/embenet_brt.c:235:8:EMBENET_BRT_ReceiveRaw	24	static
+../embenet_node_port/src/embenet_brt.c:248:6:EMBENET_BRT_Reset	16	static
+../embenet_node_port/src/embenet_brt.c:254:6:EMBENET_BRT_IsBusy	4	static
+../embenet_node_port/src/embenet_brt.c:258:6:tx_isr	24	static
+../embenet_node_port/src/embenet_brt.c:276:6:rx_isr	24	static
+../embenet_node_port/src/embenet_brt.c:291:13:putFlag	16	static
+../embenet_node_port/src/embenet_brt.c:296:13:putByte	16	static
+../embenet_node_port/src/embenet_brt.c:307:13:uartWrite	16	static

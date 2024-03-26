@@ -1,0 +1,12 @@
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_resource.c:38:20:CoAP_NVsaveObservers	7
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_resource.c:107:20:CoAP_NVloadObservers	11
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_resource.c:171:27:WellKnown_GetHandler	8
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_resource.c:232:11:CoAP_InitResources	1
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_resource.c:237:27:CoAP_AppendResourceToList	4
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_resource.c:256:20:CoAP_FreeResource	1
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_resource.c:298:18:CoAP_FindResourceByUri	4
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_resource.c:313:18:CoAP_CreateResource	6
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_resource.c:357:20:CoAP_NotifyResourceObservers	1
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_resource.c:364:11:CoAP_PrintResource	2
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_resource.c:381:11:CoAP_PrintAllResources	2
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_resource.c:390:20:CoAP_RemoveObserverFromResource	5

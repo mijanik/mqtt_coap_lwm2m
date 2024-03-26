@@ -1,0 +1,5 @@
+../embenet_node_bsp/embenet_node_stm32wle5_bsp_uart_impl.c:26:6:EMBENET_NODE_BSP_UART_Init	80	static,ignoring_inline_asm
+../embenet_node_bsp/embenet_node_stm32wle5_bsp_uart_impl.c:71:6:EMBENET_NODE_BSP_UART_Deinit	8	static,ignoring_inline_asm
+../embenet_node_bsp/embenet_node_stm32wle5_bsp_uart_impl.c:85:6:EMBENET_NODE_BSP_UART_WriteByte	0	static
+../embenet_node_bsp/embenet_node_stm32wle5_bsp_uart_impl.c:89:9:EMBENET_NODE_BSP_UART_ReadByte	0	static
+../embenet_node_bsp/embenet_node_stm32wle5_bsp_uart_impl.c:93:6:LPUART1_IRQHandler	0	static

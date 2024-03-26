@@ -1,0 +1,9 @@
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_uri.c:28:27:ParseUriQueryFromStringToOption	5
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_uri.c:61:20:CoAP_AppendUriOptionsFromString	10
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_uri.c:109:20:CoAP_AddUriOptionsToMsgFromString	1
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_uri.c:116:11:CoAP_UriOptionsAreEqual	10
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_uri.c:151:11:CoAP_printUriOptionsList	7
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_uri.c:178:10:CoAP_GetUriQueryVal	11
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_uri.c:214:10:CoAP_GetUriQueryValFromMsg	3
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_uri.c:226:8:CoAP_FindUriQueryVal	7
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_uri.c:260:10:CoAP_atoi	5

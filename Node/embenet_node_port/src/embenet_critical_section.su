@@ -1,0 +1,2 @@
+../embenet_node_port/src/embenet_critical_section.c:20:6:EMBENET_CRITICAL_SECTION_Enter	16	static,ignoring_inline_asm
+../embenet_node_port/src/embenet_critical_section.c:30:6:EMBENET_CRITICAL_SECTION_Exit	4	static,ignoring_inline_asm

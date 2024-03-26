@@ -1,0 +1,7 @@
+../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_bus.h:449:22:LL_AHB2_GRP1_EnableClock	1
+../embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.c:21:6:EMBENET_NODE_BSP_RadioInit	1
+../embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.c:28:6:EMBENET_NODE_BSP_RBI_Init	1
+../embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.c:54:6:EMBENET_NODE_BSP_RBI_Deinit	1
+../embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.c:63:8:EMBENET_NODE_BSP_GetTxOffset	1
+../embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.c:68:6:EMBENET_NODE_BSP_ConfigRFSwitch	5
+../embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.c:94:27:EMBENET_NODE_BSP_GetTxConfig	1

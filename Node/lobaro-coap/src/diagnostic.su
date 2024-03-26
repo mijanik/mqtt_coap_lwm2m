@@ -1,0 +1,7 @@
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/diagnostic.c:4:7:InteractionRoleToString	16	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/diagnostic.c:19:7:InteractionStateToString	16	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/diagnostic.c:48:7:ResultToString	16	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/diagnostic.c:117:7:ReliabilityStateToString	16	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/diagnostic.c:130:11:PrintEndpoint	112	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/diagnostic.c:156:6:PrintToken	24	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/diagnostic.c:169:11:PrintInteractions	48	static

@@ -1,0 +1,8 @@
+../Core/Src/ring_buffer.c:14:6:RingBuffer_Init	0	static
+../Core/Src/ring_buffer.c:27:6:RingBuffer_Clear	0	static
+../Core/Src/ring_buffer.c:37:6:RingBuffer_IsEmpty	0	static
+../Core/Src/ring_buffer.c:45:8:RingBuffer_GetLen	0	static
+../Core/Src/ring_buffer.c:52:8:RingBuffer_GetCapacity	0	static
+../Core/Src/ring_buffer.c:59:8:RingBuffer_GetSpace	0	static
+../Core/Src/ring_buffer.c:66:6:RingBuffer_PutChar	0	static
+../Core/Src/ring_buffer.c:79:6:RingBuffer_GetChar	0	static

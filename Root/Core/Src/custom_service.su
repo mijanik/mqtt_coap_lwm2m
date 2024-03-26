@@ -1,0 +1,5 @@
+../Core/Src/custom_service.c:30:13:customServiceTask	80	static
+../Core/Src/custom_service.c:57:13:customServiceReceptionHandler	16	static
+../Core/Src/custom_service.c:91:6:custom_service_init	16	static
+../Core/Src/custom_service.c:117:6:custom_service_start	8	static
+../Core/Src/custom_service.c:125:6:custom_service_stop	8	static

@@ -1,0 +1,8 @@
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_observe.c:25:20:AddObserveOptionToMsg	24	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_observe.c:49:20:RemoveObserveOptionFromMsg	24	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_observe.c:60:20:UpdateObserveOptionInMsg	16	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_observe.c:66:20:GetObserveOptionFromMsg	24	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_observe.c:95:23:CoAP_AllocNewObserver	16	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_observe.c:106:20:CoAP_FreeObserver	16	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_observe.c:119:20:CoAP_AppendObserverToList	24	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_observe.c:143:20:CoAP_UnlinkObserverFromList	32	static

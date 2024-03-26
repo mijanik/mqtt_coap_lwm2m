@@ -1,0 +1,4 @@
+../embenet_node_bsp/embenet_node_stm32wle5_bsp_uart_impl.c:112:6:EMBENET_NODE_BSP_UART_Init	1
+../embenet_node_bsp/embenet_node_stm32wle5_bsp_uart_impl.c:115:6:EMBENET_NODE_BSP_UART_Deinit	1
+../embenet_node_bsp/embenet_node_stm32wle5_bsp_uart_impl.c:118:6:EMBENET_NODE_BSP_UART_WriteByte	1
+../embenet_node_bsp/embenet_node_stm32wle5_bsp_uart_impl.c:121:9:EMBENET_NODE_BSP_UART_ReadByte	1

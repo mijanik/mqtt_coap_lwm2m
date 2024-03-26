@@ -1,0 +1,12 @@
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_main.c:28:6:hal_debug_puts	16	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_main.c:37:11:CoAP_HandleIncomingPacket	88	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_main.c:224:27:SendResp	64	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_main.c:247:27:SendReq	64	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_main.c:269:27:CheckRespStatus	16	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_main.c:312:27:CheckReqStatus	16	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_main.c:354:16:CoAP_NewSocket	24	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_main.c:360:13:handleServerInteraction	56	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_main.c:530:13:handleNotifyInteraction	56	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_main.c:621:13:handleClientInteraction	56	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_main.c:684:11:CoAP_doWork	16	static
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/coap_main.c:728:11:CoAP_ClearPendingInteractions	8	static

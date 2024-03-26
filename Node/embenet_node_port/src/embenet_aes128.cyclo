@@ -1,0 +1,9 @@
+../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_bus.h:634:22:LL_AHB3_GRP1_EnableClock	1
+../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_bus.h:720:22:LL_AHB3_GRP1_DisableClock	1
+../embenet_node_port/src/embenet_aes128.c:32:6:HAL_CRYP_MspInit	2
+../embenet_node_port/src/embenet_aes128.c:53:6:HAL_CRYP_MspDeInit	2
+../embenet_node_port/src/embenet_aes128.c:69:6:EMBENET_AES128_Init	1
+../embenet_node_port/src/embenet_aes128.c:84:6:EMBENET_AES128_Deinit	1
+../embenet_node_port/src/embenet_aes128.c:88:6:EMBENET_AES128_SetKey	1
+../embenet_node_port/src/embenet_aes128.c:96:6:EMBENET_AES128_Encrypt	1
+../embenet_node_port/src/embenet_aes128.c:104:6:EMBENET_AES128_Decrypt	1

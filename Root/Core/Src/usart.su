@@ -1,0 +1,7 @@
+../Drivers/CMSIS/Include/core_cm4.h:1856:26:NVIC_EncodePriority.constprop	0	static
+../Core/Src/usart.c:37:6:MX_LPUART1_UART_Init	80	static,ignoring_inline_asm
+../Core/Src/usart.c:103:6:MX_USART1_UART_Init	72	static,ignoring_inline_asm
+../Core/Src/usart.c:172:6:LOGGER_UART_Init	0	static
+../Core/Src/usart.c:180:6:LOGGER_UART_Write	24	static,ignoring_inline_asm
+../Core/Src/usart.c:200:6:LOGGER_UART_FlushPolling	24	static,ignoring_inline_asm
+../Core/Src/usart.c:231:6:USART1_IRQHandler	16	static,ignoring_inline_asm

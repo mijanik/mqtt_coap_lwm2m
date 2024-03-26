@@ -1,0 +1,6 @@
+../embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.c:21:6:EMBENET_NODE_BSP_RadioInit	0	static
+../embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.c:63:8:EMBENET_NODE_BSP_GetTxOffset	0	static
+../embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.c:68:6:EMBENET_NODE_BSP_ConfigRFSwitch	8	static
+../embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.c:28:6:EMBENET_NODE_BSP_RBI_Init	48	static
+../embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.c:54:6:EMBENET_NODE_BSP_RBI_Deinit	8	static
+../embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.c:94:27:EMBENET_NODE_BSP_GetTxConfig	0	static

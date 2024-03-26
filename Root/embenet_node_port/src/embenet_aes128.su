@@ -1,0 +1,7 @@
+../embenet_node_port/src/embenet_aes128.c:32:6:HAL_CRYP_MspInit	16	static
+../embenet_node_port/src/embenet_aes128.c:53:6:HAL_CRYP_MspDeInit	0	static
+../embenet_node_port/src/embenet_aes128.c:69:6:EMBENET_AES128_Init	8	static
+../embenet_node_port/src/embenet_aes128.c:84:6:EMBENET_AES128_Deinit	0	static
+../embenet_node_port/src/embenet_aes128.c:88:6:EMBENET_AES128_SetKey	0	static
+../embenet_node_port/src/embenet_aes128.c:96:6:EMBENET_AES128_Encrypt	56	static
+../embenet_node_port/src/embenet_aes128.c:104:6:EMBENET_AES128_Decrypt	56	static

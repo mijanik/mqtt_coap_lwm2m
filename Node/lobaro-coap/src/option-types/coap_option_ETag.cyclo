@@ -1,0 +1,4 @@
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_ETag.c:27:20:AddETagOptionToMsg	2
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_ETag.c:54:20:GetETagOptionFromMsg	6
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_ETag.c:80:20:Add64BitETagOptionToMsg	3
+C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_ETag.c:93:20:Get64BitETagOptionFromMsg	3

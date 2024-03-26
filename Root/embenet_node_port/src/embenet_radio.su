@@ -1,0 +1,12 @@
+../embenet_node_port/src/embenet_radio.c:167:6:EMBENET_RADIO_SetCallbacks	0	static
+../embenet_node_port/src/embenet_radio.c:173:6:EMBENET_RADIO_Deinit	0	static
+../embenet_node_port/src/embenet_radio.c:178:22:EMBENET_RADIO_Idle	8	static
+../embenet_node_port/src/embenet_radio.c:102:22:EMBENET_RADIO_Init	56	static,ignoring_inline_asm
+../embenet_node_port/src/embenet_radio.c:188:22:EMBENET_RADIO_TxEnable	24	static
+../embenet_node_port/src/embenet_radio.c:201:22:EMBENET_RADIO_TxNow	8	static
+../embenet_node_port/src/embenet_radio.c:215:22:EMBENET_RADIO_RxEnable	16	static
+../embenet_node_port/src/embenet_radio.c:226:22:EMBENET_RADIO_RxNow	8	static
+../embenet_node_port/src/embenet_radio.c:234:22:EMBENET_RADIO_GetReceivedFrame	64	static
+../embenet_node_port/src/embenet_radio.c:272:22:EMBENET_RADIO_StartContinuousTx	8	static
+../embenet_node_port/src/embenet_radio.c:286:35:EMBENET_RADIO_GetCapabilities	0	static
+../embenet_node_port/src/embenet_radio.c:324:6:SUBGHZ_Radio_IRQHandler	24	static

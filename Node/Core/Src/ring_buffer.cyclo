@@ -1,0 +1,8 @@
+../Core/Src/ring_buffer.c:14:6:RingBuffer_Init	4
+../Core/Src/ring_buffer.c:27:6:RingBuffer_Clear	2
+../Core/Src/ring_buffer.c:37:6:RingBuffer_IsEmpty	2
+../Core/Src/ring_buffer.c:45:8:RingBuffer_GetLen	2
+../Core/Src/ring_buffer.c:52:8:RingBuffer_GetCapacity	2
+../Core/Src/ring_buffer.c:59:8:RingBuffer_GetSpace	2
+../Core/Src/ring_buffer.c:66:6:RingBuffer_PutChar	4
+../Core/Src/ring_buffer.c:79:6:RingBuffer_GetChar	5
