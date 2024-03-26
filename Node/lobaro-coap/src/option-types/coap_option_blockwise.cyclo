@@ -1,8 +1,8 @@
-C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_blockwise.c:27:20:dbgBlkOption	3
-C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_blockwise.c:46:20:AddBlkOptionToMsg	11
-C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_blockwise.c:103:20:GetBlockOptionFromMsg	11
-C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_blockwise.c:166:20:GetBlock1OptionFromMsg	1
-C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_blockwise.c:171:20:GetBlock2OptionFromMsg	1
-C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_blockwise.c:176:20:RemoveAllBlockOptionsFromMsg	4
-C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_blockwise.c:198:20:CoAP_SetPayload	6
-C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_blockwise.c:242:20:CoAP_SetPayload_CheckBlockOpt	14
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/option-types/coap_option_blockwise.c:27:20:dbgBlkOption	3
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/option-types/coap_option_blockwise.c:46:20:AddBlkOptionToMsg	11
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/option-types/coap_option_blockwise.c:103:20:GetBlockOptionFromMsg	11
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/option-types/coap_option_blockwise.c:166:20:GetBlock1OptionFromMsg	1
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/option-types/coap_option_blockwise.c:171:20:GetBlock2OptionFromMsg	1
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/option-types/coap_option_blockwise.c:176:20:RemoveAllBlockOptionsFromMsg	4
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/option-types/coap_option_blockwise.c:198:20:CoAP_SetPayload	6
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/option-types/coap_option_blockwise.c:242:20:CoAP_SetPayload_CheckBlockOpt	14

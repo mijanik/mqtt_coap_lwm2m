@@ -1,8 +1,8 @@
-C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_observe.c:25:20:AddObserveOptionToMsg	4
-C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_observe.c:49:20:RemoveObserveOptionFromMsg	3
-C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_observe.c:60:20:UpdateObserveOptionInMsg	1
-C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_observe.c:66:20:GetObserveOptionFromMsg	7
-C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_observe.c:95:23:CoAP_AllocNewObserver	2
-C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_observe.c:106:20:CoAP_FreeObserver	1
-C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_observe.c:119:20:CoAP_AppendObserverToList	4
-C:/Users/Milosz/Desktop/magisterka/lobaro-coap/src/option-types/coap_option_observe.c:143:20:CoAP_UnlinkObserverFromList	5
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/option-types/coap_option_observe.c:25:20:AddObserveOptionToMsg	4
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/option-types/coap_option_observe.c:49:20:RemoveObserveOptionFromMsg	3
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/option-types/coap_option_observe.c:60:20:UpdateObserveOptionInMsg	1
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/option-types/coap_option_observe.c:66:20:GetObserveOptionFromMsg	7
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/option-types/coap_option_observe.c:95:23:CoAP_AllocNewObserver	2
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/option-types/coap_option_observe.c:106:20:CoAP_FreeObserver	1
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/option-types/coap_option_observe.c:119:20:CoAP_AppendObserverToList	4
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/option-types/coap_option_observe.c:143:20:CoAP_UnlinkObserverFromList	5

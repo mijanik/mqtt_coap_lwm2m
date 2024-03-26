@@ -7767,8 +7767,8 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x10 ./lobaro-coap/src/interface/network/net_Packet.o
  .debug_macro   0x0000000000000000       0x16 ./lobaro-coap/src/interface/network/net_Packet.o
  .debug_macro   0x0000000000000000       0x4c ./lobaro-coap/src/interface/network/net_Packet.o
- .debug_line    0x0000000000000000      0xa7e ./lobaro-coap/src/interface/network/net_Packet.o
- .debug_str     0x0000000000000000     0xa23f ./lobaro-coap/src/interface/network/net_Packet.o
+ .debug_line    0x0000000000000000      0xaf5 ./lobaro-coap/src/interface/network/net_Packet.o
+ .debug_str     0x0000000000000000     0xa250 ./lobaro-coap/src/interface/network/net_Packet.o
  .comment       0x0000000000000000       0x44 ./lobaro-coap/src/interface/network/net_Packet.o
  .debug_frame   0x0000000000000000       0x38 ./lobaro-coap/src/interface/network/net_Packet.o
  .ARM.attributes
@@ -8006,8 +8006,8 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x10 ./lobaro-coap/src/option-types/coap_option_ETag.o
  .debug_macro   0x0000000000000000       0x16 ./lobaro-coap/src/option-types/coap_option_ETag.o
  .debug_macro   0x0000000000000000       0x4c ./lobaro-coap/src/option-types/coap_option_ETag.o
- .debug_line    0x0000000000000000      0xb60 ./lobaro-coap/src/option-types/coap_option_ETag.o
- .debug_str     0x0000000000000000     0x9a07 ./lobaro-coap/src/option-types/coap_option_ETag.o
+ .debug_line    0x0000000000000000      0xbd7 ./lobaro-coap/src/option-types/coap_option_ETag.o
+ .debug_str     0x0000000000000000     0x9a18 ./lobaro-coap/src/option-types/coap_option_ETag.o
  .comment       0x0000000000000000       0x44 ./lobaro-coap/src/option-types/coap_option_ETag.o
  .debug_frame   0x0000000000000000       0xb4 ./lobaro-coap/src/option-types/coap_option_ETag.o
  .ARM.attributes
@@ -12392,7 +12392,7 @@ LOAD C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
 .iplt           0x000000000802be8c        0x0
  .iplt          0x000000000802be8c        0x0 C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.rodata         0x000000000802be90     0x5c68
+.rodata         0x000000000802be90     0x5c78
                 0x000000000802be90                . = ALIGN (0x4)
  *(.rodata)
  .rodata        0x000000000802be90      0x26d ./Core/Src/custom_service.o
@@ -12404,227 +12404,227 @@ LOAD C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .rodata        0x000000000802c450       0x30 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cryp.o
  .rodata        0x000000000802c480       0x11 ./embenet_node_port/src/radio_driver.o
  *fill*         0x000000000802c491        0x3 
- .rodata        0x000000000802c494      0x1dc ./lobaro-coap/src/coap_interaction.o
- .rodata        0x000000000802c670      0x78e ./lobaro-coap/src/coap_main.o
- *fill*         0x000000000802cdfe        0x2 
- .rodata        0x000000000802ce00      0x695 ./lobaro-coap/src/coap_message.o
- *fill*         0x000000000802d495        0x3 
- .rodata        0x000000000802d498      0x23a ./lobaro-coap/src/coap_options.o
- *fill*         0x000000000802d6d2        0x2 
- .rodata        0x000000000802d6d4      0x235 ./lobaro-coap/src/coap_resource.o
- *fill*         0x000000000802d909        0x3 
- .rodata        0x000000000802d90c      0x5c0 ./lobaro-coap/src/diagnostic.o
- .rodata        0x000000000802decc       0xb1 ./lobaro-coap/src/liblobaro_coap.o
- *fill*         0x000000000802df7d        0x3 
- .rodata        0x000000000802df80       0x16 ./lobaro-coap/src/option-types/coap_option_observe.o
- *fill*         0x000000000802df96        0x2 
- .rodata        0x000000000802df98       0x3f ./lobaro-coap/src/option-types/coap_option_uri.o
- *fill*         0x000000000802dfd7        0x1 
- .rodata        0x000000000802dfd8      0x1a8 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(embenet_node.c.obj)
- .rodata        0x000000000802e180       0x7b C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(idmanager.c.obj)
- *fill*         0x000000000802e1fb        0x1 
- .rodata        0x000000000802e1fc      0x13c C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(neighbors.c.obj)
- .rodata        0x000000000802e338      0x15f C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(openaddress.c.obj)
- *fill*         0x000000000802e497        0x1 
- .rodata        0x000000000802e498      0x280 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(openqueue.c.obj)
- .rodata        0x000000000802e718      0x20f C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(bridge.c.obj)
- *fill*         0x000000000802e927        0x1 
- .rodata        0x000000000802e928       0xc1 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(event_timer.c.obj)
- *fill*         0x000000000802e9e9        0x3 
- .rodata        0x000000000802e9ec       0x80 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(rng.c.obj)
- .rodata        0x000000000802ea6c      0x2f1 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(encjs_pledge.c.obj)
- *fill*         0x000000000802ed5d        0x3 
- .rodata        0x000000000802ed60      0x2bf C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(encjs_proxy.c.obj)
- *fill*         0x000000000802f01f        0x1 
- .rodata        0x000000000802f020       0xa4 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(openos.c.obj)
- .rodata        0x000000000802f0c4      0x6a4 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(enms_node.c.obj)
- .rodata        0x000000000802f768        0xe C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(logger.c.obj)
- *fill*         0x000000000802f776        0x2 
- .rodata        0x000000000802f778       0x18 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(printf.c.obj)
- .rodata        0x000000000802f790      0x341 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(IEEE802154E.c.obj)
- *fill*         0x000000000802fad1        0x3 
- .rodata        0x000000000802fad4      0x189 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(asf.c.obj)
- *fill*         0x000000000802fc5d        0x3 
- .rodata        0x000000000802fc60      0x2d5 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(msf.c.obj)
- *fill*         0x000000000802ff35        0x3 
- .rodata        0x000000000802ff38      0x250 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(schedule.c.obj)
- .rodata        0x0000000008030188      0x84f C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(sixtop.c.obj)
- *fill*         0x00000000080309d7        0x1 
- .rodata        0x00000000080309d8      0x166 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(iphc.c.obj)
- *fill*         0x0000000008030b3e        0x2 
- .rodata        0x0000000008030b40      0x1d0 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(forwarding.c.obj)
- .rodata        0x0000000008030d10       0x28 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(icmpv6.c.obj)
- .rodata        0x0000000008030d38       0xac C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(icmpv6echo.c.obj)
- .rodata        0x0000000008030de4      0x467 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(icmpv6rpl.c.obj)
- *fill*         0x000000000803124b        0x1 
- .rodata        0x000000000803124c       0xb8 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(udp.c.obj)
- .rodata        0x0000000008031304      0x1a1 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(packetfunctions.c.obj)
- *fill*         0x00000000080314a5        0x3 
- .rodata        0x00000000080314a8       0xcc C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(IEEE802154.c.obj)
+ .rodata        0x000000000802c494      0x1ec ./lobaro-coap/src/coap_interaction.o
+ .rodata        0x000000000802c680      0x78e ./lobaro-coap/src/coap_main.o
+ *fill*         0x000000000802ce0e        0x2 
+ .rodata        0x000000000802ce10      0x695 ./lobaro-coap/src/coap_message.o
+ *fill*         0x000000000802d4a5        0x3 
+ .rodata        0x000000000802d4a8      0x23a ./lobaro-coap/src/coap_options.o
+ *fill*         0x000000000802d6e2        0x2 
+ .rodata        0x000000000802d6e4      0x235 ./lobaro-coap/src/coap_resource.o
+ *fill*         0x000000000802d919        0x3 
+ .rodata        0x000000000802d91c      0x5c0 ./lobaro-coap/src/diagnostic.o
+ .rodata        0x000000000802dedc       0xb1 ./lobaro-coap/src/liblobaro_coap.o
+ *fill*         0x000000000802df8d        0x3 
+ .rodata        0x000000000802df90       0x16 ./lobaro-coap/src/option-types/coap_option_observe.o
+ *fill*         0x000000000802dfa6        0x2 
+ .rodata        0x000000000802dfa8       0x3f ./lobaro-coap/src/option-types/coap_option_uri.o
+ *fill*         0x000000000802dfe7        0x1 
+ .rodata        0x000000000802dfe8      0x1a8 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(embenet_node.c.obj)
+ .rodata        0x000000000802e190       0x7b C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(idmanager.c.obj)
+ *fill*         0x000000000802e20b        0x1 
+ .rodata        0x000000000802e20c      0x13c C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(neighbors.c.obj)
+ .rodata        0x000000000802e348      0x15f C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(openaddress.c.obj)
+ *fill*         0x000000000802e4a7        0x1 
+ .rodata        0x000000000802e4a8      0x280 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(openqueue.c.obj)
+ .rodata        0x000000000802e728      0x20f C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(bridge.c.obj)
+ *fill*         0x000000000802e937        0x1 
+ .rodata        0x000000000802e938       0xc1 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(event_timer.c.obj)
+ *fill*         0x000000000802e9f9        0x3 
+ .rodata        0x000000000802e9fc       0x80 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(rng.c.obj)
+ .rodata        0x000000000802ea7c      0x2f1 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(encjs_pledge.c.obj)
+ *fill*         0x000000000802ed6d        0x3 
+ .rodata        0x000000000802ed70      0x2bf C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(encjs_proxy.c.obj)
+ *fill*         0x000000000802f02f        0x1 
+ .rodata        0x000000000802f030       0xa4 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(openos.c.obj)
+ .rodata        0x000000000802f0d4      0x6a4 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(enms_node.c.obj)
+ .rodata        0x000000000802f778        0xe C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(logger.c.obj)
+ *fill*         0x000000000802f786        0x2 
+ .rodata        0x000000000802f788       0x18 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(printf.c.obj)
+ .rodata        0x000000000802f7a0      0x341 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(IEEE802154E.c.obj)
+ *fill*         0x000000000802fae1        0x3 
+ .rodata        0x000000000802fae4      0x189 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(asf.c.obj)
+ *fill*         0x000000000802fc6d        0x3 
+ .rodata        0x000000000802fc70      0x2d5 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(msf.c.obj)
+ *fill*         0x000000000802ff45        0x3 
+ .rodata        0x000000000802ff48      0x250 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(schedule.c.obj)
+ .rodata        0x0000000008030198      0x84f C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(sixtop.c.obj)
+ *fill*         0x00000000080309e7        0x1 
+ .rodata        0x00000000080309e8      0x166 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(iphc.c.obj)
+ *fill*         0x0000000008030b4e        0x2 
+ .rodata        0x0000000008030b50      0x1d0 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(forwarding.c.obj)
+ .rodata        0x0000000008030d20       0x28 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(icmpv6.c.obj)
+ .rodata        0x0000000008030d48       0xac C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(icmpv6echo.c.obj)
+ .rodata        0x0000000008030df4      0x467 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(icmpv6rpl.c.obj)
+ *fill*         0x000000000803125b        0x1 
+ .rodata        0x000000000803125c       0xb8 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(udp.c.obj)
+ .rodata        0x0000000008031314      0x1a1 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(packetfunctions.c.obj)
+ *fill*         0x00000000080314b5        0x3 
+ .rodata        0x00000000080314b8       0xcc C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(IEEE802154.c.obj)
  *(.rodata*)
  .rodata.serverEp
-                0x0000000008031574       0x18 ./Core/Src/custom_service.o
-                0x0000000008031574                serverEp
+                0x0000000008031584       0x18 ./Core/Src/custom_service.o
+                0x0000000008031584                serverEp
  .rodata.__func__.4
-                0x000000000803158c        0xc ./Core/Src/stm32wlxx_it.o
+                0x000000000803159c        0xc ./Core/Src/stm32wlxx_it.o
  .rodata.__func__.3
-                0x0000000008031598       0x12 ./Core/Src/stm32wlxx_it.o
- *fill*         0x00000000080315aa        0x2 
+                0x00000000080315a8       0x12 ./Core/Src/stm32wlxx_it.o
+ *fill*         0x00000000080315ba        0x2 
  .rodata.__func__.2
-                0x00000000080315ac       0x12 ./Core/Src/stm32wlxx_it.o
- *fill*         0x00000000080315be        0x2 
+                0x00000000080315bc       0x12 ./Core/Src/stm32wlxx_it.o
+ *fill*         0x00000000080315ce        0x2 
  .rodata.__func__.1
-                0x00000000080315c0       0x11 ./Core/Src/stm32wlxx_it.o
- *fill*         0x00000000080315d1        0x3 
+                0x00000000080315d0       0x11 ./Core/Src/stm32wlxx_it.o
+ *fill*         0x00000000080315e1        0x3 
  .rodata.__func__.0
-                0x00000000080315d4       0x13 ./Core/Src/stm32wlxx_it.o
- *fill*         0x00000000080315e7        0x1 
+                0x00000000080315e4       0x13 ./Core/Src/stm32wlxx_it.o
+ *fill*         0x00000000080315f7        0x1 
  .rodata.AHBPrescTable
-                0x00000000080315e8       0x40 ./Core/Src/system_stm32wlxx.o
-                0x00000000080315e8                AHBPrescTable
+                0x00000000080315f8       0x40 ./Core/Src/system_stm32wlxx.o
+                0x00000000080315f8                AHBPrescTable
  .rodata.APBPrescTable
-                0x0000000008031628       0x20 ./Core/Src/system_stm32wlxx.o
-                0x0000000008031628                APBPrescTable
+                0x0000000008031638       0x20 ./Core/Src/system_stm32wlxx.o
+                0x0000000008031638                APBPrescTable
  .rodata.MSIRangeTable
-                0x0000000008031648       0x40 ./Core/Src/system_stm32wlxx.o
-                0x0000000008031648                MSIRangeTable
+                0x0000000008031658       0x40 ./Core/Src/system_stm32wlxx.o
+                0x0000000008031658                MSIRangeTable
  .rodata.LPUART_PRESCALER_TAB
-                0x0000000008031688       0x18 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_ll_lpuart.o
+                0x0000000008031698       0x18 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_ll_lpuart.o
  .rodata.EMBENET_NODE_BSP_TCXOSupplyVoltage
-                0x00000000080316a0        0x1 ./embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.o
-                0x00000000080316a0                EMBENET_NODE_BSP_TCXOSupplyVoltage
- *fill*         0x00000000080316a1        0x3 
+                0x00000000080316b0        0x1 ./embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.o
+                0x00000000080316b0                EMBENET_NODE_BSP_TCXOSupplyVoltage
+ *fill*         0x00000000080316b1        0x3 
  .rodata.EMBENET_NODE_BSP_HSEFreq
-                0x00000000080316a4        0x4 ./embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.o
-                0x00000000080316a4                EMBENET_NODE_BSP_HSEFreq
+                0x00000000080316b4        0x4 ./embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.o
+                0x00000000080316b4                EMBENET_NODE_BSP_HSEFreq
  .rodata.EMBENET_NODE_BSP_XOCapacitanceValue
-                0x00000000080316a8        0x1 ./embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.o
-                0x00000000080316a8                EMBENET_NODE_BSP_XOCapacitanceValue
+                0x00000000080316b8        0x1 ./embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.o
+                0x00000000080316b8                EMBENET_NODE_BSP_XOCapacitanceValue
  .rodata.EMBENET_NODE_BSP_HasTCXO
-                0x00000000080316a9        0x1 ./embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.o
-                0x00000000080316a9                EMBENET_NODE_BSP_HasTCXO
+                0x00000000080316b9        0x1 ./embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.o
+                0x00000000080316b9                EMBENET_NODE_BSP_HasTCXO
  .rodata.EMBENET_NODE_BSP_HasDCDC
-                0x00000000080316aa        0x1 ./embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.o
-                0x00000000080316aa                EMBENET_NODE_BSP_HasDCDC
- *fill*         0x00000000080316ab        0x1 
+                0x00000000080316ba        0x1 ./embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.o
+                0x00000000080316ba                EMBENET_NODE_BSP_HasDCDC
+ *fill*         0x00000000080316bb        0x1 
  .rodata.fcstab
-                0x00000000080316ac      0x200 ./embenet_node_port/src/embenet_brt.o
+                0x00000000080316bc      0x200 ./embenet_node_port/src/embenet_brt.o
  .rodata.embenetMacTimings
-                0x00000000080318ac       0x20 ./embenet_node_port/src/embenet_capabilities.o
-                0x00000000080318ac                embenetMacTimings
+                0x00000000080318bc       0x20 ./embenet_node_port/src/embenet_capabilities.o
+                0x00000000080318bc                embenetMacTimings
  .rodata.embenetMacChannelListSize
-                0x00000000080318cc        0x4 ./embenet_node_port/src/embenet_capabilities.o
-                0x00000000080318cc                embenetMacChannelListSize
+                0x00000000080318dc        0x4 ./embenet_node_port/src/embenet_capabilities.o
+                0x00000000080318dc                embenetMacChannelListSize
  .rodata.embenetMacChannelList
-                0x00000000080318d0       0x45 ./embenet_node_port/src/embenet_capabilities.o
-                0x00000000080318d0                embenetMacChannelList
- *fill*         0x0000000008031915        0x3 
+                0x00000000080318e0       0x45 ./embenet_node_port/src/embenet_capabilities.o
+                0x00000000080318e0                embenetMacChannelList
+ *fill*         0x0000000008031925        0x3 
  .rodata.embenetMacAdvChannelListSize
-                0x0000000008031918        0x4 ./embenet_node_port/src/embenet_capabilities.o
-                0x0000000008031918                embenetMacAdvChannelListSize
- .rodata.embenetMacAdvChannelList
-                0x000000000803191c        0x3 ./embenet_node_port/src/embenet_capabilities.o
-                0x000000000803191c                embenetMacAdvChannelList
- *fill*         0x000000000803191f        0x1 
- .rodata.embenetMacTimeCorrectionGuardUs
-                0x0000000008031920        0x4 ./embenet_node_port/src/embenet_capabilities.o
-                0x0000000008031920                embenetMacTimeCorrectionGuardUs
- .rodata.embenetMacKaPeriodSlots
-                0x0000000008031924        0x4 ./embenet_node_port/src/embenet_capabilities.o
-                0x0000000008031924                embenetMacKaPeriodSlots
- .rodata.embenetMacDesyncTimeoutSlots
                 0x0000000008031928        0x4 ./embenet_node_port/src/embenet_capabilities.o
-                0x0000000008031928                embenetMacDesyncTimeoutSlots
+                0x0000000008031928                embenetMacAdvChannelListSize
+ .rodata.embenetMacAdvChannelList
+                0x000000000803192c        0x3 ./embenet_node_port/src/embenet_capabilities.o
+                0x000000000803192c                embenetMacAdvChannelList
+ *fill*         0x000000000803192f        0x1 
+ .rodata.embenetMacTimeCorrectionGuardUs
+                0x0000000008031930        0x4 ./embenet_node_port/src/embenet_capabilities.o
+                0x0000000008031930                embenetMacTimeCorrectionGuardUs
+ .rodata.embenetMacKaPeriodSlots
+                0x0000000008031934        0x4 ./embenet_node_port/src/embenet_capabilities.o
+                0x0000000008031934                embenetMacKaPeriodSlots
+ .rodata.embenetMacDesyncTimeoutSlots
+                0x0000000008031938        0x4 ./embenet_node_port/src/embenet_capabilities.o
+                0x0000000008031938                embenetMacDesyncTimeoutSlots
  .rodata.embenetMacTopologyActive
-                0x000000000803192c        0x1 ./embenet_node_port/src/embenet_capabilities.o
-                0x000000000803192c                embenetMacTopologyActive
- *fill*         0x000000000803192d        0x3 
+                0x000000000803193c        0x1 ./embenet_node_port/src/embenet_capabilities.o
+                0x000000000803193c                embenetMacTopologyActive
+ *fill*         0x000000000803193d        0x3 
  .rodata.embenetMacTopologyList
-                0x0000000008031930       0x10 ./embenet_node_port/src/embenet_capabilities.o
-                0x0000000008031930                embenetMacTopologyList
+                0x0000000008031940       0x10 ./embenet_node_port/src/embenet_capabilities.o
+                0x0000000008031940                embenetMacTopologyList
  .rodata.embenetMacTopologyListEntriesCount
-                0x0000000008031940        0x4 ./embenet_node_port/src/embenet_capabilities.o
-                0x0000000008031940                embenetMacTopologyListEntriesCount
+                0x0000000008031950        0x4 ./embenet_node_port/src/embenet_capabilities.o
+                0x0000000008031950                embenetMacTopologyListEntriesCount
  .rodata.fskBandwidths
-                0x0000000008031944       0xb0 ./embenet_node_port/src/embenet_radio.o
-                0x0000000008031944                fskBandwidths
+                0x0000000008031954       0xb0 ./embenet_node_port/src/embenet_radio.o
+                0x0000000008031954                fskBandwidths
  .rodata.OFFSET_TAB_CCMRx
-                0x00000000080319f4        0x9 ./embenet_node_port/src/embenet_timer.o
- *fill*         0x00000000080319fd        0x3 
+                0x0000000008031a04        0x9 ./embenet_node_port/src/embenet_timer.o
+ *fill*         0x0000000008031a0d        0x3 
  .rodata.SHIFT_TAB_OCxx
-                0x0000000008031a00        0x9 ./embenet_node_port/src/embenet_timer.o
- *fill*         0x0000000008031a09        0x3 
+                0x0000000008031a10        0x9 ./embenet_node_port/src/embenet_timer.o
+ *fill*         0x0000000008031a19        0x3 
  .rodata.linklocalprefix.0
-                0x0000000008031a0c        0x8 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(openaddress.c.obj)
+                0x0000000008031a1c        0x8 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(openaddress.c.obj)
  .rodata.LOGGER_printableLevel
-                0x0000000008031a14        0xa C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(logger.c.obj)
- *fill*         0x0000000008031a1e        0x2 
+                0x0000000008031a24        0xa C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(logger.c.obj)
+ *fill*         0x0000000008031a2e        0x2 
  .rodata.pow10.0
-                0x0000000008031a20       0x50 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(printf.c.obj)
+                0x0000000008031a30       0x50 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(printf.c.obj)
  .rodata.ebIEsBytestream
-                0x0000000008031a70       0x21 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(sixtop.c.obj)
- *fill*         0x0000000008031a91        0x3 
+                0x0000000008031a80       0x21 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(sixtop.c.obj)
+ *fill*         0x0000000008031aa1        0x3 
  .rodata.all_routers_multicast
-                0x0000000008031a94       0x10 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(iphc.c.obj)
+                0x0000000008031aa4       0x10 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(iphc.c.obj)
  .rodata.dagroot_mac64b
-                0x0000000008031aa4        0x9 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(iphc.c.obj)
- *fill*         0x0000000008031aad        0x3 
+                0x0000000008031ab4        0x9 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(iphc.c.obj)
+ *fill*         0x0000000008031abd        0x3 
  .rodata.all_routers_multicast
-                0x0000000008031ab0       0x10 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(icmpv6rpl.c.obj)
+                0x0000000008031ac0       0x10 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(icmpv6rpl.c.obj)
  .rodata.lowPdrLimit.0
-                0x0000000008031ac0        0x4 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(of0.c.obj)
+                0x0000000008031ad0        0x4 C:\Users\Milosz\Desktop\magisterka\embenet_demo_src\embenet_node\lib\libembenet_node_amalgamate.a(of0.c.obj)
  .rodata._svfprintf_r.str1.1
-                0x0000000008031ac4       0x11 C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o)
+                0x0000000008031ad4       0x11 C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(libc_a-nano-svfprintf.o)
  .rodata._vfprintf_r.str1.1
-                0x0000000008031ad5       0x11 C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(libc_a-nano-vfprintf.o)
+                0x0000000008031ae5       0x11 C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(libc_a-nano-vfprintf.o)
  .rodata._printf_i.str1.1
-                0x0000000008031ad5       0x22 C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(libc_a-nano-vfprintf_i.o)
-                0x0000000008031af8                . = ALIGN (0x4)
- *fill*         0x0000000008031af7        0x1 
+                0x0000000008031ae5       0x22 C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(libc_a-nano-vfprintf_i.o)
+                0x0000000008031b08                . = ALIGN (0x4)
+ *fill*         0x0000000008031b07        0x1 
 
-.ARM.extab      0x0000000008031af8        0x0
-                0x0000000008031af8                . = ALIGN (0x4)
+.ARM.extab      0x0000000008031b08        0x0
+                0x0000000008031b08                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000008031af8                . = ALIGN (0x4)
+                0x0000000008031b08                . = ALIGN (0x4)
 
-.ARM            0x0000000008031af8        0x8
-                0x0000000008031af8                . = ALIGN (0x4)
-                0x0000000008031af8                __exidx_start = .
+.ARM            0x0000000008031b08        0x8
+                0x0000000008031b08                . = ALIGN (0x4)
+                0x0000000008031b08                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x0000000008031af8        0x8 C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp\libgcc.a(_udivmoddi4.o)
-                0x0000000008031b00                __exidx_end = .
-                0x0000000008031b00                . = ALIGN (0x4)
+ .ARM.exidx     0x0000000008031b08        0x8 C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp\libgcc.a(_udivmoddi4.o)
+                0x0000000008031b10                __exidx_end = .
+                0x0000000008031b10                . = ALIGN (0x4)
 
-.rel.dyn        0x0000000008031b00        0x0
- .rel.iplt      0x0000000008031b00        0x0 C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtbegin.o
+.rel.dyn        0x0000000008031b10        0x0
+ .rel.iplt      0x0000000008031b10        0x0 C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtbegin.o
 
-.preinit_array  0x0000000008031b00        0x0
-                0x0000000008031b00                . = ALIGN (0x4)
-                0x0000000008031b00                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008031b10        0x0
+                0x0000000008031b10                . = ALIGN (0x4)
+                0x0000000008031b10                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0000000008031b00                PROVIDE (__preinit_array_end = .)
-                0x0000000008031b00                . = ALIGN (0x4)
+                0x0000000008031b10                PROVIDE (__preinit_array_end = .)
+                0x0000000008031b10                . = ALIGN (0x4)
 
-.init_array     0x0000000008031b00        0x4
-                0x0000000008031b00                . = ALIGN (0x4)
-                0x0000000008031b00                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008031b10        0x4
+                0x0000000008031b10                . = ALIGN (0x4)
+                0x0000000008031b10                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0000000008031b00        0x4 C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtbegin.o
-                0x0000000008031b04                PROVIDE (__init_array_end = .)
-                0x0000000008031b04                . = ALIGN (0x4)
+ .init_array    0x0000000008031b10        0x4 C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtbegin.o
+                0x0000000008031b14                PROVIDE (__init_array_end = .)
+                0x0000000008031b14                . = ALIGN (0x4)
 
-.fini_array     0x0000000008031b04        0x4
-                0x0000000008031b04                . = ALIGN (0x4)
+.fini_array     0x0000000008031b14        0x4
+                0x0000000008031b14                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008031b04        0x4 C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtbegin.o
+ .fini_array    0x0000000008031b14        0x4 C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x0000000008031b08                . = ALIGN (0x4)
-                0x0000000008031b08                _sidata = LOADADDR (.data)
+                0x0000000008031b18                . = ALIGN (0x4)
+                0x0000000008031b18                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000      0x31c load address 0x0000000008031b08
+.data           0x0000000020000000      0x31c load address 0x0000000008031b18
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -12673,11 +12673,11 @@ LOAD C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                 0x000000002000031c                . = ALIGN (0x4)
                 0x000000002000031c                _edata = .
 
-.igot.plt       0x000000002000031c        0x0 load address 0x0000000008031e24
+.igot.plt       0x000000002000031c        0x0 load address 0x0000000008031e34
  .igot.plt      0x000000002000031c        0x0 C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/thumb/v7e-m/nofp/crtbegin.o
                 0x000000002000031c                . = ALIGN (0x4)
 
-.bss            0x0000000020000320     0x3dc0 load address 0x0000000008031e24
+.bss            0x0000000020000320     0x3dc0 load address 0x0000000008031e34
                 0x0000000020000320                _sbss = .
                 0x0000000020000320                __bss_start__ = _sbss
  *(.bss)
@@ -12787,7 +12787,7 @@ LOAD C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                 0x00000000200040e0                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x00000000200040e0      0x600 load address 0x0000000008031e24
+                0x00000000200040e0      0x600 load address 0x0000000008031e34
                 0x00000000200040e0                . = ALIGN (0x8)
                 0x00000000200040e0                PROVIDE (end = .)
                 [!provide]                        PROVIDE (_end = .)
@@ -13639,55 +13639,55 @@ LOAD C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x00000000000251a6      0x2fd ./lobaro-coap/src/option-types/coap_option_observe.o
  .debug_macro   0x00000000000254a3      0x2ef ./lobaro-coap/src/option-types/coap_option_uri.o
 
-.debug_line     0x0000000000000000    0x26bbe
- .debug_line    0x0000000000000000      0xfdf ./Core/Src/custom_service.o
- .debug_line    0x0000000000000fdf      0x905 ./Core/Src/gpio.o
- .debug_line    0x00000000000018e4      0xee8 ./Core/Src/main.o
- .debug_line    0x00000000000027cc      0x5c9 ./Core/Src/ring_buffer.o
- .debug_line    0x0000000000002d95      0x873 ./Core/Src/stm32wlxx_hal_msp.o
- .debug_line    0x0000000000003608      0x921 ./Core/Src/stm32wlxx_it.o
- .debug_line    0x0000000000003f29      0x87c ./Core/Src/system_stm32wlxx.o
- .debug_line    0x00000000000047a5     0x10e7 ./Core/Src/usart.o
- .debug_line    0x000000000000588c       0x7b ./Core/Starup/startup_stm32wl55jcix.o
- .debug_line    0x0000000000005907      0xf95 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
- .debug_line    0x000000000000689c      0xd7c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
- .debug_line    0x0000000000007618     0x3c14 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cryp.o
- .debug_line    0x000000000000b22c      0xbf1 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
- .debug_line    0x000000000000be1d     0x17ab ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
- .debug_line    0x000000000000d5c8     0x10f4 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_subghz.o
- .debug_line    0x000000000000e6bc      0xae6 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_ll_gpio.o
- .debug_line    0x000000000000f1a2      0x95f ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_ll_lpuart.o
- .debug_line    0x000000000000fb01     0x14db ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_ll_rcc.o
- .debug_line    0x0000000000010fdc      0xed3 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_ll_tim.o
- .debug_line    0x0000000000011eaf      0xeca ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_ll_utils.o
- .debug_line    0x0000000000012d79      0x922 ./embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.o
- .debug_line    0x000000000001369b      0x8c1 ./embenet_node_bsp/embenet_node_stm32wle5_bsp_uart_impl.o
- .debug_line    0x0000000000013f5c      0xb25 ./embenet_node_port/src/embenet_aes128.o
- .debug_line    0x0000000000014a81      0xd8c ./embenet_node_port/src/embenet_brt.o
- .debug_line    0x000000000001580d      0x5e6 ./embenet_node_port/src/embenet_capabilities.o
- .debug_line    0x0000000000015df3      0x8ac ./embenet_node_port/src/embenet_critical_section.o
- .debug_line    0x000000000001669f      0x98e ./embenet_node_port/src/embenet_eui64.o
- .debug_line    0x000000000001702d      0xfc1 ./embenet_node_port/src/embenet_radio.o
- .debug_line    0x0000000000017fee      0x4b3 ./embenet_node_port/src/embenet_random.o
- .debug_line    0x00000000000184a1      0xd05 ./embenet_node_port/src/embenet_timer.o
- .debug_line    0x00000000000191a6     0x167b ./embenet_node_port/src/radio_driver.o
- .debug_line    0x000000000001a821     0x1149 ./lobaro-coap/src/coap_interaction.o
- .debug_line    0x000000000001b96a     0x1220 ./lobaro-coap/src/coap_main.o
- .debug_line    0x000000000001cb8a      0x99b ./lobaro-coap/src/coap_mem.o
- .debug_line    0x000000000001d525     0x1109 ./lobaro-coap/src/coap_message.o
- .debug_line    0x000000000001e62e     0x1248 ./lobaro-coap/src/coap_options.o
- .debug_line    0x000000000001f876      0xda3 ./lobaro-coap/src/coap_resource.o
- .debug_line    0x0000000000020619      0xad2 ./lobaro-coap/src/diagnostic.o
- .debug_line    0x00000000000210eb      0x982 ./lobaro-coap/src/liblobaro_coap.o
- .debug_line    0x0000000000021a6d      0x833 ./lobaro-coap/src/interface/debug/coap_debug.o
- .debug_line    0x00000000000222a0      0xb9d ./lobaro-coap/src/interface/network/net_Endpoint.o
- .debug_line    0x0000000000022e3d      0xabc ./lobaro-coap/src/interface/network/net_Socket.o
- .debug_line    0x00000000000238f9      0xe15 ./lobaro-coap/src/option-types/coap_option_blockwise.o
- .debug_line    0x000000000002470e      0xabe ./lobaro-coap/src/option-types/coap_option_cf.o
- .debug_line    0x00000000000251cc      0xc21 ./lobaro-coap/src/option-types/coap_option_observe.o
- .debug_line    0x0000000000025ded      0xdd1 ./lobaro-coap/src/option-types/coap_option_uri.o
+.debug_line     0x0000000000000000    0x27273
+ .debug_line    0x0000000000000000     0x1045 ./Core/Src/custom_service.o
+ .debug_line    0x0000000000001045      0x905 ./Core/Src/gpio.o
+ .debug_line    0x000000000000194a      0xee8 ./Core/Src/main.o
+ .debug_line    0x0000000000002832      0x5c9 ./Core/Src/ring_buffer.o
+ .debug_line    0x0000000000002dfb      0x873 ./Core/Src/stm32wlxx_hal_msp.o
+ .debug_line    0x000000000000366e      0x921 ./Core/Src/stm32wlxx_it.o
+ .debug_line    0x0000000000003f8f      0x87c ./Core/Src/system_stm32wlxx.o
+ .debug_line    0x000000000000480b     0x10e7 ./Core/Src/usart.o
+ .debug_line    0x00000000000058f2       0x7b ./Core/Starup/startup_stm32wl55jcix.o
+ .debug_line    0x000000000000596d      0xf95 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal.o
+ .debug_line    0x0000000000006902      0xd7c ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cortex.o
+ .debug_line    0x000000000000767e     0x3c14 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_cryp.o
+ .debug_line    0x000000000000b292      0xbf1 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_gpio.o
+ .debug_line    0x000000000000be83     0x17ab ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_rcc.o
+ .debug_line    0x000000000000d62e     0x10f4 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_hal_subghz.o
+ .debug_line    0x000000000000e722      0xae6 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_ll_gpio.o
+ .debug_line    0x000000000000f208      0x95f ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_ll_lpuart.o
+ .debug_line    0x000000000000fb67     0x14db ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_ll_rcc.o
+ .debug_line    0x0000000000011042      0xed3 ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_ll_tim.o
+ .debug_line    0x0000000000011f15      0xeca ./Drivers/STM32WLxx_HAL_Driver/Src/stm32wlxx_ll_utils.o
+ .debug_line    0x0000000000012ddf      0x922 ./embenet_node_bsp/embenet_node_stm32wle5_bsp_rf_impl.o
+ .debug_line    0x0000000000013701      0x8c1 ./embenet_node_bsp/embenet_node_stm32wle5_bsp_uart_impl.o
+ .debug_line    0x0000000000013fc2      0xb25 ./embenet_node_port/src/embenet_aes128.o
+ .debug_line    0x0000000000014ae7      0xd8c ./embenet_node_port/src/embenet_brt.o
+ .debug_line    0x0000000000015873      0x5e6 ./embenet_node_port/src/embenet_capabilities.o
+ .debug_line    0x0000000000015e59      0x8ac ./embenet_node_port/src/embenet_critical_section.o
+ .debug_line    0x0000000000016705      0x98e ./embenet_node_port/src/embenet_eui64.o
+ .debug_line    0x0000000000017093      0xfc1 ./embenet_node_port/src/embenet_radio.o
+ .debug_line    0x0000000000018054      0x4b3 ./embenet_node_port/src/embenet_random.o
+ .debug_line    0x0000000000018507      0xd05 ./embenet_node_port/src/embenet_timer.o
+ .debug_line    0x000000000001920c     0x167b ./embenet_node_port/src/radio_driver.o
+ .debug_line    0x000000000001a887     0x11af ./lobaro-coap/src/coap_interaction.o
+ .debug_line    0x000000000001ba36     0x1286 ./lobaro-coap/src/coap_main.o
+ .debug_line    0x000000000001ccbc      0xa01 ./lobaro-coap/src/coap_mem.o
+ .debug_line    0x000000000001d6bd     0x116f ./lobaro-coap/src/coap_message.o
+ .debug_line    0x000000000001e82c     0x12ae ./lobaro-coap/src/coap_options.o
+ .debug_line    0x000000000001fada      0xe09 ./lobaro-coap/src/coap_resource.o
+ .debug_line    0x00000000000208e3      0xb38 ./lobaro-coap/src/diagnostic.o
+ .debug_line    0x000000000002141b      0x9e8 ./lobaro-coap/src/liblobaro_coap.o
+ .debug_line    0x0000000000021e03      0x888 ./lobaro-coap/src/interface/debug/coap_debug.o
+ .debug_line    0x000000000002268b      0xc14 ./lobaro-coap/src/interface/network/net_Endpoint.o
+ .debug_line    0x000000000002329f      0xb33 ./lobaro-coap/src/interface/network/net_Socket.o
+ .debug_line    0x0000000000023dd2      0xe8c ./lobaro-coap/src/option-types/coap_option_blockwise.o
+ .debug_line    0x0000000000024c5e      0xb35 ./lobaro-coap/src/option-types/coap_option_cf.o
+ .debug_line    0x0000000000025793      0xc98 ./lobaro-coap/src/option-types/coap_option_observe.o
+ .debug_line    0x000000000002642b      0xe48 ./lobaro-coap/src/option-types/coap_option_uri.o
 
-.debug_str      0x0000000000000000    0xc3077
+.debug_str      0x0000000000000000    0xc3176
  .debug_str     0x0000000000000000    0xb4ea4 ./Core/Src/custom_service.o
                                       0xb551e (size before relaxing)
  .debug_str     0x00000000000b4ea4      0x27c ./Core/Src/gpio.o
@@ -13750,36 +13750,36 @@ LOAD C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                                       0xaadc3 (size before relaxing)
  .debug_str     0x00000000000c06eb      0xcae ./embenet_node_port/src/radio_driver.o
                                       0xab451 (size before relaxing)
- .debug_str     0x00000000000c1399      0x8f3 ./lobaro-coap/src/coap_interaction.o
-                                       0xa2b5 (size before relaxing)
- .debug_str     0x00000000000c1c8c      0x24e ./lobaro-coap/src/coap_main.o
-                                       0xb0ed (size before relaxing)
- .debug_str     0x00000000000c1eda       0x4a ./lobaro-coap/src/coap_mem.o
-                                       0x9c73 (size before relaxing)
- .debug_str     0x00000000000c1f24      0x2f8 ./lobaro-coap/src/coap_message.o
-                                       0xb126 (size before relaxing)
- .debug_str     0x00000000000c221c      0x331 ./lobaro-coap/src/coap_options.o
-                                       0xb13e (size before relaxing)
- .debug_str     0x00000000000c254d      0x300 ./lobaro-coap/src/coap_resource.o
-                                       0xb1f6 (size before relaxing)
- .debug_str     0x00000000000c284d       0xac ./lobaro-coap/src/diagnostic.o
-                                       0xad27 (size before relaxing)
- .debug_str     0x00000000000c28f9       0x54 ./lobaro-coap/src/liblobaro_coap.o
-                                       0x9c8c (size before relaxing)
- .debug_str     0x00000000000c294d       0x50 ./lobaro-coap/src/interface/debug/coap_debug.o
-                                       0x8b4c (size before relaxing)
- .debug_str     0x00000000000c299d      0x110 ./lobaro-coap/src/interface/network/net_Endpoint.o
-                                       0x9200 (size before relaxing)
- .debug_str     0x00000000000c2aad       0x85 ./lobaro-coap/src/interface/network/net_Socket.o
-                                       0x9277 (size before relaxing)
- .debug_str     0x00000000000c2b32      0x271 ./lobaro-coap/src/option-types/coap_option_blockwise.o
-                                       0xaf5f (size before relaxing)
- .debug_str     0x00000000000c2da3       0xc2 ./lobaro-coap/src/option-types/coap_option_cf.o
-                                       0x9a07 (size before relaxing)
- .debug_str     0x00000000000c2e65       0x8e ./lobaro-coap/src/option-types/coap_option_observe.o
-                                       0x9b2e (size before relaxing)
- .debug_str     0x00000000000c2ef3      0x184 ./lobaro-coap/src/option-types/coap_option_uri.o
-                                       0x9b9a (size before relaxing)
+ .debug_str     0x00000000000c1399      0x904 ./lobaro-coap/src/coap_interaction.o
+                                       0xa2c6 (size before relaxing)
+ .debug_str     0x00000000000c1c9d      0x25f ./lobaro-coap/src/coap_main.o
+                                       0xb0fe (size before relaxing)
+ .debug_str     0x00000000000c1efc       0x5b ./lobaro-coap/src/coap_mem.o
+                                       0x9c84 (size before relaxing)
+ .debug_str     0x00000000000c1f57      0x309 ./lobaro-coap/src/coap_message.o
+                                       0xb137 (size before relaxing)
+ .debug_str     0x00000000000c2260      0x342 ./lobaro-coap/src/coap_options.o
+                                       0xb14f (size before relaxing)
+ .debug_str     0x00000000000c25a2      0x311 ./lobaro-coap/src/coap_resource.o
+                                       0xb207 (size before relaxing)
+ .debug_str     0x00000000000c28b3       0xbd ./lobaro-coap/src/diagnostic.o
+                                       0xad38 (size before relaxing)
+ .debug_str     0x00000000000c2970       0x65 ./lobaro-coap/src/liblobaro_coap.o
+                                       0x9c9d (size before relaxing)
+ .debug_str     0x00000000000c29d5       0x61 ./lobaro-coap/src/interface/debug/coap_debug.o
+                                       0x8b5d (size before relaxing)
+ .debug_str     0x00000000000c2a36      0x121 ./lobaro-coap/src/interface/network/net_Endpoint.o
+                                       0x9211 (size before relaxing)
+ .debug_str     0x00000000000c2b57       0x96 ./lobaro-coap/src/interface/network/net_Socket.o
+                                       0x9288 (size before relaxing)
+ .debug_str     0x00000000000c2bed      0x282 ./lobaro-coap/src/option-types/coap_option_blockwise.o
+                                       0xaf70 (size before relaxing)
+ .debug_str     0x00000000000c2e6f       0xd3 ./lobaro-coap/src/option-types/coap_option_cf.o
+                                       0x9a18 (size before relaxing)
+ .debug_str     0x00000000000c2f42       0x9f ./lobaro-coap/src/option-types/coap_option_observe.o
+                                       0x9b3f (size before relaxing)
+ .debug_str     0x00000000000c2fe1      0x195 ./lobaro-coap/src/option-types/coap_option_uri.o
+                                       0x9bab (size before relaxing)
 
 .debug_frame    0x0000000000000000     0x86f0
  .debug_frame   0x0000000000000000      0x178 ./Core/Src/custom_service.o

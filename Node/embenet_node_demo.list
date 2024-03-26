@@ -7,23 +7,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   1 .text         0002bd4c  08000140  08000140  00010140  2**4
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .rodata       00005c68  0802be90  0802be90  0003be90  2**3
+  2 .rodata       00005c78  0802be90  0802be90  0003be90  2**3
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 .ARM.extab    00000000  08031af8  08031af8  0005031c  2**0
+  3 .ARM.extab    00000000  08031b08  08031b08  0005031c  2**0
                   CONTENTS
-  4 .ARM          00000008  08031af8  08031af8  00041af8  2**2
+  4 .ARM          00000008  08031b08  08031b08  00041b08  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  5 .preinit_array 00000000  08031b00  08031b00  0005031c  2**0
+  5 .preinit_array 00000000  08031b10  08031b10  0005031c  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  6 .init_array   00000004  08031b00  08031b00  00041b00  2**2
+  6 .init_array   00000004  08031b10  08031b10  00041b10  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  7 .fini_array   00000004  08031b04  08031b04  00041b04  2**2
+  7 .fini_array   00000004  08031b14  08031b14  00041b14  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  8 .data         0000031c  20000000  08031b08  00050000  2**2
+  8 .data         0000031c  20000000  08031b18  00050000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .bss          00003dc0  20000320  08031e24  00050320  2**3
+  9 .bss          00003dc0  20000320  08031e34  00050320  2**3
                   ALLOC
- 10 ._user_heap_stack 00000600  200040e0  08031e24  000540e0  2**0
+ 10 ._user_heap_stack 00000600  200040e0  08031e34  000540e0  2**0
                   ALLOC
  11 .ARM.attributes 0000002a  00000000  00000000  0005031c  2**0
                   CONTENTS, READONLY
@@ -39,13 +39,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_macro  00025792  00000000  00000000  0007d7e4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   00026bbe  00000000  00000000  000a2f76  2**0
+ 18 .debug_line   00027273  00000000  00000000  000a2f76  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000c3077  00000000  00000000  000c9b34  2**0
+ 19 .debug_str    000c3176  00000000  00000000  000ca1e9  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_frame  000086f0  00000000  00000000  0018cbac  2**2
+ 20 .debug_frame  000086f0  00000000  00000000  0018d360  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 00000060  00000000  00000000  0019529c  2**0
+ 21 .debug_line_str 00000060  00000000  00000000  00195a50  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -1354,7 +1354,7 @@ static void customServiceTask(EMBENET_TaskId taskId, EMBENET_NODE_TimeSource tim
  8000e8a:	bf00      	nop
  8000e8c:	0802bf28 	.word	0x0802bf28
  8000e90:	08000de5 	.word	0x08000de5
- 8000e94:	08031574 	.word	0x08031574
+ 8000e94:	08031584 	.word	0x08031584
  8000e98:	2000033c 	.word	0x2000033c
  8000e9c:	0802bf34 	.word	0x0802bf34
 
@@ -3130,7 +3130,7 @@ void NMI_Handler(void)
  800189e:	f7ff ff33 	bl	8001708 <EXPECT_OnAbortHandler>
  80018a2:	bf00      	nop
  80018a4:	0802c434 	.word	0x0802c434
- 80018a8:	0803158c 	.word	0x0803158c
+ 80018a8:	0803159c 	.word	0x0803159c
 
 080018ac <HardFault_Handler>:
 
@@ -3149,7 +3149,7 @@ void HardFault_Handler(void)
  80018b6:	f7ff ff27 	bl	8001708 <EXPECT_OnAbortHandler>
  80018ba:	bf00      	nop
  80018bc:	0802c434 	.word	0x0802c434
- 80018c0:	08031598 	.word	0x08031598
+ 80018c0:	080315a8 	.word	0x080315a8
 
 080018c4 <MemManage_Handler>:
 
@@ -3168,7 +3168,7 @@ void MemManage_Handler(void)
  80018ce:	f7ff ff1b 	bl	8001708 <EXPECT_OnAbortHandler>
  80018d2:	bf00      	nop
  80018d4:	0802c434 	.word	0x0802c434
- 80018d8:	080315ac 	.word	0x080315ac
+ 80018d8:	080315bc 	.word	0x080315bc
 
 080018dc <BusFault_Handler>:
 
@@ -3187,7 +3187,7 @@ void BusFault_Handler(void)
  80018e6:	f7ff ff0f 	bl	8001708 <EXPECT_OnAbortHandler>
  80018ea:	bf00      	nop
  80018ec:	0802c434 	.word	0x0802c434
- 80018f0:	080315c0 	.word	0x080315c0
+ 80018f0:	080315d0 	.word	0x080315d0
 
 080018f4 <UsageFault_Handler>:
 
@@ -3206,7 +3206,7 @@ void UsageFault_Handler(void)
  80018fe:	f7ff ff03 	bl	8001708 <EXPECT_OnAbortHandler>
  8001902:	bf00      	nop
  8001904:	0802c434 	.word	0x0802c434
- 8001908:	080315d4 	.word	0x080315d4
+ 8001908:	080315e4 	.word	0x080315e4
 
 0800190c <SVC_Handler>:
 
@@ -4555,7 +4555,7 @@ LoopForever:
   ldr r1, =_edata
  8002028:	2000031c 	.word	0x2000031c
   ldr r2, =_sidata
- 800202c:	08031b08 	.word	0x08031b08
+ 800202c:	08031b18 	.word	0x08031b18
   ldr r2, =_sbss
  8002030:	20000320 	.word	0x20000320
   ldr r4, =_ebss
@@ -9516,7 +9516,7 @@ uint32_t HAL_RCC_GetSysClockFreq(void)
  8003c5e:	371c      	adds	r7, #28
  8003c60:	46bd      	mov	sp, r7
  8003c62:	bd90      	pop	{r4, r7, pc}
- 8003c64:	08031648 	.word	0x08031648
+ 8003c64:	08031658 	.word	0x08031658
  8003c68:	00f42400 	.word	0x00f42400
  8003c6c:	01e84800 	.word	0x01e84800
 
@@ -9543,7 +9543,7 @@ uint32_t HAL_RCC_GetHCLKFreq(void)
 }
  8003c90:	4618      	mov	r0, r3
  8003c92:	bd98      	pop	{r3, r4, r7, pc}
- 8003c94:	080315e8 	.word	0x080315e8
+ 8003c94:	080315f8 	.word	0x080315f8
 
 08003c98 <LL_PWR_SetRadioBusyTrigger>:
   *         @arg @ref LL_PWR_RADIO_BUSY_TRIGGER_NONE
@@ -11983,7 +11983,7 @@ ErrorStatus LL_GPIO_Init(GPIO_TypeDef *GPIOx, LL_GPIO_InitTypeDef *GPIO_InitStru
  80049b4:	3720      	adds	r7, #32
  80049b6:	46bd      	mov	sp, r7
  80049b8:	e8bd 8fb0 	ldmia.w	sp!, {r4, r5, r7, r8, r9, sl, fp, pc}
- 80049bc:	08031688 	.word	0x08031688
+ 80049bc:	08031698 	.word	0x08031698
 
 080049c0 <LL_LPUART_Init>:
   * @retval An ErrorStatus enumeration value:
@@ -12721,7 +12721,7 @@ static uint32_t RCC_GetSystemClockFreq(void)
  8004e3a:	46bd      	mov	sp, r7
  8004e3c:	bd80      	pop	{r7, pc}
  8004e3e:	bf00      	nop
- 8004e40:	08031648 	.word	0x08031648
+ 8004e40:	08031658 	.word	0x08031658
  8004e44:	00f42400 	.word	0x00f42400
  8004e48:	01e84800 	.word	0x01e84800
 
@@ -12751,7 +12751,7 @@ static uint32_t RCC_GetHCLK1ClockFreq(uint32_t SYSCLK_Frequency)
  8004e6e:	3708      	adds	r7, #8
  8004e70:	46bd      	mov	sp, r7
  8004e72:	bd80      	pop	{r7, pc}
- 8004e74:	080315e8 	.word	0x080315e8
+ 8004e74:	080315f8 	.word	0x080315f8
 
 08004e78 <RCC_GetHCLK2ClockFreq>:
   * @brief  Return HCLK2 clock frequency
@@ -12779,7 +12779,7 @@ static uint32_t RCC_GetHCLK2ClockFreq(uint32_t SYSCLK_Frequency)
  8004e9a:	3708      	adds	r7, #8
  8004e9c:	46bd      	mov	sp, r7
  8004e9e:	bd80      	pop	{r7, pc}
- 8004ea0:	080315e8 	.word	0x080315e8
+ 8004ea0:	080315f8 	.word	0x080315f8
 
 08004ea4 <RCC_GetHCLK3ClockFreq>:
   * @brief  Return HCLK clock frequency
@@ -12807,7 +12807,7 @@ static uint32_t RCC_GetHCLK3ClockFreq(uint32_t SYSCLK_Frequency)
  8004ec6:	3708      	adds	r7, #8
  8004ec8:	46bd      	mov	sp, r7
  8004eca:	bd80      	pop	{r7, pc}
- 8004ecc:	080315e8 	.word	0x080315e8
+ 8004ecc:	080315f8 	.word	0x080315f8
 
 08004ed0 <RCC_GetPCLK1ClockFreq>:
   * @brief  Return PCLK1 clock frequency
@@ -12834,7 +12834,7 @@ static uint32_t RCC_GetPCLK1ClockFreq(uint32_t HCLK_Frequency)
  8004eee:	3708      	adds	r7, #8
  8004ef0:	46bd      	mov	sp, r7
  8004ef2:	bd80      	pop	{r7, pc}
- 8004ef4:	08031628 	.word	0x08031628
+ 8004ef4:	08031638 	.word	0x08031638
 
 08004ef8 <RCC_GetPCLK2ClockFreq>:
   * @brief  Return PCLK2 clock frequency
@@ -12861,7 +12861,7 @@ static uint32_t RCC_GetPCLK2ClockFreq(uint32_t HCLK_Frequency)
  8004f16:	3708      	adds	r7, #8
  8004f18:	46bd      	mov	sp, r7
  8004f1a:	bd80      	pop	{r7, pc}
- 8004f1c:	08031628 	.word	0x08031628
+ 8004f1c:	08031638 	.word	0x08031638
 
 08004f20 <RCC_PLL_GetFreqDomain_SYS>:
 /**
@@ -13038,7 +13038,7 @@ static uint32_t RCC_PLL_GetFreqDomain_SYS(void)
  8005056:	46bd      	mov	sp, r7
  8005058:	bd90      	pop	{r4, r7, pc}
  800505a:	bf00      	nop
- 800505c:	08031648 	.word	0x08031648
+ 800505c:	08031658 	.word	0x08031658
  8005060:	00f42400 	.word	0x00f42400
  8005064:	01e84800 	.word	0x01e84800
 
@@ -15345,7 +15345,7 @@ uint16_t openhdlc_crc(uint16_t crc, uint8_t byte) {
  8005d42:	bc80      	pop	{r7}
  8005d44:	4770      	bx	lr
  8005d46:	bf00      	nop
- 8005d48:	080316ac 	.word	0x080316ac
+ 8005d48:	080316bc 	.word	0x080316bc
 
 08005d4c <EMBENET_BRT_Send>:
     RingBuffer_Init(&inputRingBufferDesc, inputRingBuffer, INPUT_RING_BUFFER_SIZE);
@@ -16911,7 +16911,7 @@ static uint8_t getFskBandwidthRegValue(uint32_t bandwidth) {
  80066b2:	46bd      	mov	sp, r7
  80066b4:	bc80      	pop	{r7}
  80066b6:	4770      	bx	lr
- 80066b8:	08031944 	.word	0x08031944
+ 80066b8:	08031954 	.word	0x08031954
 
 080066bc <SUBGHZ_Radio_IRQHandler>:
 
@@ -17424,8 +17424,8 @@ uint32_t EMBENET_RANDOM_Get(void) {
  8006a3a:	46bd      	mov	sp, r7
  8006a3c:	bc80      	pop	{r7}
  8006a3e:	4770      	bx	lr
- 8006a40:	080319f4 	.word	0x080319f4
- 8006a44:	08031a00 	.word	0x08031a00
+ 8006a40:	08031a04 	.word	0x08031a04
+ 8006a44:	08031a10 	.word	0x08031a10
 
 08006a48 <LL_TIM_OC_SetCompareCH1>:
 {
@@ -17951,9 +17951,9 @@ void SUBGRF_Init( DioIrqHandler dioIrq )
  8006d92:	bf00      	nop
  8006d94:	20000b08 	.word	0x20000b08
  8006d98:	20000b04 	.word	0x20000b04
- 8006d9c:	080316a9 	.word	0x080316a9
- 8006da0:	080316a0 	.word	0x080316a0
- 8006da4:	080316a8 	.word	0x080316a8
+ 8006d9c:	080316b9 	.word	0x080316b9
+ 8006da0:	080316b0 	.word	0x080316b0
+ 8006da4:	080316b8 	.word	0x080316b8
  8006da8:	20000afc 	.word	0x20000afc
 
 08006dac <SUBGRF_SetSyncWord>:
@@ -18377,7 +18377,7 @@ void SUBGRF_SetRegulatorMode( void )
  8006ff2:	3708      	adds	r7, #8
  8006ff4:	46bd      	mov	sp, r7
  8006ff6:	bd80      	pop	{r7, pc}
- 8006ff8:	080316aa 	.word	0x080316aa
+ 8006ff8:	080316ba 	.word	0x080316ba
 
 08006ffc <SUBGRF_Calibrate>:
 
@@ -18828,7 +18828,7 @@ void SUBGRF_SetRfFrequency( uint32_t frequency )
  80072b2:	46bd      	mov	sp, r7
  80072b4:	e8bd 8fb0 	ldmia.w	sp!, {r4, r5, r7, r8, r9, sl, fp, pc}
  80072b8:	20000b04 	.word	0x20000b04
- 80072bc:	080316a4 	.word	0x080316a4
+ 80072bc:	080316b4 	.word	0x080316b4
 
 080072c0 <SUBGRF_SetPacketType>:
 
@@ -19269,7 +19269,7 @@ void SUBGRF_SetModulationParams( ModulationParams_t *modulationParams )
  800757e:	bf00      	nop
  8007580:	0802c480 	.word	0x0802c480
  8007584:	20000afd 	.word	0x20000afd
- 8007588:	080316a4 	.word	0x080316a4
+ 8007588:	080316b4 	.word	0x080316b4
 
 0800758c <SUBGRF_SetPacketParams>:
 
@@ -20099,7 +20099,7 @@ static void Radio_SMPS_Set(uint8_t level)
  8007a32:	3710      	adds	r7, #16
  8007a34:	46bd      	mov	sp, r7
  8007a36:	bd80      	pop	{r7, pc}
- 8007a38:	080316aa 	.word	0x080316aa
+ 8007a38:	080316ba 	.word	0x080316ba
 
 08007a3c <CoAP_AllocNewInteraction>:
 #include "liblobaro_coap.h"
@@ -20160,7 +20160,7 @@ static CoAP_Interaction_t* _rom CoAP_AllocNewInteraction() {
  8007a94:	0802c494 	.word	0x0802c494
  8007a98:	20000b54 	.word	0x20000b54
  8007a9c:	0802c4e0 	.word	0x0802c4e0
- 8007aa0:	0802c528 	.word	0x0802c528
+ 8007aa0:	0802c538 	.word	0x0802c538
 
 08007aa4 <CoAP_FreeInteraction>:
 
@@ -20533,7 +20533,7 @@ CoAP_Result_t _rom CoAP_EnableAckTimeout(CoAP_Interaction_t* pIA, uint8_t retryN
  8007c76:	3710      	adds	r7, #16
  8007c78:	46bd      	mov	sp, r7
  8007c7a:	bd80      	pop	{r7, pc}
- 8007c7c:	0802c550 	.word	0x0802c550
+ 8007c7c:	0802c560 	.word	0x0802c560
  8007c80:	20000b54 	.word	0x20000b54
  8007c84:	20000b0c 	.word	0x20000b0c
 
@@ -20845,10 +20845,10 @@ CoAP_Result_t _rom CoAP_StartNewRequest(CoAP_MessageCode_t type, const char* Uri
  8007e68:	3720      	adds	r7, #32
  8007e6a:	46bd      	mov	sp, r7
  8007e6c:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
- 8007e70:	0802c590 	.word	0x0802c590
+ 8007e70:	0802c5a0 	.word	0x0802c5a0
  8007e74:	20000b54 	.word	0x20000b54
- 8007e78:	0802c59c 	.word	0x0802c59c
- 8007e7c:	0802c564 	.word	0x0802c564
+ 8007e78:	0802c5ac 	.word	0x0802c5ac
+ 8007e7c:	0802c574 	.word	0x0802c574
 
 08007e80 <CoAP_StartNewServerInteraction>:
 	}
@@ -21039,9 +21039,9 @@ CoAP_Result_t _rom CoAP_StartNewServerInteraction(CoAP_Message_t* pMsgReq, CoAP_
  8007fa8:	bdf0      	pop	{r4, r5, r6, r7, pc}
  8007faa:	bf00      	nop
  8007fac:	20000b0c 	.word	0x20000b0c
- 8007fb0:	0802c590 	.word	0x0802c590
+ 8007fb0:	0802c5a0 	.word	0x0802c5a0
  8007fb4:	20000b54 	.word	0x20000b54
- 8007fb8:	0802c5f0 	.word	0x0802c5f0
+ 8007fb8:	0802c600 	.word	0x0802c600
 
 08007fbc <CoAP_RemoveInteractionsObserver>:
 
@@ -21394,7 +21394,7 @@ CoAP_Result_t _rom CoAP_HandleObservationInReq(CoAP_Interaction_t* pIA) {
  80081e8:	46bd      	mov	sp, r7
  80081ea:	bdb0      	pop	{r4, r5, r7, pc}
  80081ec:	20000b0c 	.word	0x20000b0c
- 80081f0:	0802c624 	.word	0x0802c624
+ 80081f0:	0802c634 	.word	0x0802c634
  80081f4:	20000b54 	.word	0x20000b54
 
 080081f8 <hal_debug_puts>:
@@ -21822,14 +21822,14 @@ void _ram CoAP_HandleIncomingPacket(SocketHandle_t socketHandle, NetPacket_t* pP
 		goto END;
  80084e0:	e141      	b.n	8008766 <CoAP_HandleIncomingPacket+0x54a>
  80084e2:	bf00      	nop
- 80084e4:	0802c670 	.word	0x0802c670
+ 80084e4:	0802c680 	.word	0x0802c680
  80084e8:	20000b54 	.word	0x20000b54
- 80084ec:	0802c6c0 	.word	0x0802c6c0
- 80084f0:	0802c6d4 	.word	0x0802c6d4
- 80084f4:	0802c6d8 	.word	0x0802c6d8
- 80084f8:	0802c6f4 	.word	0x0802c6f4
- 80084fc:	0802c700 	.word	0x0802c700
- 8008500:	0802c710 	.word	0x0802c710
+ 80084ec:	0802c6d0 	.word	0x0802c6d0
+ 80084f0:	0802c6e4 	.word	0x0802c6e4
+ 80084f4:	0802c6e8 	.word	0x0802c6e8
+ 80084f8:	0802c704 	.word	0x0802c704
+ 80084fc:	0802c710 	.word	0x0802c710
+ 8008500:	0802c720 	.word	0x0802c720
  8008504:	20000b0c 	.word	0x20000b0c
 		if (pIA == NULL) {
  8008508:	693b      	ldr	r3, [r7, #16]
@@ -22164,10 +22164,10 @@ void _ram CoAP_HandleIncomingPacket(SocketHandle_t socketHandle, NetPacket_t* pP
  800878a:	371c      	adds	r7, #28
  800878c:	46bd      	mov	sp, r7
  800878e:	bdf0      	pop	{r4, r5, r6, r7, pc}
- 8008790:	0802c744 	.word	0x0802c744
+ 8008790:	0802c754 	.word	0x0802c754
  8008794:	20000b54 	.word	0x20000b54
- 8008798:	0802c77c 	.word	0x0802c77c
- 800879c:	0802c7b4 	.word	0x0802c7b4
+ 8008798:	0802c78c 	.word	0x0802c78c
+ 800879c:	0802c7c4 	.word	0x0802c7c4
  80087a0:	20000b0c 	.word	0x20000b0c
 
 080087a4 <SendResp>:
@@ -22264,7 +22264,7 @@ static CoAP_Result_t _rom SendResp(CoAP_Interaction_t* pIA, CoAP_InteractionStat
  800883e:	371c      	adds	r7, #28
  8008840:	46bd      	mov	sp, r7
  8008842:	bdf0      	pop	{r4, r5, r6, r7, pc}
- 8008844:	0802c7e8 	.word	0x0802c7e8
+ 8008844:	0802c7f8 	.word	0x0802c7f8
  8008848:	20000b54 	.word	0x20000b54
 
 0800884c <SendReq>:
@@ -22350,7 +22350,7 @@ static CoAP_Result_t _rom SendReq(CoAP_Interaction_t* pIA, CoAP_InteractionState
  80088d2:	371c      	adds	r7, #28
  80088d4:	46bd      	mov	sp, r7
  80088d6:	bdf0      	pop	{r4, r5, r6, r7, pc}
- 80088d8:	0802c840 	.word	0x0802c840
+ 80088d8:	0802c850 	.word	0x0802c850
  80088dc:	20000b54 	.word	0x20000b54
 
 080088e0 <CheckRespStatus>:
@@ -22502,13 +22502,13 @@ static CoAP_Result_t _rom CheckRespStatus(CoAP_Interaction_t* pIA) {
  80089ca:	3708      	adds	r7, #8
  80089cc:	46bd      	mov	sp, r7
  80089ce:	bd80      	pop	{r7, pc}
- 80089d0:	0802c898 	.word	0x0802c898
+ 80089d0:	0802c8a8 	.word	0x0802c8a8
  80089d4:	20000b54 	.word	0x20000b54
- 80089d8:	0802c8d4 	.word	0x0802c8d4
+ 80089d8:	0802c8e4 	.word	0x0802c8e4
  80089dc:	20000b0c 	.word	0x20000b0c
- 80089e0:	0802c914 	.word	0x0802c914
- 80089e4:	0802c958 	.word	0x0802c958
- 80089e8:	0802c970 	.word	0x0802c970
+ 80089e0:	0802c924 	.word	0x0802c924
+ 80089e4:	0802c968 	.word	0x0802c968
+ 80089e8:	0802c980 	.word	0x0802c980
 
 080089ec <CheckReqStatus>:
 
@@ -22658,14 +22658,14 @@ static CoAP_Result_t _rom CheckReqStatus(CoAP_Interaction_t* pIA) {
  8008ada:	3708      	adds	r7, #8
  8008adc:	46bd      	mov	sp, r7
  8008ade:	bd80      	pop	{r7, pc}
- 8008ae0:	0802c9a4 	.word	0x0802c9a4
+ 8008ae0:	0802c9b4 	.word	0x0802c9b4
  8008ae4:	20000b54 	.word	0x20000b54
- 8008ae8:	0802c9e0 	.word	0x0802c9e0
- 8008aec:	0802ca38 	.word	0x0802ca38
+ 8008ae8:	0802c9f0 	.word	0x0802c9f0
+ 8008aec:	0802ca48 	.word	0x0802ca48
  8008af0:	20000b0c 	.word	0x20000b0c
- 8008af4:	0802ca7c 	.word	0x0802ca7c
- 8008af8:	0802c958 	.word	0x0802c958
- 8008afc:	0802cab8 	.word	0x0802cab8
+ 8008af4:	0802ca8c 	.word	0x0802ca8c
+ 8008af8:	0802c968 	.word	0x0802c968
+ 8008afc:	0802cac8 	.word	0x0802cac8
 
 08008b00 <handleServerInteraction>:
 	CoAP_Socket_t* socket = AllocSocket();
@@ -23071,12 +23071,12 @@ static void handleServerInteraction(CoAP_Interaction_t* pIA) {
  8008d96:	f7fe ffc3 	bl	8007d20 <CoAP_EnqueueLastInteraction>
 				return;
  8008d9a:	e0c6      	b.n	8008f2a <handleServerInteraction+0x42a>
- 8008d9c:	0802caf8 	.word	0x0802caf8
+ 8008d9c:	0802cb08 	.word	0x0802cb08
  8008da0:	20000b54 	.word	0x20000b54
- 8008da4:	0802cb30 	.word	0x0802cb30
- 8008da8:	0802cb64 	.word	0x0802cb64
- 8008dac:	0802cbb0 	.word	0x0802cbb0
- 8008db0:	0802cbe4 	.word	0x0802cbe4
+ 8008da4:	0802cb40 	.word	0x0802cb40
+ 8008da8:	0802cb74 	.word	0x0802cb74
+ 8008dac:	0802cbc0 	.word	0x0802cbc0
+ 8008db0:	0802cbf4 	.word	0x0802cbf4
 			}
 		}
 
@@ -23305,11 +23305,11 @@ static void handleServerInteraction(CoAP_Interaction_t* pIA) {
  8008f2a:	3714      	adds	r7, #20
  8008f2c:	46bd      	mov	sp, r7
  8008f2e:	bdf0      	pop	{r4, r5, r6, r7, pc}
- 8008f30:	0802cc0c 	.word	0x0802cc0c
+ 8008f30:	0802cc1c 	.word	0x0802cc1c
  8008f34:	20000b54 	.word	0x20000b54
- 8008f38:	0802cc28 	.word	0x0802cc28
- 8008f3c:	0802cc54 	.word	0x0802cc54
- 8008f40:	0802cc6c 	.word	0x0802cc6c
+ 8008f38:	0802cc38 	.word	0x0802cc38
+ 8008f3c:	0802cc64 	.word	0x0802cc64
+ 8008f40:	0802cc7c 	.word	0x0802cc7c
 
 08008f44 <handleNotifyInteraction>:
 
@@ -23665,13 +23665,13 @@ static void handleNotifyInteraction(CoAP_Interaction_t* pIA) {
  80091e2:	46bd      	mov	sp, r7
  80091e4:	bdf0      	pop	{r4, r5, r6, r7, pc}
  80091e6:	bf00      	nop
- 80091e8:	0802cca8 	.word	0x0802cca8
+ 80091e8:	0802ccb8 	.word	0x0802ccb8
  80091ec:	20000b54 	.word	0x20000b54
- 80091f0:	0802ccc0 	.word	0x0802ccc0
- 80091f4:	0802ccd8 	.word	0x0802ccd8
- 80091f8:	0802ccf8 	.word	0x0802ccf8
- 80091fc:	0802cd24 	.word	0x0802cd24
- 8009200:	0802cd60 	.word	0x0802cd60
+ 80091f0:	0802ccd0 	.word	0x0802ccd0
+ 80091f4:	0802cce8 	.word	0x0802cce8
+ 80091f8:	0802cd08 	.word	0x0802cd08
+ 80091fc:	0802cd34 	.word	0x0802cd34
+ 8009200:	0802cd70 	.word	0x0802cd70
 
 08009204 <handleClientInteraction>:
 
@@ -23852,7 +23852,7 @@ static void handleClientInteraction(CoAP_Interaction_t* pIA) {
  8009332:	3714      	adds	r7, #20
  8009334:	46bd      	mov	sp, r7
  8009336:	bdf0      	pop	{r4, r5, r6, r7, pc}
- 8009338:	0802cda0 	.word	0x0802cda0
+ 8009338:	0802cdb0 	.word	0x0802cdb0
  800933c:	20000b54 	.word	0x20000b54
 
 08009340 <CoAP_doWork>:
@@ -23955,9 +23955,9 @@ void _rom CoAP_doWork() {
  80093c8:	bd80      	pop	{r7, pc}
  80093ca:	bf00      	nop
  80093cc:	20000b0c 	.word	0x20000b0c
- 80093d0:	0802c6f4 	.word	0x0802c6f4
+ 80093d0:	0802c704 	.word	0x0802c704
  80093d4:	20000b54 	.word	0x20000b54
- 80093d8:	0802cde0 	.word	0x0802cde0
+ 80093d8:	0802cdf0 	.word	0x0802cdf0
 
 080093dc <CoAP_free>:
 #include "coap.h"
@@ -24095,7 +24095,7 @@ static void _rom CoAP_InitToEmptyResetMsg(CoAP_Message_t* msg) {
  800949e:	46bd      	mov	sp, r7
  80094a0:	bc80      	pop	{r7}
  80094a2:	4770      	bx	lr
- 80094a4:	0802ce00 	.word	0x0802ce00
+ 80094a4:	0802ce10 	.word	0x0802ce10
 
 080094a8 <CoAP_TokenEqual>:
 
@@ -24540,10 +24540,10 @@ CoAP_Message_t* _rom CoAP_AllocRespMsg(CoAP_Message_t* ReqMsg, CoAP_MessageCode_
  8009726:	3710      	adds	r7, #16
  8009728:	46bd      	mov	sp, r7
  800972a:	bd80      	pop	{r7, pc}
- 800972c:	0802ce0c 	.word	0x0802ce0c
+ 800972c:	0802ce1c 	.word	0x0802ce1c
  8009730:	20000b54 	.word	0x20000b54
- 8009734:	0802ce18 	.word	0x0802ce18
- 8009738:	0802ce40 	.word	0x0802ce40
+ 8009734:	0802ce28 	.word	0x0802ce28
+ 8009738:	0802ce50 	.word	0x0802ce50
 
 0800973c <CoAP_ParseMessageFromDatagram>:
 
@@ -24908,12 +24908,12 @@ CoAP_Result_t _rom CoAP_ParseMessageFromDatagram(uint8_t* srcArr, uint16_t srcAr
  800996c:	bd90      	pop	{r4, r7, pc}
  800996e:	bf00      	nop
  8009970:	20000b28 	.word	0x20000b28
- 8009974:	0802ce54 	.word	0x0802ce54
+ 8009974:	0802ce64 	.word	0x0802ce64
  8009978:	20000b54 	.word	0x20000b54
- 800997c:	0802ce70 	.word	0x0802ce70
- 8009980:	0802cea8 	.word	0x0802cea8
+ 800997c:	0802ce80 	.word	0x0802ce80
+ 8009980:	0802ceb8 	.word	0x0802ceb8
  8009984:	20000b40 	.word	0x20000b40
- 8009988:	0802ce8c 	.word	0x0802ce8c
+ 8009988:	0802ce9c 	.word	0x0802ce9c
  800998c:	20000b0c 	.word	0x20000b0c
 
 08009990 <CoAP_GetRawSizeOfMessage>:
@@ -25604,18 +25604,18 @@ CoAP_Result_t _rom CoAP_SendMsg(CoAP_Message_t* Msg, SocketHandle_t socketHandle
  8009e1c:	e8bd 40b0 	ldmia.w	sp!, {r4, r5, r7, lr}
  8009e20:	b002      	add	sp, #8
  8009e22:	4770      	bx	lr
- 8009e24:	0802ceb0 	.word	0x0802ceb0
+ 8009e24:	0802cec0 	.word	0x0802cec0
  8009e28:	20000b54 	.word	0x20000b54
- 8009e2c:	0802ce0c 	.word	0x0802ce0c
- 8009e30:	0802cec4 	.word	0x0802cec4
- 8009e34:	0802cee4 	.word	0x0802cee4
- 8009e38:	0802cf10 	.word	0x0802cf10
- 8009e3c:	0802cf3c 	.word	0x0802cf3c
- 8009e40:	0802cf80 	.word	0x0802cf80
- 8009e44:	0802cf98 	.word	0x0802cf98
+ 8009e2c:	0802ce1c 	.word	0x0802ce1c
+ 8009e30:	0802ced4 	.word	0x0802ced4
+ 8009e34:	0802cef4 	.word	0x0802cef4
+ 8009e38:	0802cf20 	.word	0x0802cf20
+ 8009e3c:	0802cf4c 	.word	0x0802cf4c
+ 8009e40:	0802cf90 	.word	0x0802cf90
+ 8009e44:	0802cfa8 	.word	0x0802cfa8
  8009e48:	20000b0c 	.word	0x20000b0c
- 8009e4c:	0802cf9c 	.word	0x0802cf9c
- 8009e50:	0802cfb8 	.word	0x0802cfb8
+ 8009e4c:	0802cfac 	.word	0x0802cfac
+ 8009e50:	0802cfc8 	.word	0x0802cfc8
 
 08009e54 <CoAP_InitIds>:
 
@@ -25866,18 +25866,18 @@ void _rom CoAP_PrintMsg(CoAP_Message_t* msg) {
  800a00a:	3708      	adds	r7, #8
  800a00c:	46bd      	mov	sp, r7
  800a00e:	bd80      	pop	{r7, pc}
- 800a010:	0802cff0 	.word	0x0802cff0
+ 800a010:	0802d000 	.word	0x0802d000
  800a014:	20000b54 	.word	0x20000b54
- 800a018:	0802d000 	.word	0x0802d000
- 800a01c:	0802d00c 	.word	0x0802d00c
- 800a020:	0802d018 	.word	0x0802d018
- 800a024:	0802d024 	.word	0x0802d024
- 800a028:	0802d030 	.word	0x0802d030
- 800a02c:	0802d044 	.word	0x0802d044
- 800a030:	0802d050 	.word	0x0802d050
- 800a034:	0802d05c 	.word	0x0802d05c
- 800a038:	0802d06c 	.word	0x0802d06c
- 800a03c:	0802cf98 	.word	0x0802cf98
+ 800a018:	0802d010 	.word	0x0802d010
+ 800a01c:	0802d01c 	.word	0x0802d01c
+ 800a020:	0802d028 	.word	0x0802d028
+ 800a024:	0802d034 	.word	0x0802d034
+ 800a028:	0802d040 	.word	0x0802d040
+ 800a02c:	0802d054 	.word	0x0802d054
+ 800a030:	0802d060 	.word	0x0802d060
+ 800a034:	0802d06c 	.word	0x0802d06c
+ 800a038:	0802d07c 	.word	0x0802d07c
+ 800a03c:	0802cfa8 	.word	0x0802cfa8
 
 0800a040 <CoAP_CodeName>:
 
@@ -26198,39 +26198,39 @@ const char _rom *CoAP_CodeName(CoAP_MessageCode_t code) {
  800a376:	46bd      	mov	sp, r7
  800a378:	bc80      	pop	{r7}
  800a37a:	4770      	bx	lr
- 800a37c:	0802d07c 	.word	0x0802d07c
- 800a380:	0802d084 	.word	0x0802d084
- 800a384:	0802d08c 	.word	0x0802d08c
- 800a388:	0802d098 	.word	0x0802d098
- 800a38c:	0802d0a0 	.word	0x0802d0a0
- 800a390:	0802d0ac 	.word	0x0802d0ac
- 800a394:	0802d0b8 	.word	0x0802d0b8
- 800a398:	0802d0c4 	.word	0x0802d0c4
- 800a39c:	0802d0d8 	.word	0x0802d0d8
- 800a3a0:	0802d0e8 	.word	0x0802d0e8
- 800a3a4:	0802d104 	.word	0x0802d104
- 800a3a8:	0802d120 	.word	0x0802d120
- 800a3ac:	0802d138 	.word	0x0802d138
- 800a3b0:	0802d154 	.word	0x0802d154
- 800a3b4:	0802d170 	.word	0x0802d170
- 800a3b8:	0802d18c 	.word	0x0802d18c
- 800a3bc:	0802d1a8 	.word	0x0802d1a8
- 800a3c0:	0802d1c8 	.word	0x0802d1c8
- 800a3c4:	0802d1e0 	.word	0x0802d1e0
- 800a3c8:	0802d1f4 	.word	0x0802d1f4
- 800a3cc:	0802d208 	.word	0x0802d208
- 800a3d0:	0802d228 	.word	0x0802d228
- 800a3d4:	0802d248 	.word	0x0802d248
- 800a3d8:	0802d26c 	.word	0x0802d26c
- 800a3dc:	0802d28c 	.word	0x0802d28c
- 800a3e0:	0802d2b0 	.word	0x0802d2b0
- 800a3e4:	0802d2d8 	.word	0x0802d2d8
- 800a3e8:	0802d2f8 	.word	0x0802d2f8
- 800a3ec:	0802d314 	.word	0x0802d314
- 800a3f0:	0802d32c 	.word	0x0802d32c
- 800a3f4:	0802d34c 	.word	0x0802d34c
- 800a3f8:	0802d368 	.word	0x0802d368
- 800a3fc:	0802d38c 	.word	0x0802d38c
+ 800a37c:	0802d08c 	.word	0x0802d08c
+ 800a380:	0802d094 	.word	0x0802d094
+ 800a384:	0802d09c 	.word	0x0802d09c
+ 800a388:	0802d0a8 	.word	0x0802d0a8
+ 800a38c:	0802d0b0 	.word	0x0802d0b0
+ 800a390:	0802d0bc 	.word	0x0802d0bc
+ 800a394:	0802d0c8 	.word	0x0802d0c8
+ 800a398:	0802d0d4 	.word	0x0802d0d4
+ 800a39c:	0802d0e8 	.word	0x0802d0e8
+ 800a3a0:	0802d0f8 	.word	0x0802d0f8
+ 800a3a4:	0802d114 	.word	0x0802d114
+ 800a3a8:	0802d130 	.word	0x0802d130
+ 800a3ac:	0802d148 	.word	0x0802d148
+ 800a3b0:	0802d164 	.word	0x0802d164
+ 800a3b4:	0802d180 	.word	0x0802d180
+ 800a3b8:	0802d19c 	.word	0x0802d19c
+ 800a3bc:	0802d1b8 	.word	0x0802d1b8
+ 800a3c0:	0802d1d8 	.word	0x0802d1d8
+ 800a3c4:	0802d1f0 	.word	0x0802d1f0
+ 800a3c8:	0802d204 	.word	0x0802d204
+ 800a3cc:	0802d218 	.word	0x0802d218
+ 800a3d0:	0802d238 	.word	0x0802d238
+ 800a3d4:	0802d258 	.word	0x0802d258
+ 800a3d8:	0802d27c 	.word	0x0802d27c
+ 800a3dc:	0802d29c 	.word	0x0802d29c
+ 800a3e0:	0802d2c0 	.word	0x0802d2c0
+ 800a3e4:	0802d2e8 	.word	0x0802d2e8
+ 800a3e8:	0802d308 	.word	0x0802d308
+ 800a3ec:	0802d324 	.word	0x0802d324
+ 800a3f0:	0802d33c 	.word	0x0802d33c
+ 800a3f4:	0802d35c 	.word	0x0802d35c
+ 800a3f8:	0802d378 	.word	0x0802d378
+ 800a3fc:	0802d39c 	.word	0x0802d39c
 
 0800a400 <CoAP_PrintResultValue>:
 
@@ -26352,16 +26352,16 @@ void _rom CoAP_PrintResultValue(CoAP_Result_t res) {
  800a4ca:	3708      	adds	r7, #8
  800a4cc:	46bd      	mov	sp, r7
  800a4ce:	bd80      	pop	{r7, pc}
- 800a4d0:	0802d394 	.word	0x0802d394
+ 800a4d0:	0802d3a4 	.word	0x0802d3a4
  800a4d4:	20000b54 	.word	0x20000b54
- 800a4d8:	0802d3a0 	.word	0x0802d3a0
- 800a4dc:	0802d3c0 	.word	0x0802d3c0
- 800a4e0:	0802d3e4 	.word	0x0802d3e4
- 800a4e4:	0802d408 	.word	0x0802d408
- 800a4e8:	0802d428 	.word	0x0802d428
- 800a4ec:	0802d448 	.word	0x0802d448
- 800a4f0:	0802d468 	.word	0x0802d468
- 800a4f4:	0802d484 	.word	0x0802d484
+ 800a4d8:	0802d3b0 	.word	0x0802d3b0
+ 800a4dc:	0802d3d0 	.word	0x0802d3d0
+ 800a4e0:	0802d3f4 	.word	0x0802d3f4
+ 800a4e4:	0802d418 	.word	0x0802d418
+ 800a4e8:	0802d438 	.word	0x0802d438
+ 800a4ec:	0802d458 	.word	0x0802d458
+ 800a4f0:	0802d478 	.word	0x0802d478
+ 800a4f4:	0802d494 	.word	0x0802d494
 
 0800a4f8 <pack_OptionsFromList>:
 //#########################################################################################################
@@ -27153,13 +27153,13 @@ CoAP_Result_t _rom parse_OptionsFromRaw(uint8_t* srcArr, uint16_t srcLength, uin
  800a986:	3720      	adds	r7, #32
  800a988:	46bd      	mov	sp, r7
  800a98a:	bd80      	pop	{r7, pc}
- 800a98c:	0802d498 	.word	0x0802d498
+ 800a98c:	0802d4a8 	.word	0x0802d4a8
  800a990:	20000b54 	.word	0x20000b54
- 800a994:	0802d4c8 	.word	0x0802d4c8
- 800a998:	0802d508 	.word	0x0802d508
- 800a99c:	0802d538 	.word	0x0802d538
- 800a9a0:	0802d56c 	.word	0x0802d56c
- 800a9a4:	0802d580 	.word	0x0802d580
+ 800a994:	0802d4d8 	.word	0x0802d4d8
+ 800a998:	0802d518 	.word	0x0802d518
+ 800a99c:	0802d548 	.word	0x0802d548
+ 800a9a0:	0802d57c 	.word	0x0802d57c
+ 800a9a4:	0802d590 	.word	0x0802d590
 
 0800a9a8 <CoAP_RemoveOptionFromList>:
 
@@ -28271,16 +28271,16 @@ CoAP_HandlerResult_t _rom WellKnown_GetHandler(CoAP_Message_t* pReq, CoAP_Messag
  800afee:	372c      	adds	r7, #44	; 0x2c
  800aff0:	46bd      	mov	sp, r7
  800aff2:	bd90      	pop	{r4, r7, pc}
- 800aff4:	0802d7fc 	.word	0x0802d7fc
+ 800aff4:	0802d80c 	.word	0x0802d80c
  800aff8:	20000b4c 	.word	0x20000b4c
  800affc:	20000b0c 	.word	0x20000b0c
  800b000:	20000b50 	.word	0x20000b50
- 800b004:	0802d778 	.word	0x0802d778
+ 800b004:	0802d788 	.word	0x0802d788
  800b008:	20000b54 	.word	0x20000b54
- 800b00c:	0802d7a8 	.word	0x0802d7a8
- 800b010:	0802d7e0 	.word	0x0802d7e0
- 800b014:	0802d7ec 	.word	0x0802d7ec
- 800b018:	0802d7f4 	.word	0x0802d7f4
+ 800b00c:	0802d7b8 	.word	0x0802d7b8
+ 800b010:	0802d7f0 	.word	0x0802d7f0
+ 800b014:	0802d7fc 	.word	0x0802d7fc
+ 800b018:	0802d804 	.word	0x0802d804
 
 0800b01c <CoAP_InitResources>:
 
@@ -28314,8 +28314,8 @@ void _rom CoAP_InitResources() {
  800b04c:	bd80      	pop	{r7, pc}
  800b04e:	bf00      	nop
  800b050:	0800ae69 	.word	0x0800ae69
- 800b054:	0802d80c 	.word	0x0802d80c
- 800b058:	0802d810 	.word	0x0802d810
+ 800b054:	0802d81c 	.word	0x0802d81c
+ 800b058:	0802d820 	.word	0x0802d820
 
 0800b05c <CoAP_AppendResourceToList>:
 
@@ -28639,11 +28639,11 @@ CoAP_Res_t* _rom CoAP_CreateResource(char* Uri, char* Descr, CoAP_ResOpts_t Opti
  800b252:	46bd      	mov	sp, r7
  800b254:	bd90      	pop	{r4, r7, pc}
  800b256:	bf00      	nop
- 800b258:	0802d824 	.word	0x0802d824
- 800b25c:	0802d828 	.word	0x0802d828
+ 800b258:	0802d834 	.word	0x0802d834
+ 800b25c:	0802d838 	.word	0x0802d838
  800b260:	20000b54 	.word	0x20000b54
- 800b264:	0802d860 	.word	0x0802d860
- 800b268:	0802d86c 	.word	0x0802d86c
+ 800b264:	0802d870 	.word	0x0802d870
+ 800b268:	0802d87c 	.word	0x0802d87c
  800b26c:	20000b0c 	.word	0x20000b0c
  800b270:	20000b4c 	.word	0x20000b4c
  800b274:	20000b50 	.word	0x20000b50
@@ -28735,7 +28735,7 @@ CoAP_Result_t _rom CoAP_RemoveObserverFromResource(CoAP_Observer_t** pObserverLi
  800b300:	e8bd 4080 	ldmia.w	sp!, {r7, lr}
  800b304:	b002      	add	sp, #8
  800b306:	4770      	bx	lr
- 800b308:	0802d8e0 	.word	0x0802d8e0
+ 800b308:	0802d8f0 	.word	0x0802d8f0
  800b30c:	20000b54 	.word	0x20000b54
 
 0800b310 <ResultToString>:
@@ -28922,38 +28922,38 @@ char* ResultToString(CoAP_Result_t res) {
  800b426:	46bd      	mov	sp, r7
  800b428:	bc80      	pop	{r7}
  800b42a:	4770      	bx	lr
- 800b42c:	0802da1c 	.word	0x0802da1c
- 800b430:	0802da24 	.word	0x0802da24
- 800b434:	0802da34 	.word	0x0802da34
- 800b438:	0802da54 	.word	0x0802da54
- 800b43c:	0802da74 	.word	0x0802da74
- 800b440:	0802da94 	.word	0x0802da94
- 800b444:	0802dab0 	.word	0x0802dab0
- 800b448:	0802dacc 	.word	0x0802dacc
- 800b44c:	0802dae8 	.word	0x0802dae8
- 800b450:	0802db04 	.word	0x0802db04
- 800b454:	0802db20 	.word	0x0802db20
- 800b458:	0802db34 	.word	0x0802db34
- 800b45c:	0802db44 	.word	0x0802db44
- 800b460:	0802db58 	.word	0x0802db58
- 800b464:	0802db70 	.word	0x0802db70
- 800b468:	0802db8c 	.word	0x0802db8c
- 800b46c:	0802dba0 	.word	0x0802dba0
- 800b470:	0802dbb8 	.word	0x0802dbb8
- 800b474:	0802dbcc 	.word	0x0802dbcc
- 800b478:	0802dbd8 	.word	0x0802dbd8
- 800b47c:	0802dbe4 	.word	0x0802dbe4
- 800b480:	0802dbfc 	.word	0x0802dbfc
- 800b484:	0802dc10 	.word	0x0802dc10
- 800b488:	0802dc24 	.word	0x0802dc24
- 800b48c:	0802dc34 	.word	0x0802dc34
- 800b490:	0802dc48 	.word	0x0802dc48
- 800b494:	0802dc5c 	.word	0x0802dc5c
- 800b498:	0802dc78 	.word	0x0802dc78
- 800b49c:	0802dc8c 	.word	0x0802dc8c
- 800b4a0:	0802dc9c 	.word	0x0802dc9c
- 800b4a4:	0802dcb0 	.word	0x0802dcb0
- 800b4a8:	0802dcbc 	.word	0x0802dcbc
+ 800b42c:	0802da2c 	.word	0x0802da2c
+ 800b430:	0802da34 	.word	0x0802da34
+ 800b434:	0802da44 	.word	0x0802da44
+ 800b438:	0802da64 	.word	0x0802da64
+ 800b43c:	0802da84 	.word	0x0802da84
+ 800b440:	0802daa4 	.word	0x0802daa4
+ 800b444:	0802dac0 	.word	0x0802dac0
+ 800b448:	0802dadc 	.word	0x0802dadc
+ 800b44c:	0802daf8 	.word	0x0802daf8
+ 800b450:	0802db14 	.word	0x0802db14
+ 800b454:	0802db30 	.word	0x0802db30
+ 800b458:	0802db44 	.word	0x0802db44
+ 800b45c:	0802db54 	.word	0x0802db54
+ 800b460:	0802db68 	.word	0x0802db68
+ 800b464:	0802db80 	.word	0x0802db80
+ 800b468:	0802db9c 	.word	0x0802db9c
+ 800b46c:	0802dbb0 	.word	0x0802dbb0
+ 800b470:	0802dbc8 	.word	0x0802dbc8
+ 800b474:	0802dbdc 	.word	0x0802dbdc
+ 800b478:	0802dbe8 	.word	0x0802dbe8
+ 800b47c:	0802dbf4 	.word	0x0802dbf4
+ 800b480:	0802dc0c 	.word	0x0802dc0c
+ 800b484:	0802dc20 	.word	0x0802dc20
+ 800b488:	0802dc34 	.word	0x0802dc34
+ 800b48c:	0802dc44 	.word	0x0802dc44
+ 800b490:	0802dc58 	.word	0x0802dc58
+ 800b494:	0802dc6c 	.word	0x0802dc6c
+ 800b498:	0802dc88 	.word	0x0802dc88
+ 800b49c:	0802dc9c 	.word	0x0802dc9c
+ 800b4a0:	0802dcac 	.word	0x0802dcac
+ 800b4a4:	0802dcc0 	.word	0x0802dcc0
+ 800b4a8:	0802dccc 	.word	0x0802dccc
 
 0800b4ac <PrintEndpoint>:
 	default:
@@ -29149,15 +29149,15 @@ void _rom PrintEndpoint(const NetEp_t* ep) {
  800b61a:	3724      	adds	r7, #36	; 0x24
  800b61c:	46bd      	mov	sp, r7
  800b61e:	bdf0      	pop	{r4, r5, r6, r7, pc}
- 800b620:	0802dcdc 	.word	0x0802dcdc
+ 800b620:	0802dcec 	.word	0x0802dcec
  800b624:	20000b54 	.word	0x20000b54
- 800b628:	0802dce4 	.word	0x0802dce4
- 800b62c:	0802dcec 	.word	0x0802dcec
- 800b630:	0802dd34 	.word	0x0802dd34
- 800b634:	0802dd3c 	.word	0x0802dd3c
- 800b638:	0802dd54 	.word	0x0802dd54
- 800b63c:	0802dd5c 	.word	0x0802dd5c
- 800b640:	0802dd68 	.word	0x0802dd68
+ 800b628:	0802dcf4 	.word	0x0802dcf4
+ 800b62c:	0802dcfc 	.word	0x0802dcfc
+ 800b630:	0802dd44 	.word	0x0802dd44
+ 800b634:	0802dd4c 	.word	0x0802dd4c
+ 800b638:	0802dd64 	.word	0x0802dd64
+ 800b63c:	0802dd6c 	.word	0x0802dd6c
+ 800b640:	0802dd78 	.word	0x0802dd78
 
 0800b644 <debugPuts_Empty>:
 
@@ -29267,13 +29267,13 @@ void CoAP_Init(CoAP_API_t api) {
  800b6f6:	bf00      	nop
  800b6f8:	20000b0c 	.word	0x20000b0c
  800b6fc:	0800b645 	.word	0x0800b645
- 800b700:	0802decc 	.word	0x0802decc
+ 800b700:	0802dedc 	.word	0x0802dedc
  800b704:	20000b54 	.word	0x20000b54
- 800b708:	0802dedc 	.word	0x0802dedc
- 800b70c:	0802df00 	.word	0x0802df00
- 800b710:	0802df1c 	.word	0x0802df1c
- 800b714:	0802df3c 	.word	0x0802df3c
- 800b718:	0802df5c 	.word	0x0802df5c
+ 800b708:	0802deec 	.word	0x0802deec
+ 800b70c:	0802df10 	.word	0x0802df10
+ 800b710:	0802df2c 	.word	0x0802df2c
+ 800b714:	0802df4c 	.word	0x0802df4c
+ 800b718:	0802df6c 	.word	0x0802df6c
 
 0800b71c <EpAreEqual>:
 
@@ -30363,7 +30363,7 @@ CoAP_Result_t _rom CoAP_FreeObserver(CoAP_Observer_t** pObserver)
  800bd9a:	3708      	adds	r7, #8
  800bd9c:	46bd      	mov	sp, r7
  800bd9e:	bd80      	pop	{r7, pc}
- 800bda0:	0802df80 	.word	0x0802df80
+ 800bda0:	0802df90 	.word	0x0802df90
  800bda4:	20000b54 	.word	0x20000b54
 
 0800bda8 <CoAP_AppendObserverToList>:
@@ -30639,9 +30639,9 @@ static CoAP_Result_t _rom ParseUriQueryFromStringToOption(CoAP_option_t** pUriOp
  800bf0a:	46bd      	mov	sp, r7
  800bf0c:	bd80      	pop	{r7, pc}
  800bf0e:	bf00      	nop
- 800bf10:	0802df98 	.word	0x0802df98
+ 800bf10:	0802dfa8 	.word	0x0802dfa8
  800bf14:	20000b54 	.word	0x20000b54
- 800bf18:	0802dfb0 	.word	0x0802dfb0
+ 800bf18:	0802dfc0 	.word	0x0802dfc0
 
 0800bf1c <CoAP_AppendUriOptionsFromString>:
 
@@ -31064,8 +31064,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800c1de:	3718      	adds	r7, #24
  800c1e0:	46bd      	mov	sp, r7
  800c1e2:	bdb0      	pop	{r4, r5, r7, pc}
- 800c1e4:	0802dfd8 	.word	0x0802dfd8
- 800c1e8:	0802e040 	.word	0x0802e040
+ 800c1e4:	0802dfe8 	.word	0x0802dfe8
+ 800c1e8:	0802e050 	.word	0x0802e050
 
 0800c1ec <scheduleNearestTasks>:
  800c1ec:	e92d 4fb0 	stmdb	sp!, {r4, r5, r7, r8, r9, sl, fp, lr}
@@ -31299,8 +31299,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800c446:	46bd      	mov	sp, r7
  800c448:	bd90      	pop	{r4, r7, pc}
  800c44a:	bf00      	nop
- 800c44c:	0802dfd8 	.word	0x0802dfd8
- 800c450:	0802e040 	.word	0x0802e040
+ 800c44c:	0802dfe8 	.word	0x0802dfe8
+ 800c450:	0802e050 	.word	0x0802e050
  800c454:	20000040 	.word	0x20000040
  800c458:	0800c1a9 	.word	0x0800c1a9
 
@@ -31489,11 +31489,11 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800c652:	3740      	adds	r7, #64	; 0x40
  800c654:	46bd      	mov	sp, r7
  800c656:	bdb0      	pop	{r4, r5, r7, pc}
- 800c658:	0802e094 	.word	0x0802e094
- 800c65c:	0802e044 	.word	0x0802e044
+ 800c658:	0802e0a4 	.word	0x0802e0a4
+ 800c65c:	0802e054 	.word	0x0802e054
  800c660:	20000040 	.word	0x20000040
  800c664:	0800c395 	.word	0x0800c395
- 800c668:	0802e060 	.word	0x0802e060
+ 800c668:	0802e070 	.word	0x0802e070
  800c66c:	0800c1a9 	.word	0x0800c1a9
 
 0800c670 <EMBENET_NODE_Join>:
@@ -31539,8 +31539,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800c6d4:	46bd      	mov	sp, r7
  800c6d6:	bd80      	pop	{r7, pc}
  800c6d8:	20000040 	.word	0x20000040
- 800c6dc:	0802e094 	.word	0x0802e094
- 800c6e0:	0802e09c 	.word	0x0802e09c
+ 800c6dc:	0802e0a4 	.word	0x0802e0a4
+ 800c6e0:	0802e0ac 	.word	0x0802e0ac
 
 0800c6e4 <EMBENET_UDP_RegisterSocket>:
  800c6e4:	b580      	push	{r7, lr}
@@ -31824,9 +31824,9 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800c998:	bd80      	pop	{r7, pc}
  800c99a:	bf00      	nop
  800c99c:	20000040 	.word	0x20000040
- 800c9a0:	0802e174 	.word	0x0802e174
- 800c9a4:	0802e104 	.word	0x0802e104
- 800c9a8:	0802e13c 	.word	0x0802e13c
+ 800c9a0:	0802e184 	.word	0x0802e184
+ 800c9a4:	0802e114 	.word	0x0802e114
+ 800c9a8:	0802e14c 	.word	0x0802e14c
 
 0800c9ac <EMBENET_NODE_TaskSchedule>:
  800c9ac:	e92d 4fb0 	stmdb	sp!, {r4, r5, r7, r8, r9, sl, fp, lr}
@@ -32012,7 +32012,7 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800cb94:	2305      	movs	r3, #5
  800cb96:	e0cf      	b.n	800cd38 <EMBENET_NODE_TaskSchedule+0x38c>
  800cb98:	20000040 	.word	0x20000040
- 800cb9c:	080318ac 	.word	0x080318ac
+ 800cb9c:	080318bc 	.word	0x080318bc
  800cba0:	10624dd3 	.word	0x10624dd3
  800cba4:	0800c1a9 	.word	0x0800c1a9
  800cba8:	f8d7 20c4 	ldr.w	r2, [r7, #196]	; 0xc4
@@ -32269,7 +32269,7 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800ce2a:	46bd      	mov	sp, r7
  800ce2c:	bc80      	pop	{r7}
  800ce2e:	4770      	bx	lr
- 800ce30:	0802e17c 	.word	0x0802e17c
+ 800ce30:	0802e18c 	.word	0x0802e18c
 
 0800ce34 <EMBENET_NODE_GetGroupCount>:
  800ce34:	b580      	push	{r7, lr}
@@ -32471,8 +32471,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800cfea:	3720      	adds	r7, #32
  800cfec:	46bd      	mov	sp, r7
  800cfee:	bd80      	pop	{r7, pc}
- 800cff0:	0802e180 	.word	0x0802e180
- 800cff4:	0802e1e8 	.word	0x0802e1e8
+ 800cff0:	0802e190 	.word	0x0802e190
+ 800cff4:	0802e1f8 	.word	0x0802e1f8
  800cff8:	20000040 	.word	0x20000040
 
 0800cffc <976f1995b2c83947a84b9c8a6775d2e1dcb20b1a>:
@@ -32519,8 +32519,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800d05c:	bd80      	pop	{r7, pc}
  800d05e:	bf00      	nop
  800d060:	20000040 	.word	0x20000040
- 800d064:	0802e180 	.word	0x0802e180
- 800d068:	0802e1e8 	.word	0x0802e1e8
+ 800d064:	0802e190 	.word	0x0802e190
+ 800d068:	0802e1f8 	.word	0x0802e1f8
 
 0800d06c <00481873317fdef387db1bb310377b408b8e47be>:
  800d06c:	b580      	push	{r7, lr}
@@ -32584,8 +32584,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800d0fc:	bd80      	pop	{r7, pc}
  800d0fe:	bf00      	nop
  800d100:	20000040 	.word	0x20000040
- 800d104:	0802e180 	.word	0x0802e180
- 800d108:	0802e1e8 	.word	0x0802e1e8
+ 800d104:	0802e190 	.word	0x0802e190
+ 800d108:	0802e1f8 	.word	0x0802e1f8
 
 0800d10c <ef42a56931e541b0c8c1f2660a00aa81f857110a>:
  800d10c:	b580      	push	{r7, lr}
@@ -32925,8 +32925,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800d404:	46bd      	mov	sp, r7
  800d406:	bd80      	pop	{r7, pc}
  800d408:	20000040 	.word	0x20000040
- 800d40c:	0802e1fc 	.word	0x0802e1fc
- 800d410:	0802e264 	.word	0x0802e264
+ 800d40c:	0802e20c 	.word	0x0802e20c
+ 800d410:	0802e274 	.word	0x0802e274
 
 0800d414 <231ee13350ba09f13191bc6eb894c2ea8bf59b41>:
  800d414:	b580      	push	{r7, lr}
@@ -32973,8 +32973,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800d470:	46bd      	mov	sp, r7
  800d472:	bd80      	pop	{r7, pc}
  800d474:	20000040 	.word	0x20000040
- 800d478:	0802e1fc 	.word	0x0802e1fc
- 800d47c:	0802e278 	.word	0x0802e278
+ 800d478:	0802e20c 	.word	0x0802e20c
+ 800d47c:	0802e288 	.word	0x0802e288
 
 0800d480 <734215ec60b076a73ccd748a6d2a9ef259a5be9c>:
  800d480:	b580      	push	{r7, lr}
@@ -33041,8 +33041,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800d50c:	bd80      	pop	{r7, pc}
  800d50e:	bf00      	nop
  800d510:	20000040 	.word	0x20000040
- 800d514:	0802e1fc 	.word	0x0802e1fc
- 800d518:	0802e288 	.word	0x0802e288
+ 800d514:	0802e20c 	.word	0x0802e20c
+ 800d518:	0802e298 	.word	0x0802e298
 
 0800d51c <5b63cb34daec6664391bfc943c457a7558e21261>:
  800d51c:	b580      	push	{r7, lr}
@@ -33134,10 +33134,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800d5f0:	46bd      	mov	sp, r7
  800d5f2:	bd80      	pop	{r7, pc}
  800d5f4:	20000040 	.word	0x20000040
- 800d5f8:	0802e1fc 	.word	0x0802e1fc
- 800d5fc:	0802e278 	.word	0x0802e278
- 800d600:	0802e2bc 	.word	0x0802e2bc
- 800d604:	0802e29c 	.word	0x0802e29c
+ 800d5f8:	0802e20c 	.word	0x0802e20c
+ 800d5fc:	0802e288 	.word	0x0802e288
+ 800d600:	0802e2cc 	.word	0x0802e2cc
+ 800d604:	0802e2ac 	.word	0x0802e2ac
 
 0800d608 <7df3ba357f7f62320ead08135508bf101de27d80>:
  800d608:	b580      	push	{r7, lr}
@@ -33188,8 +33188,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800d66c:	bd80      	pop	{r7, pc}
  800d66e:	bf00      	nop
  800d670:	20000040 	.word	0x20000040
- 800d674:	0802e1fc 	.word	0x0802e1fc
- 800d678:	0802e278 	.word	0x0802e278
+ 800d674:	0802e20c 	.word	0x0802e20c
+ 800d678:	0802e288 	.word	0x0802e288
 
 0800d67c <5004528a8ffa5581bbd161cf1057e8d5d3867843>:
  800d67c:	b590      	push	{r4, r7, lr}
@@ -33241,8 +33241,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800d6e8:	bd90      	pop	{r4, r7, pc}
  800d6ea:	bf00      	nop
  800d6ec:	20000040 	.word	0x20000040
- 800d6f0:	0802e1fc 	.word	0x0802e1fc
- 800d6f4:	0802e278 	.word	0x0802e278
+ 800d6f0:	0802e20c 	.word	0x0802e20c
+ 800d6f4:	0802e288 	.word	0x0802e288
 
 0800d6f8 <0fa1209e048698b86219960838c5b2bdc21151fc>:
  800d6f8:	e92d 43f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, lr}
@@ -33473,8 +33473,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800d902:	e8bd 83f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, pc}
  800d906:	bf00      	nop
  800d908:	20000040 	.word	0x20000040
- 800d90c:	0802e1fc 	.word	0x0802e1fc
- 800d910:	0802e264 	.word	0x0802e264
+ 800d90c:	0802e20c 	.word	0x0802e20c
+ 800d910:	0802e274 	.word	0x0802e274
  800d914:	000f4241 	.word	0x000f4241
 
 0800d918 <027deecf67887395ef5db16208d3312ee727e45e>:
@@ -33540,8 +33540,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800d99c:	46bd      	mov	sp, r7
  800d99e:	bd80      	pop	{r7, pc}
  800d9a0:	20000040 	.word	0x20000040
- 800d9a4:	0802e1fc 	.word	0x0802e1fc
- 800d9a8:	0802e264 	.word	0x0802e264
+ 800d9a4:	0802e20c 	.word	0x0802e20c
+ 800d9a8:	0802e274 	.word	0x0802e274
 
 0800d9ac <0a8a8543f799df9767389ce496f81ab8433a71f4>:
  800d9ac:	b580      	push	{r7, lr}
@@ -33605,8 +33605,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800da2c:	46bd      	mov	sp, r7
  800da2e:	bd80      	pop	{r7, pc}
  800da30:	20000040 	.word	0x20000040
- 800da34:	0802e1fc 	.word	0x0802e1fc
- 800da38:	0802e2c4 	.word	0x0802e2c4
+ 800da34:	0802e20c 	.word	0x0802e20c
+ 800da38:	0802e2d4 	.word	0x0802e2d4
 
 0800da3c <91ad02464a5553c72b508f812e77f83c74a657ed>:
  800da3c:	b580      	push	{r7, lr}
@@ -33658,8 +33658,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800daa2:	3718      	adds	r7, #24
  800daa4:	46bd      	mov	sp, r7
  800daa6:	bd80      	pop	{r7, pc}
- 800daa8:	0802e1fc 	.word	0x0802e1fc
- 800daac:	0802e278 	.word	0x0802e278
+ 800daa8:	0802e20c 	.word	0x0802e20c
+ 800daac:	0802e288 	.word	0x0802e288
  800dab0:	20000040 	.word	0x20000040
 
 0800dab4 <9f1a6cf98ed84541f8f0a98d41c73f676d47aa86>:
@@ -34328,8 +34328,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800e076:	3710      	adds	r7, #16
  800e078:	46bd      	mov	sp, r7
  800e07a:	bd80      	pop	{r7, pc}
- 800e07c:	0802e1fc 	.word	0x0802e1fc
- 800e080:	0802e278 	.word	0x0802e278
+ 800e07c:	0802e20c 	.word	0x0802e20c
+ 800e080:	0802e288 	.word	0x0802e288
  800e084:	20000040 	.word	0x20000040
 
 0800e088 <f978182667c580e22e6ae7bda9ab6a3b6ebffcb1>:
@@ -34361,8 +34361,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800e0c2:	3710      	adds	r7, #16
  800e0c4:	46bd      	mov	sp, r7
  800e0c6:	bd80      	pop	{r7, pc}
- 800e0c8:	0802e1fc 	.word	0x0802e1fc
- 800e0cc:	0802e264 	.word	0x0802e264
+ 800e0c8:	0802e20c 	.word	0x0802e20c
+ 800e0cc:	0802e274 	.word	0x0802e274
  800e0d0:	20000040 	.word	0x20000040
 
 0800e0d4 <a1f453367df5fb7326959ac01438704c8522c5f4>:
@@ -34431,8 +34431,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800e160:	46bd      	mov	sp, r7
  800e162:	bd80      	pop	{r7, pc}
  800e164:	20000040 	.word	0x20000040
- 800e168:	0802e1fc 	.word	0x0802e1fc
- 800e16c:	0802e264 	.word	0x0802e264
+ 800e168:	0802e20c 	.word	0x0802e20c
+ 800e16c:	0802e274 	.word	0x0802e274
 
 0800e170 <aa4ba635fab2a57cfac739bffc367cf6103ea92f>:
  800e170:	b580      	push	{r7, lr}
@@ -34605,12 +34605,12 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800e306:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
  800e30a:	bf00      	nop
  800e30c:	20000040 	.word	0x20000040
- 800e310:	080318ac 	.word	0x080318ac
+ 800e310:	080318bc 	.word	0x080318bc
  800e314:	d693a400 	.word	0xd693a400
- 800e318:	0802e314 	.word	0x0802e314
- 800e31c:	0802e2dc 	.word	0x0802e2dc
- 800e320:	0802e31c 	.word	0x0802e31c
- 800e324:	0802e2f8 	.word	0x0802e2f8
+ 800e318:	0802e324 	.word	0x0802e324
+ 800e31c:	0802e2ec 	.word	0x0802e2ec
+ 800e320:	0802e32c 	.word	0x0802e32c
+ 800e324:	0802e308 	.word	0x0802e308
 
 0800e328 <8a74e7031ce6bc2ae0c06fa9b4f66a6dea2edd3c>:
  800e328:	b580      	push	{r7, lr}
@@ -34658,8 +34658,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800e388:	bd80      	pop	{r7, pc}
  800e38a:	bf00      	nop
  800e38c:	20000040 	.word	0x20000040
- 800e390:	0802e1fc 	.word	0x0802e1fc
- 800e394:	0802e278 	.word	0x0802e278
+ 800e390:	0802e20c 	.word	0x0802e20c
+ 800e394:	0802e288 	.word	0x0802e288
 
 0800e398 <284c3d2939813df9bbc67851898b3a4c94b0a9cc>:
  800e398:	b580      	push	{r7, lr}
@@ -34703,8 +34703,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800e3f0:	bd80      	pop	{r7, pc}
  800e3f2:	bf00      	nop
  800e3f4:	20000040 	.word	0x20000040
- 800e3f8:	0802e1fc 	.word	0x0802e1fc
- 800e3fc:	0802e278 	.word	0x0802e278
+ 800e3f8:	0802e20c 	.word	0x0802e20c
+ 800e3fc:	0802e288 	.word	0x0802e288
 
 0800e400 <d5581a03a7943b95f7fabafbaf8177c4d06e5b3a>:
  800e400:	e92d 43f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, lr}
@@ -35041,8 +35041,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800e70e:	3710      	adds	r7, #16
  800e710:	46bd      	mov	sp, r7
  800e712:	bd80      	pop	{r7, pc}
- 800e714:	0802e1fc 	.word	0x0802e1fc
- 800e718:	0802e278 	.word	0x0802e278
+ 800e714:	0802e20c 	.word	0x0802e20c
+ 800e718:	0802e288 	.word	0x0802e288
  800e71c:	20000040 	.word	0x20000040
 
 0800e720 <112b6c7ff0378e3d771f72ee1fe6c65d1cd5ff37>:
@@ -35181,8 +35181,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800e840:	bd80      	pop	{r7, pc}
  800e842:	bf00      	nop
  800e844:	20000040 	.word	0x20000040
- 800e848:	0802e1fc 	.word	0x0802e1fc
- 800e84c:	0802e264 	.word	0x0802e264
+ 800e848:	0802e20c 	.word	0x0802e20c
+ 800e84c:	0802e274 	.word	0x0802e274
 
 0800e850 <ca04a83f27bd1933b342c8619a464a402518176b>:
  800e850:	b580      	push	{r7, lr}
@@ -35230,8 +35230,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800e8b0:	bd80      	pop	{r7, pc}
  800e8b2:	bf00      	nop
  800e8b4:	20000040 	.word	0x20000040
- 800e8b8:	0802e1fc 	.word	0x0802e1fc
- 800e8bc:	0802e278 	.word	0x0802e278
+ 800e8b8:	0802e20c 	.word	0x0802e20c
+ 800e8bc:	0802e288 	.word	0x0802e288
 
 0800e8c0 <963d67651eaddeb307ab0b02134cee28199d533d>:
  800e8c0:	b480      	push	{r7}
@@ -35315,8 +35315,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800e96c:	46bd      	mov	sp, r7
  800e96e:	bd80      	pop	{r7, pc}
  800e970:	20000040 	.word	0x20000040
- 800e974:	0802e1fc 	.word	0x0802e1fc
- 800e978:	0802e324 	.word	0x0802e324
+ 800e974:	0802e20c 	.word	0x0802e20c
+ 800e978:	0802e334 	.word	0x0802e334
 
 0800e97c <201075ddfc12155ac10a81b74045472dd935ece2>:
  800e97c:	b580      	push	{r7, lr}
@@ -35354,8 +35354,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800e9c8:	bd80      	pop	{r7, pc}
  800e9ca:	bf00      	nop
  800e9cc:	20000040 	.word	0x20000040
- 800e9d0:	0802e1fc 	.word	0x0802e1fc
- 800e9d4:	0802e324 	.word	0x0802e324
+ 800e9d0:	0802e20c 	.word	0x0802e20c
+ 800e9d4:	0802e334 	.word	0x0802e334
 
 0800e9d8 <isNeighbor>:
  800e9d8:	b580      	push	{r7, lr}
@@ -35453,8 +35453,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800eaa8:	bd80      	pop	{r7, pc}
  800eaaa:	bf00      	nop
  800eaac:	20000040 	.word	0x20000040
- 800eab0:	0802e1fc 	.word	0x0802e1fc
- 800eab4:	0802e278 	.word	0x0802e278
+ 800eab0:	0802e20c 	.word	0x0802e20c
+ 800eab4:	0802e288 	.word	0x0802e288
 
 0800eab8 <ADDR_GetLength>:
  800eab8:	b480      	push	{r7}
@@ -35607,10 +35607,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800ec02:	3728      	adds	r7, #40	; 0x28
  800ec04:	46bd      	mov	sp, r7
  800ec06:	bdb0      	pop	{r4, r5, r7, pc}
- 800ec08:	0802e338 	.word	0x0802e338
- 800ec0c:	0802e3a4 	.word	0x0802e3a4
- 800ec10:	0802e3c0 	.word	0x0802e3c0
- 800ec14:	0802e3a8 	.word	0x0802e3a8
+ 800ec08:	0802e348 	.word	0x0802e348
+ 800ec0c:	0802e3b4 	.word	0x0802e3b4
+ 800ec10:	0802e3d0 	.word	0x0802e3d0
+ 800ec14:	0802e3b8 	.word	0x0802e3b8
 
 0800ec18 <2af6233fa7118fd11caf81b4f86d81e84f105465>:
  800ec18:	b5b0      	push	{r4, r5, r7, lr}
@@ -35684,10 +35684,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800ecba:	46bd      	mov	sp, r7
  800ecbc:	bdb0      	pop	{r4, r5, r7, pc}
  800ecbe:	bf00      	nop
- 800ecc0:	0802e338 	.word	0x0802e338
- 800ecc4:	0802e3a4 	.word	0x0802e3a4
- 800ecc8:	0802e3c0 	.word	0x0802e3c0
- 800eccc:	0802e3a8 	.word	0x0802e3a8
+ 800ecc0:	0802e348 	.word	0x0802e348
+ 800ecc4:	0802e3b4 	.word	0x0802e3b4
+ 800ecc8:	0802e3d0 	.word	0x0802e3d0
+ 800eccc:	0802e3b8 	.word	0x0802e3b8
 
 0800ecd0 <e1f09b154ce8c1c840a8dd2e4c2e0aa8149bfcd4>:
  800ecd0:	b5b0      	push	{r4, r5, r7, lr}
@@ -35768,10 +35768,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800ed86:	3730      	adds	r7, #48	; 0x30
  800ed88:	46bd      	mov	sp, r7
  800ed8a:	bdb0      	pop	{r4, r5, r7, pc}
- 800ed8c:	0802e338 	.word	0x0802e338
- 800ed90:	0802e3a4 	.word	0x0802e3a4
- 800ed94:	0802e3c0 	.word	0x0802e3c0
- 800ed98:	0802e3c8 	.word	0x0802e3c8
+ 800ed8c:	0802e348 	.word	0x0802e348
+ 800ed90:	0802e3b4 	.word	0x0802e3b4
+ 800ed94:	0802e3d0 	.word	0x0802e3d0
+ 800ed98:	0802e3d8 	.word	0x0802e3d8
 
 0800ed9c <b4e42b26493966bc617e4c89906d69f121a97c96>:
  800ed9c:	b5b0      	push	{r4, r5, r7, lr}
@@ -35830,10 +35830,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800ee1a:	3728      	adds	r7, #40	; 0x28
  800ee1c:	46bd      	mov	sp, r7
  800ee1e:	bdb0      	pop	{r4, r5, r7, pc}
- 800ee20:	0802e338 	.word	0x0802e338
- 800ee24:	0802e3a4 	.word	0x0802e3a4
- 800ee28:	0802e3c0 	.word	0x0802e3c0
- 800ee2c:	0802e3e4 	.word	0x0802e3e4
+ 800ee20:	0802e348 	.word	0x0802e348
+ 800ee24:	0802e3b4 	.word	0x0802e3b4
+ 800ee28:	0802e3d0 	.word	0x0802e3d0
+ 800ee2c:	0802e3f4 	.word	0x0802e3f4
 
 0800ee30 <9730579196d24a2a06a66ac441c59b7f99b57834>:
  800ee30:	b5b0      	push	{r4, r5, r7, lr}
@@ -35898,10 +35898,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800eebe:	3728      	adds	r7, #40	; 0x28
  800eec0:	46bd      	mov	sp, r7
  800eec2:	bdb0      	pop	{r4, r5, r7, pc}
- 800eec4:	0802e338 	.word	0x0802e338
- 800eec8:	0802e3a4 	.word	0x0802e3a4
- 800eecc:	0802e3c0 	.word	0x0802e3c0
- 800eed0:	0802e3f4 	.word	0x0802e3f4
+ 800eec4:	0802e348 	.word	0x0802e348
+ 800eec8:	0802e3b4 	.word	0x0802e3b4
+ 800eecc:	0802e3d0 	.word	0x0802e3d0
+ 800eed0:	0802e404 	.word	0x0802e404
 
 0800eed4 <144ed7de545b4a42832ce04a16bf065a50d4ff30>:
  800eed4:	b5b0      	push	{r4, r5, r7, lr}
@@ -36021,10 +36021,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800efee:	46bd      	mov	sp, r7
  800eff0:	bdb0      	pop	{r4, r5, r7, pc}
  800eff2:	bf00      	nop
- 800eff4:	0802e338 	.word	0x0802e338
- 800eff8:	0802e3a4 	.word	0x0802e3a4
- 800effc:	0802e3c0 	.word	0x0802e3c0
- 800f000:	0802e404 	.word	0x0802e404
+ 800eff4:	0802e348 	.word	0x0802e348
+ 800eff8:	0802e3b4 	.word	0x0802e3b4
+ 800effc:	0802e3d0 	.word	0x0802e3d0
+ 800f000:	0802e414 	.word	0x0802e414
 
 0800f004 <bd0efe2f4ea1bc3c059d1e48499cdcc14a5db53b>:
  800f004:	b580      	push	{r7, lr}
@@ -36085,8 +36085,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800f08e:	46bd      	mov	sp, r7
  800f090:	bd80      	pop	{r7, pc}
  800f092:	bf00      	nop
- 800f094:	0802e338 	.word	0x0802e338
- 800f098:	0802e3a4 	.word	0x0802e3a4
+ 800f094:	0802e348 	.word	0x0802e348
+ 800f098:	0802e3b4 	.word	0x0802e3b4
 
 0800f09c <f26cfbfa45ddc428fa93a21aa284ea921322a858>:
  800f09c:	b580      	push	{r7, lr}
@@ -36138,10 +36138,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800f10a:	46bd      	mov	sp, r7
  800f10c:	bd80      	pop	{r7, pc}
  800f10e:	bf00      	nop
- 800f110:	0802e338 	.word	0x0802e338
- 800f114:	0802e3a4 	.word	0x0802e3a4
- 800f118:	0802e3c0 	.word	0x0802e3c0
- 800f11c:	0802e3a8 	.word	0x0802e3a8
+ 800f110:	0802e348 	.word	0x0802e348
+ 800f114:	0802e3b4 	.word	0x0802e3b4
+ 800f118:	0802e3d0 	.word	0x0802e3d0
+ 800f11c:	0802e3b8 	.word	0x0802e3b8
 
 0800f120 <2de8c5d05f60c15cf061eba17324436038284da6>:
  800f120:	b580      	push	{r7, lr}
@@ -36210,8 +36210,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800f1a2:	46bd      	mov	sp, r7
  800f1a4:	bd80      	pop	{r7, pc}
  800f1a6:	bf00      	nop
- 800f1a8:	0802e338 	.word	0x0802e338
- 800f1ac:	0802e3a4 	.word	0x0802e3a4
+ 800f1a8:	0802e348 	.word	0x0802e348
+ 800f1ac:	0802e3b4 	.word	0x0802e3b4
 
 0800f1b0 <271b2dbe31e411eac579adb987eb6de74d66e6b2>:
  800f1b0:	b480      	push	{r7}
@@ -36531,20 +36531,20 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800f44e:	3710      	adds	r7, #16
  800f450:	46bd      	mov	sp, r7
  800f452:	bd80      	pop	{r7, pc}
- 800f454:	0802e42c 	.word	0x0802e42c
- 800f458:	0802e434 	.word	0x0802e434
- 800f45c:	0802e43c 	.word	0x0802e43c
- 800f460:	0802e440 	.word	0x0802e440
- 800f464:	0802e444 	.word	0x0802e444
- 800f468:	0802e44c 	.word	0x0802e44c
- 800f46c:	0802e454 	.word	0x0802e454
- 800f470:	0802e45c 	.word	0x0802e45c
- 800f474:	0802e464 	.word	0x0802e464
- 800f478:	0802e46c 	.word	0x0802e46c
- 800f47c:	0802e478 	.word	0x0802e478
- 800f480:	0802e484 	.word	0x0802e484
- 800f484:	0802e48c 	.word	0x0802e48c
- 800f488:	0802e494 	.word	0x0802e494
+ 800f454:	0802e43c 	.word	0x0802e43c
+ 800f458:	0802e444 	.word	0x0802e444
+ 800f45c:	0802e44c 	.word	0x0802e44c
+ 800f460:	0802e450 	.word	0x0802e450
+ 800f464:	0802e454 	.word	0x0802e454
+ 800f468:	0802e45c 	.word	0x0802e45c
+ 800f46c:	0802e464 	.word	0x0802e464
+ 800f470:	0802e46c 	.word	0x0802e46c
+ 800f474:	0802e474 	.word	0x0802e474
+ 800f478:	0802e47c 	.word	0x0802e47c
+ 800f47c:	0802e488 	.word	0x0802e488
+ 800f480:	0802e494 	.word	0x0802e494
+ 800f484:	0802e49c 	.word	0x0802e49c
+ 800f488:	0802e4a4 	.word	0x0802e4a4
 
 0800f48c <3c5e9d665a63e4e817bae7c8fa4bc5f3c0cfa1bb>:
  800f48c:	b480      	push	{r7}
@@ -36555,7 +36555,7 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800f496:	bc80      	pop	{r7}
  800f498:	4770      	bx	lr
  800f49a:	bf00      	nop
- 800f49c:	08031a0c 	.word	0x08031a0c
+ 800f49c:	08031a1c 	.word	0x08031a1c
 
 0800f4a0 <8651bfcf35514b04809eb22bd8aa118172b46770>:
  800f4a0:	b590      	push	{r4, r7, lr}
@@ -36803,8 +36803,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800f724:	bd90      	pop	{r4, r7, pc}
  800f726:	bf00      	nop
  800f728:	20000040 	.word	0x20000040
- 800f72c:	0802e4d4 	.word	0x0802e4d4
- 800f730:	0802e498 	.word	0x0802e498
+ 800f72c:	0802e4e4 	.word	0x0802e4e4
+ 800f730:	0802e4a8 	.word	0x0802e4a8
 
 0800f734 <331ec243926b1d9fd1d86c735e311ea19678e45f>:
  800f734:	b5b0      	push	{r4, r5, r7, lr}
@@ -37009,8 +37009,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800f93c:	46bd      	mov	sp, r7
  800f93e:	bdb0      	pop	{r4, r5, r7, pc}
  800f940:	20000040 	.word	0x20000040
- 800f944:	0802e4d4 	.word	0x0802e4d4
- 800f948:	0802e4dc 	.word	0x0802e4dc
+ 800f944:	0802e4e4 	.word	0x0802e4e4
+ 800f948:	0802e4ec 	.word	0x0802e4ec
 
 0800f94c <218a9716e8ca33d3905e4d5d678efcb718f6f31f>:
  800f94c:	b580      	push	{r7, lr}
@@ -37083,10 +37083,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800f9fc:	bd80      	pop	{r7, pc}
  800f9fe:	bf00      	nop
  800fa00:	20000040 	.word	0x20000040
- 800fa04:	0802e54c 	.word	0x0802e54c
- 800fa08:	0802e5b4 	.word	0x0802e5b4
- 800fa0c:	0802e5f0 	.word	0x0802e5f0
- 800fa10:	0802e5cc 	.word	0x0802e5cc
+ 800fa04:	0802e55c 	.word	0x0802e55c
+ 800fa08:	0802e5c4 	.word	0x0802e5c4
+ 800fa0c:	0802e600 	.word	0x0802e600
+ 800fa10:	0802e5dc 	.word	0x0802e5dc
 
 0800fa14 <f9d7d5c68ea55258d57b5d3bc3540348dc13b74e>:
  800fa14:	b580      	push	{r7, lr}
@@ -37215,8 +37215,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800fb4a:	e8bd 83f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, pc}
  800fb4e:	bf00      	nop
  800fb50:	20000040 	.word	0x20000040
- 800fb54:	0802e4d4 	.word	0x0802e4d4
- 800fb58:	0802e5f8 	.word	0x0802e5f8
+ 800fb54:	0802e4e4 	.word	0x0802e4e4
+ 800fb58:	0802e608 	.word	0x0802e608
 
 0800fb5c <5abd2f358b9e462fcede09cdd96a94c4ca379573>:
  800fb5c:	b580      	push	{r7, lr}
@@ -37655,8 +37655,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  800ff6c:	bd80      	pop	{r7, pc}
  800ff6e:	bf00      	nop
  800ff70:	20000040 	.word	0x20000040
- 800ff74:	0802e620 	.word	0x0802e620
- 800ff78:	0802e60c 	.word	0x0802e60c
+ 800ff74:	0802e630 	.word	0x0802e630
+ 800ff78:	0802e61c 	.word	0x0802e61c
 
 0800ff7c <4c857b78cdc7cd5cc9a39e6ca4ea27a1fc7cf725>:
  800ff7c:	b580      	push	{r7, lr}
@@ -38929,8 +38929,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8010b9a:	61fb      	str	r3, [r7, #28]
  8010b9c:	e067      	b.n	8010c6e <fc07e894741fc85c512f976929ce54659d763792+0x31a>
  8010b9e:	bf00      	nop
- 8010ba0:	0802e54c 	.word	0x0802e54c
- 8010ba4:	0802e628 	.word	0x0802e628
+ 8010ba0:	0802e55c 	.word	0x0802e55c
+ 8010ba4:	0802e638 	.word	0x0802e638
  8010ba8:	20000040 	.word	0x20000040
  8010bac:	f7f5 fa50 	bl	8006050 <EMBENET_CRITICAL_SECTION_Enter>
  8010bb0:	697a      	ldr	r2, [r7, #20]
@@ -39193,10 +39193,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8010e24:	46bd      	mov	sp, r7
  8010e26:	bd80      	pop	{r7, pc}
  8010e28:	20000040 	.word	0x20000040
- 8010e2c:	0802e4d4 	.word	0x0802e4d4
- 8010e30:	0802e6d0 	.word	0x0802e6d0
- 8010e34:	0802e620 	.word	0x0802e620
- 8010e38:	0802e704 	.word	0x0802e704
+ 8010e2c:	0802e4e4 	.word	0x0802e4e4
+ 8010e30:	0802e6e0 	.word	0x0802e6e0
+ 8010e34:	0802e630 	.word	0x0802e630
+ 8010e38:	0802e714 	.word	0x0802e714
 
 08010e3c <isSpaceForNonMaintenancePackets>:
  8010e3c:	b480      	push	{r7}
@@ -39586,8 +39586,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80111ce:	46bd      	mov	sp, r7
  80111d0:	bd90      	pop	{r4, r7, pc}
  80111d2:	bf00      	nop
- 80111d4:	0802e7a0 	.word	0x0802e7a0
- 80111d8:	0802e768 	.word	0x0802e768
+ 80111d4:	0802e7b0 	.word	0x0802e7b0
+ 80111d8:	0802e778 	.word	0x0802e778
 
 080111dc <35026cb1892f0fbf645572f3a2a8a2f27f287a78>:
  80111dc:	b580      	push	{r7, lr}
@@ -39772,11 +39772,11 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80113fa:	46bd      	mov	sp, r7
  80113fc:	bd80      	pop	{r7, pc}
  80113fe:	bf00      	nop
- 8011400:	0802e7a0 	.word	0x0802e7a0
- 8011404:	0802e7a8 	.word	0x0802e7a8
- 8011408:	0802e760 	.word	0x0802e760
- 801140c:	0802e7b8 	.word	0x0802e7b8
- 8011410:	0802e7e0 	.word	0x0802e7e0
+ 8011400:	0802e7b0 	.word	0x0802e7b0
+ 8011404:	0802e7b8 	.word	0x0802e7b8
+ 8011408:	0802e770 	.word	0x0802e770
+ 801140c:	0802e7c8 	.word	0x0802e7c8
+ 8011410:	0802e7f0 	.word	0x0802e7f0
 
 08011414 <dce4ce0d58651ef366444808f387d05a6157ac6c>:
  8011414:	b590      	push	{r4, r7, lr}
@@ -39882,10 +39882,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801154a:	46bd      	mov	sp, r7
  801154c:	bd90      	pop	{r4, r7, pc}
  801154e:	bf00      	nop
- 8011550:	0802e758 	.word	0x0802e758
- 8011554:	0802e810 	.word	0x0802e810
- 8011558:	0802e760 	.word	0x0802e760
- 801155c:	0802e718 	.word	0x0802e718
+ 8011550:	0802e768 	.word	0x0802e768
+ 8011554:	0802e820 	.word	0x0802e820
+ 8011558:	0802e770 	.word	0x0802e770
+ 801155c:	0802e728 	.word	0x0802e728
 
 08011560 <BRIDGE_DataIndication>:
  8011560:	b580      	push	{r7, lr}
@@ -40026,14 +40026,14 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80116d6:	3748      	adds	r7, #72	; 0x48
  80116d8:	46bd      	mov	sp, r7
  80116da:	bd80      	pop	{r7, pc}
- 80116dc:	0802e7a0 	.word	0x0802e7a0
- 80116e0:	0802e828 	.word	0x0802e828
- 80116e4:	0802e8e0 	.word	0x0802e8e0
- 80116e8:	0802e844 	.word	0x0802e844
- 80116ec:	0802e760 	.word	0x0802e760
- 80116f0:	0802e864 	.word	0x0802e864
- 80116f4:	0802e888 	.word	0x0802e888
- 80116f8:	0802e8bc 	.word	0x0802e8bc
+ 80116dc:	0802e7b0 	.word	0x0802e7b0
+ 80116e0:	0802e838 	.word	0x0802e838
+ 80116e4:	0802e8f0 	.word	0x0802e8f0
+ 80116e8:	0802e854 	.word	0x0802e854
+ 80116ec:	0802e770 	.word	0x0802e770
+ 80116f0:	0802e874 	.word	0x0802e874
+ 80116f4:	0802e898 	.word	0x0802e898
+ 80116f8:	0802e8cc 	.word	0x0802e8cc
 
 080116fc <c122f50a74e97b0b971f059f93cac9f52ab85af9>:
  80116fc:	b580      	push	{r7, lr}
@@ -40063,8 +40063,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801173a:	3710      	adds	r7, #16
  801173c:	46bd      	mov	sp, r7
  801173e:	bd80      	pop	{r7, pc}
- 8011740:	0802e760 	.word	0x0802e760
- 8011744:	0802e8e8 	.word	0x0802e8e8
+ 8011740:	0802e770 	.word	0x0802e770
+ 8011744:	0802e8f8 	.word	0x0802e8f8
 
 08011748 <db78e4d9b28d7c42d16d219c1384c29b20a49150>:
  8011748:	e92d 43f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, lr}
@@ -40124,8 +40124,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80117ce:	46bd      	mov	sp, r7
  80117d0:	e8bd 83f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, pc}
  80117d4:	20000040 	.word	0x20000040
- 80117d8:	0802e7a0 	.word	0x0802e7a0
- 80117dc:	0802e900 	.word	0x0802e900
+ 80117d8:	0802e7b0 	.word	0x0802e7b0
+ 80117dc:	0802e910 	.word	0x0802e910
 
 080117e0 <bbe099565971cd2d437b6a8e152f225cced7c4ee>:
  80117e0:	b580      	push	{r7, lr}
@@ -40452,10 +40452,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8011aaa:	46bd      	mov	sp, r7
  8011aac:	bd90      	pop	{r4, r7, pc}
  8011aae:	bf00      	nop
- 8011ab0:	0802e928 	.word	0x0802e928
- 8011ab4:	0802e990 	.word	0x0802e990
+ 8011ab0:	0802e938 	.word	0x0802e938
+ 8011ab4:	0802e9a0 	.word	0x0802e9a0
  8011ab8:	20000040 	.word	0x20000040
- 8011abc:	0802e9bc 	.word	0x0802e9bc
+ 8011abc:	0802e9cc 	.word	0x0802e9cc
  8011ac0:	ffffec78 	.word	0xffffec78
 
 08011ac4 <2f27d002e6f5798bf50ec4e1714df836a8561b81>:
@@ -40546,8 +40546,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8011b76:	46bd      	mov	sp, r7
  8011b78:	bd80      	pop	{r7, pc}
  8011b7a:	bf00      	nop
- 8011b7c:	0802e928 	.word	0x0802e928
- 8011b80:	0802e9e8 	.word	0x0802e9e8
+ 8011b7c:	0802e938 	.word	0x0802e938
+ 8011b80:	0802e9f8 	.word	0x0802e9f8
  8011b84:	20000040 	.word	0x20000040
 
 08011b88 <56445be374e93738432324b7e0ececbd8047647a>:
@@ -40848,8 +40848,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8011e46:	3708      	adds	r7, #8
  8011e48:	46bd      	mov	sp, r7
  8011e4a:	bd80      	pop	{r7, pc}
- 8011e4c:	0802e9ec 	.word	0x0802e9ec
- 8011e50:	0802ea4c 	.word	0x0802ea4c
+ 8011e4c:	0802e9fc 	.word	0x0802e9fc
+ 8011e50:	0802ea5c 	.word	0x0802ea5c
  8011e54:	20000040 	.word	0x20000040
 
 08011e58 <570d8a765a6a38e2a02d25f1ad3297e0c6b6f6e8>:
@@ -40961,8 +40961,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8011f50:	372c      	adds	r7, #44	; 0x2c
  8011f52:	46bd      	mov	sp, r7
  8011f54:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
- 8011f58:	0802e9ec 	.word	0x0802e9ec
- 8011f5c:	0802ea60 	.word	0x0802ea60
+ 8011f58:	0802e9fc 	.word	0x0802e9fc
+ 8011f5c:	0802ea70 	.word	0x0802ea70
 
 08011f60 <23673502809f5a9646d21283e7a04e0764f4d11d>:
  8011f60:	b580      	push	{r7, lr}
@@ -41291,10 +41291,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8012202:	3720      	adds	r7, #32
  8012204:	46bd      	mov	sp, r7
  8012206:	bd80      	pop	{r7, pc}
- 8012208:	0802eae8 	.word	0x0802eae8
- 801220c:	0802ea6c 	.word	0x0802ea6c
- 8012210:	0802eaf0 	.word	0x0802eaf0
- 8012214:	0802eab0 	.word	0x0802eab0
+ 8012208:	0802eaf8 	.word	0x0802eaf8
+ 801220c:	0802ea7c 	.word	0x0802ea7c
+ 8012210:	0802eb00 	.word	0x0802eb00
+ 8012214:	0802eac0 	.word	0x0802eac0
 
 08012218 <validatePacket>:
  8012218:	b590      	push	{r4, r7, lr}
@@ -41591,8 +41591,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801248a:	46bd      	mov	sp, r7
  801248c:	bd80      	pop	{r7, pc}
  801248e:	bf00      	nop
- 8012490:	0802eaf8 	.word	0x0802eaf8
- 8012494:	0802eb5c 	.word	0x0802eb5c
+ 8012490:	0802eb08 	.word	0x0802eb08
+ 8012494:	0802eb6c 	.word	0x0802eb6c
  8012498:	20000040 	.word	0x20000040
 
 0801249c <7d0846c279c7703537dc22d139b898222dc42c28>:
@@ -41628,8 +41628,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80124de:	3710      	adds	r7, #16
  80124e0:	46bd      	mov	sp, r7
  80124e2:	bd80      	pop	{r7, pc}
- 80124e4:	0802eaf8 	.word	0x0802eaf8
- 80124e8:	0802eb70 	.word	0x0802eb70
+ 80124e4:	0802eb08 	.word	0x0802eb08
+ 80124e8:	0802eb80 	.word	0x0802eb80
  80124ec:	20000040 	.word	0x20000040
 
 080124f0 <d492673eb40b0122449614ddec3203e781e2c714>:
@@ -41813,16 +41813,16 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80126b4:	46bd      	mov	sp, r7
  80126b6:	bd80      	pop	{r7, pc}
  80126b8:	20000040 	.word	0x20000040
- 80126bc:	0802eaf0 	.word	0x0802eaf0
- 80126c0:	0802eb90 	.word	0x0802eb90
+ 80126bc:	0802eb00 	.word	0x0802eb00
+ 80126c0:	0802eba0 	.word	0x0802eba0
  80126c4:	03938700 	.word	0x03938700
- 80126c8:	0802eae8 	.word	0x0802eae8
- 80126cc:	0802ebcc 	.word	0x0802ebcc
- 80126d0:	0802ec1c 	.word	0x0802ec1c
- 80126d4:	0802ebe4 	.word	0x0802ebe4
- 80126d8:	0802ebf4 	.word	0x0802ebf4
+ 80126c8:	0802eaf8 	.word	0x0802eaf8
+ 80126cc:	0802ebdc 	.word	0x0802ebdc
+ 80126d0:	0802ec2c 	.word	0x0802ec2c
+ 80126d4:	0802ebf4 	.word	0x0802ebf4
+ 80126d8:	0802ec04 	.word	0x0802ec04
  80126dc:	00989680 	.word	0x00989680
- 80126e0:	0802ec08 	.word	0x0802ec08
+ 80126e0:	0802ec18 	.word	0x0802ec18
 
 080126e4 <03d6da78285e4b5dbf21b3dd748386b7299cb1fe>:
  80126e4:	b580      	push	{r7, lr}
@@ -41960,10 +41960,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8012838:	02aea540 	.word	0x02aea540
  801283c:	00989680 	.word	0x00989680
  8012840:	000f4240 	.word	0x000f4240
- 8012844:	0802eaf0 	.word	0x0802eaf0
- 8012848:	0802ec24 	.word	0x0802ec24
- 801284c:	0802ec3c 	.word	0x0802ec3c
- 8012850:	0802ec68 	.word	0x0802ec68
+ 8012844:	0802eb00 	.word	0x0802eb00
+ 8012848:	0802ec34 	.word	0x0802ec34
+ 801284c:	0802ec4c 	.word	0x0802ec4c
+ 8012850:	0802ec78 	.word	0x0802ec78
 
 08012854 <9506f9c37a945216115ab5227293f46163fc6230>:
  8012854:	b580      	push	{r7, lr}
@@ -42065,8 +42065,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8012938:	46bd      	mov	sp, r7
  801293a:	bd80      	pop	{r7, pc}
  801293c:	20000040 	.word	0x20000040
- 8012940:	0802ec1c 	.word	0x0802ec1c
- 8012944:	0802ec84 	.word	0x0802ec84
+ 8012940:	0802ec2c 	.word	0x0802ec2c
+ 8012944:	0802ec94 	.word	0x0802ec94
 
 08012948 <19861f752ed5b4a4fab486514c3b7aa2c914e6fa>:
  8012948:	b590      	push	{r4, r7, lr}
@@ -42189,13 +42189,13 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8012a6e:	46bd      	mov	sp, r7
  8012a70:	bd90      	pop	{r4, r7, pc}
  8012a72:	bf00      	nop
- 8012a74:	0802eaf8 	.word	0x0802eaf8
- 8012a78:	0802eca8 	.word	0x0802eca8
- 8012a7c:	0802ecbc 	.word	0x0802ecbc
+ 8012a74:	0802eb08 	.word	0x0802eb08
+ 8012a78:	0802ecb8 	.word	0x0802ecb8
+ 8012a7c:	0802eccc 	.word	0x0802eccc
  8012a80:	20000040 	.word	0x20000040
- 8012a84:	0802eaf0 	.word	0x0802eaf0
- 8012a88:	0802ecd0 	.word	0x0802ecd0
- 8012a8c:	0802ed04 	.word	0x0802ed04
+ 8012a84:	0802eb00 	.word	0x0802eb00
+ 8012a88:	0802ece0 	.word	0x0802ece0
+ 8012a8c:	0802ed14 	.word	0x0802ed14
 
 08012a90 <ce7cfafa044c34a88028e8cf12995b3096f9f973>:
  8012a90:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -42351,10 +42351,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8012bfe:	46bd      	mov	sp, r7
  8012c00:	bdf0      	pop	{r4, r5, r6, r7, pc}
  8012c02:	bf00      	nop
- 8012c04:	0802eaf8 	.word	0x0802eaf8
- 8012c08:	0802eca8 	.word	0x0802eca8
- 8012c0c:	0802ed38 	.word	0x0802ed38
- 8012c10:	0802ed4c 	.word	0x0802ed4c
+ 8012c04:	0802eb08 	.word	0x0802eb08
+ 8012c08:	0802ecb8 	.word	0x0802ecb8
+ 8012c0c:	0802ed48 	.word	0x0802ed48
+ 8012c10:	0802ed5c 	.word	0x0802ed5c
  8012c14:	20000040 	.word	0x20000040
 
 08012c18 <c5868198428dfaffddb0900c3d01452778b19d11>:
@@ -42580,8 +42580,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8012e16:	46bd      	mov	sp, r7
  8012e18:	bd80      	pop	{r7, pc}
  8012e1a:	bf00      	nop
- 8012e1c:	0802edc4 	.word	0x0802edc4
- 8012e20:	0802edcc 	.word	0x0802edcc
+ 8012e1c:	0802edd4 	.word	0x0802edd4
+ 8012e20:	0802eddc 	.word	0x0802eddc
 
 08012e24 <62d501c077e77071b13b9590edfc05c0693f6990>:
  8012e24:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -42691,13 +42691,13 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8012f4a:	46bd      	mov	sp, r7
  8012f4c:	bdf0      	pop	{r4, r5, r6, r7, pc}
  8012f4e:	bf00      	nop
- 8012f50:	0802edbc 	.word	0x0802edbc
- 8012f54:	0802edfc 	.word	0x0802edfc
- 8012f58:	0802ee34 	.word	0x0802ee34
- 8012f5c:	0802eed0 	.word	0x0802eed0
- 8012f60:	0802ee54 	.word	0x0802ee54
- 8012f64:	0802edc4 	.word	0x0802edc4
- 8012f68:	0802eeb8 	.word	0x0802eeb8
+ 8012f50:	0802edcc 	.word	0x0802edcc
+ 8012f54:	0802ee0c 	.word	0x0802ee0c
+ 8012f58:	0802ee44 	.word	0x0802ee44
+ 8012f5c:	0802eee0 	.word	0x0802eee0
+ 8012f60:	0802ee64 	.word	0x0802ee64
+ 8012f64:	0802edd4 	.word	0x0802edd4
+ 8012f68:	0802eec8 	.word	0x0802eec8
 
 08012f6c <sendPacketToPledge>:
  8012f6c:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -42817,11 +42817,11 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8013096:	3754      	adds	r7, #84	; 0x54
  8013098:	46bd      	mov	sp, r7
  801309a:	bdf0      	pop	{r4, r5, r6, r7, pc}
- 801309c:	0802edbc 	.word	0x0802edbc
- 80130a0:	0802eed8 	.word	0x0802eed8
- 80130a4:	0802eef0 	.word	0x0802eef0
- 80130a8:	0802edc4 	.word	0x0802edc4
- 80130ac:	0802ef1c 	.word	0x0802ef1c
+ 801309c:	0802edcc 	.word	0x0802edcc
+ 80130a0:	0802eee8 	.word	0x0802eee8
+ 80130a4:	0802ef00 	.word	0x0802ef00
+ 80130a8:	0802edd4 	.word	0x0802edd4
+ 80130ac:	0802ef2c 	.word	0x0802ef2c
 
 080130b0 <sendPacketToJrc>:
  80130b0:	b580      	push	{r7, lr}
@@ -42889,11 +42889,11 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8013168:	46bd      	mov	sp, r7
  801316a:	bd80      	pop	{r7, pc}
  801316c:	20000040 	.word	0x20000040
- 8013170:	0802edbc 	.word	0x0802edbc
- 8013174:	0802ed60 	.word	0x0802ed60
- 8013178:	0802edc4 	.word	0x0802edc4
- 801317c:	0802ef40 	.word	0x0802ef40
- 8013180:	0802ed98 	.word	0x0802ed98
+ 8013170:	0802edcc 	.word	0x0802edcc
+ 8013174:	0802ed70 	.word	0x0802ed70
+ 8013178:	0802edd4 	.word	0x0802edd4
+ 801317c:	0802ef50 	.word	0x0802ef50
+ 8013180:	0802eda8 	.word	0x0802eda8
 
 08013184 <isPledgeLocked>:
  8013184:	b580      	push	{r7, lr}
@@ -43054,12 +43054,12 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8013302:	bf00      	nop
  8013304:	20000040 	.word	0x20000040
  8013308:	02160ec0 	.word	0x02160ec0
- 801330c:	0802edc4 	.word	0x0802edc4
- 8013310:	0802ef64 	.word	0x0802ef64
- 8013314:	0802edbc 	.word	0x0802edbc
- 8013318:	0802ef74 	.word	0x0802ef74
- 801331c:	0802efc0 	.word	0x0802efc0
- 8013320:	0802efd4 	.word	0x0802efd4
+ 801330c:	0802edd4 	.word	0x0802edd4
+ 8013310:	0802ef74 	.word	0x0802ef74
+ 8013314:	0802edcc 	.word	0x0802edcc
+ 8013318:	0802ef84 	.word	0x0802ef84
+ 801331c:	0802efd0 	.word	0x0802efd0
+ 8013320:	0802efe4 	.word	0x0802efe4
 
 08013324 <unlockPledge>:
  8013324:	b580      	push	{r7, lr}
@@ -43204,8 +43204,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801345c:	bd80      	pop	{r7, pc}
  801345e:	bf00      	nop
  8013460:	20000040 	.word	0x20000040
- 8013464:	0802f048 	.word	0x0802f048
- 8013468:	0802f020 	.word	0x0802f020
+ 8013464:	0802f058 	.word	0x0802f058
+ 8013468:	0802f030 	.word	0x0802f030
 
 0801346c <openos_push_task_impl>:
  801346c:	b580      	push	{r7, lr}
@@ -43282,8 +43282,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8013508:	bd80      	pop	{r7, pc}
  801350a:	bf00      	nop
  801350c:	20000040 	.word	0x20000040
- 8013510:	0802f050 	.word	0x0802f050
- 8013514:	0802f0ac 	.word	0x0802f0ac
+ 8013510:	0802f060 	.word	0x0802f060
+ 8013514:	0802f0bc 	.word	0x0802f0bc
 
 08013518 <1ccc4abfd47b530140fa698535d3d315df3ed28c>:
  8013518:	b580      	push	{r7, lr}
@@ -43919,12 +43919,12 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8013a9e:	46bd      	mov	sp, r7
  8013aa0:	bd90      	pop	{r4, r7, pc}
  8013aa2:	bf00      	nop
- 8013aa4:	0802f0c4 	.word	0x0802f0c4
- 8013aa8:	0802f128 	.word	0x0802f128
- 8013aac:	0802f190 	.word	0x0802f190
- 8013ab0:	0802f138 	.word	0x0802f138
- 8013ab4:	0802f198 	.word	0x0802f198
- 8013ab8:	0802f15c 	.word	0x0802f15c
+ 8013aa4:	0802f0d4 	.word	0x0802f0d4
+ 8013aa8:	0802f138 	.word	0x0802f138
+ 8013aac:	0802f1a0 	.word	0x0802f1a0
+ 8013ab0:	0802f148 	.word	0x0802f148
+ 8013ab4:	0802f1a8 	.word	0x0802f1a8
+ 8013ab8:	0802f16c 	.word	0x0802f16c
 
 08013abc <sendBasicInfoIndicationPacket>:
  8013abc:	b590      	push	{r4, r7, lr}
@@ -44009,12 +44009,12 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8013b92:	46bd      	mov	sp, r7
  8013b94:	bd90      	pop	{r4, r7, pc}
  8013b96:	bf00      	nop
- 8013b98:	0802f0c4 	.word	0x0802f0c4
- 8013b9c:	0802f128 	.word	0x0802f128
- 8013ba0:	0802f190 	.word	0x0802f190
- 8013ba4:	0802f1a0 	.word	0x0802f1a0
- 8013ba8:	0802f198 	.word	0x0802f198
- 8013bac:	0802f1c0 	.word	0x0802f1c0
+ 8013b98:	0802f0d4 	.word	0x0802f0d4
+ 8013b9c:	0802f138 	.word	0x0802f138
+ 8013ba0:	0802f1a0 	.word	0x0802f1a0
+ 8013ba4:	0802f1b0 	.word	0x0802f1b0
+ 8013ba8:	0802f1a8 	.word	0x0802f1a8
+ 8013bac:	0802f1d0 	.word	0x0802f1d0
 
 08013bb0 <sendServiceInfoConfirmationPacket>:
  8013bb0:	b580      	push	{r7, lr}
@@ -44126,12 +44126,12 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8013cba:	3738      	adds	r7, #56	; 0x38
  8013cbc:	46bd      	mov	sp, r7
  8013cbe:	bd80      	pop	{r7, pc}
- 8013cc0:	0802f0c4 	.word	0x0802f0c4
- 8013cc4:	0802f128 	.word	0x0802f128
- 8013cc8:	0802f190 	.word	0x0802f190
- 8013ccc:	0802f1ec 	.word	0x0802f1ec
- 8013cd0:	0802f198 	.word	0x0802f198
- 8013cd4:	0802f224 	.word	0x0802f224
+ 8013cc0:	0802f0d4 	.word	0x0802f0d4
+ 8013cc4:	0802f138 	.word	0x0802f138
+ 8013cc8:	0802f1a0 	.word	0x0802f1a0
+ 8013ccc:	0802f1fc 	.word	0x0802f1fc
+ 8013cd0:	0802f1a8 	.word	0x0802f1a8
+ 8013cd4:	0802f234 	.word	0x0802f234
 
 08013cd8 <sendServiceInfoIndicationPacket>:
  8013cd8:	b580      	push	{r7, lr}
@@ -44290,12 +44290,12 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8013e4a:	46bd      	mov	sp, r7
  8013e4c:	bd80      	pop	{r7, pc}
  8013e4e:	bf00      	nop
- 8013e50:	0802f0c4 	.word	0x0802f0c4
- 8013e54:	0802f128 	.word	0x0802f128
- 8013e58:	0802f190 	.word	0x0802f190
- 8013e5c:	0802f254 	.word	0x0802f254
- 8013e60:	0802f198 	.word	0x0802f198
- 8013e64:	0802f288 	.word	0x0802f288
+ 8013e50:	0802f0d4 	.word	0x0802f0d4
+ 8013e54:	0802f138 	.word	0x0802f138
+ 8013e58:	0802f1a0 	.word	0x0802f1a0
+ 8013e5c:	0802f264 	.word	0x0802f264
+ 8013e60:	0802f1a8 	.word	0x0802f1a8
+ 8013e64:	0802f298 	.word	0x0802f298
 
 08013e68 <sendStatusConfirmationIndication>:
  8013e68:	b590      	push	{r4, r7, lr}
@@ -44530,14 +44530,14 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80140ee:	46bd      	mov	sp, r7
  80140f0:	bd90      	pop	{r4, r7, pc}
  80140f2:	bf00      	nop
- 80140f4:	0802f0c4 	.word	0x0802f0c4
- 80140f8:	0802f128 	.word	0x0802f128
- 80140fc:	0802f190 	.word	0x0802f190
- 8014100:	0802f2b4 	.word	0x0802f2b4
- 8014104:	0802f2d4 	.word	0x0802f2d4
- 8014108:	0802f198 	.word	0x0802f198
- 801410c:	0802f2f0 	.word	0x0802f2f0
- 8014110:	0802f318 	.word	0x0802f318
+ 80140f4:	0802f0d4 	.word	0x0802f0d4
+ 80140f8:	0802f138 	.word	0x0802f138
+ 80140fc:	0802f1a0 	.word	0x0802f1a0
+ 8014100:	0802f2c4 	.word	0x0802f2c4
+ 8014104:	0802f2e4 	.word	0x0802f2e4
+ 8014108:	0802f1a8 	.word	0x0802f1a8
+ 801410c:	0802f300 	.word	0x0802f300
+ 8014110:	0802f328 	.word	0x0802f328
 
 08014114 <sendCells>:
  8014114:	b580      	push	{r7, lr}
@@ -44794,15 +44794,15 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80143ae:	46bd      	mov	sp, r7
  80143b0:	bd80      	pop	{r7, pc}
  80143b2:	bf00      	nop
- 80143b4:	0802f0c4 	.word	0x0802f0c4
- 80143b8:	0802f128 	.word	0x0802f128
+ 80143b4:	0802f0d4 	.word	0x0802f0d4
+ 80143b8:	0802f138 	.word	0x0802f138
  80143bc:	cccccccd 	.word	0xcccccccd
- 80143c0:	0802f190 	.word	0x0802f190
- 80143c4:	0802f340 	.word	0x0802f340
- 80143c8:	0802f36c 	.word	0x0802f36c
- 80143cc:	0802f198 	.word	0x0802f198
- 80143d0:	0802f398 	.word	0x0802f398
- 80143d4:	0802f3c0 	.word	0x0802f3c0
+ 80143c0:	0802f1a0 	.word	0x0802f1a0
+ 80143c4:	0802f350 	.word	0x0802f350
+ 80143c8:	0802f37c 	.word	0x0802f37c
+ 80143cc:	0802f1a8 	.word	0x0802f1a8
+ 80143d0:	0802f3a8 	.word	0x0802f3a8
+ 80143d4:	0802f3d0 	.word	0x0802f3d0
 
 080143d8 <sendNeighborhood>:
  80143d8:	b580      	push	{r7, lr}
@@ -45021,15 +45021,15 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8014612:	46bd      	mov	sp, r7
  8014614:	bd80      	pop	{r7, pc}
  8014616:	bf00      	nop
- 8014618:	0802f0c4 	.word	0x0802f0c4
- 801461c:	0802f128 	.word	0x0802f128
+ 8014618:	0802f0d4 	.word	0x0802f0d4
+ 801461c:	0802f138 	.word	0x0802f138
  8014620:	24924925 	.word	0x24924925
- 8014624:	0802f190 	.word	0x0802f190
- 8014628:	0802f3e8 	.word	0x0802f3e8
- 801462c:	0802f420 	.word	0x0802f420
- 8014630:	0802f198 	.word	0x0802f198
- 8014634:	0802f454 	.word	0x0802f454
- 8014638:	0802f484 	.word	0x0802f484
+ 8014624:	0802f1a0 	.word	0x0802f1a0
+ 8014628:	0802f3f8 	.word	0x0802f3f8
+ 801462c:	0802f430 	.word	0x0802f430
+ 8014630:	0802f1a8 	.word	0x0802f1a8
+ 8014634:	0802f464 	.word	0x0802f464
+ 8014638:	0802f494 	.word	0x0802f494
 
 0801463c <updRxHandler>:
  801463c:	b580      	push	{r7, lr}
@@ -45136,13 +45136,13 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801472a:	3720      	adds	r7, #32
  801472c:	46bd      	mov	sp, r7
  801472e:	bd80      	pop	{r7, pc}
- 8014730:	0802f0c4 	.word	0x0802f0c4
- 8014734:	0802f4b0 	.word	0x0802f4b0
- 8014738:	0802f4c8 	.word	0x0802f4c8
- 801473c:	0802f4f0 	.word	0x0802f4f0
- 8014740:	0802f508 	.word	0x0802f508
- 8014744:	0802f55c 	.word	0x0802f55c
- 8014748:	0802f520 	.word	0x0802f520
+ 8014730:	0802f0d4 	.word	0x0802f0d4
+ 8014734:	0802f4c0 	.word	0x0802f4c0
+ 8014738:	0802f4d8 	.word	0x0802f4d8
+ 801473c:	0802f500 	.word	0x0802f500
+ 8014740:	0802f518 	.word	0x0802f518
+ 8014744:	0802f56c 	.word	0x0802f56c
+ 8014748:	0802f530 	.word	0x0802f530
 
 0801474c <enmsTask>:
  801474c:	e92d 4fb0 	stmdb	sp!, {r4, r5, r7, r8, r9, sl, fp, lr}
@@ -45634,16 +45634,16 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8014c66:	46bd      	mov	sp, r7
  8014c68:	bdf0      	pop	{r4, r5, r6, r7, pc}
  8014c6a:	bf00      	nop
- 8014c6c:	0802f190 	.word	0x0802f190
- 8014c70:	0802f564 	.word	0x0802f564
+ 8014c6c:	0802f1a0 	.word	0x0802f1a0
+ 8014c70:	0802f574 	.word	0x0802f574
  8014c74:	0801463d 	.word	0x0801463d
- 8014c78:	0802f198 	.word	0x0802f198
- 8014c7c:	0802f5d8 	.word	0x0802f5d8
+ 8014c78:	0802f1a8 	.word	0x0802f1a8
+ 8014c7c:	0802f5e8 	.word	0x0802f5e8
  8014c80:	0801474d 	.word	0x0801474d
- 8014c84:	0802f60c 	.word	0x0802f60c
- 8014c88:	0802f63c 	.word	0x0802f63c
- 8014c8c:	0802f644 	.word	0x0802f644
- 8014c90:	0802f660 	.word	0x0802f660
+ 8014c84:	0802f61c 	.word	0x0802f61c
+ 8014c88:	0802f64c 	.word	0x0802f64c
+ 8014c8c:	0802f654 	.word	0x0802f654
+ 8014c90:	0802f670 	.word	0x0802f670
 
 08014c94 <ENMS_NODE_Start>:
  8014c94:	e92d 4fb0 	stmdb	sp!, {r4, r5, r7, r8, r9, sl, fp, lr}
@@ -45886,13 +45886,13 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8014f34:	46bd      	mov	sp, r7
  8014f36:	e8bd 8fb0 	ldmia.w	sp!, {r4, r5, r7, r8, r9, sl, fp, pc}
  8014f3a:	bf00      	nop
- 8014f3c:	0802f198 	.word	0x0802f198
- 8014f40:	0802f674 	.word	0x0802f674
- 8014f44:	0802f694 	.word	0x0802f694
- 8014f48:	0802f63c 	.word	0x0802f63c
- 8014f4c:	0802f6ac 	.word	0x0802f6ac
- 8014f50:	0802f190 	.word	0x0802f190
- 8014f54:	0802f6cc 	.word	0x0802f6cc
+ 8014f3c:	0802f1a8 	.word	0x0802f1a8
+ 8014f40:	0802f684 	.word	0x0802f684
+ 8014f44:	0802f6a4 	.word	0x0802f6a4
+ 8014f48:	0802f64c 	.word	0x0802f64c
+ 8014f4c:	0802f6bc 	.word	0x0802f6bc
+ 8014f50:	0802f1a0 	.word	0x0802f1a0
+ 8014f54:	0802f6dc 	.word	0x0802f6dc
 
 08014f58 <ENMS_NODE_Stop>:
  8014f58:	b580      	push	{r7, lr}
@@ -45929,9 +45929,9 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8014fa6:	46bd      	mov	sp, r7
  8014fa8:	bd80      	pop	{r7, pc}
  8014faa:	bf00      	nop
- 8014fac:	0802f63c 	.word	0x0802f63c
- 8014fb0:	0802f198 	.word	0x0802f198
- 8014fb4:	0802f6ac 	.word	0x0802f6ac
+ 8014fac:	0802f64c 	.word	0x0802f64c
+ 8014fb0:	0802f1a8 	.word	0x0802f1a8
+ 8014fb4:	0802f6bc 	.word	0x0802f6bc
 
 08014fb8 <ENMS_NODE_RegisterService>:
  8014fb8:	b580      	push	{r7, lr}
@@ -46069,11 +46069,11 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80150ea:	46bd      	mov	sp, r7
  80150ec:	bd80      	pop	{r7, pc}
  80150ee:	bf00      	nop
- 80150f0:	0802f198 	.word	0x0802f198
- 80150f4:	0802f6dc 	.word	0x0802f6dc
- 80150f8:	0802f190 	.word	0x0802f190
- 80150fc:	0802f6fc 	.word	0x0802f6fc
- 8015100:	0802f728 	.word	0x0802f728
+ 80150f0:	0802f1a8 	.word	0x0802f1a8
+ 80150f4:	0802f6ec 	.word	0x0802f6ec
+ 80150f8:	0802f1a0 	.word	0x0802f1a0
+ 80150fc:	0802f70c 	.word	0x0802f70c
+ 8015100:	0802f738 	.word	0x0802f738
 
 08015104 <ENMS_NODE_SetServiceState>:
  8015104:	b580      	push	{r7, lr}
@@ -46155,8 +46155,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80151aa:	46bd      	mov	sp, r7
  80151ac:	bd80      	pop	{r7, pc}
  80151ae:	bf00      	nop
- 80151b0:	0802f198 	.word	0x0802f198
- 80151b4:	0802f748 	.word	0x0802f748
+ 80151b0:	0802f1a8 	.word	0x0802f1a8
+ 80151b4:	0802f758 	.word	0x0802f758
 
 080151b8 <LOGGER_Lock>:
  80151b8:	b480      	push	{r7}
@@ -46336,8 +46336,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8015324:	bd90      	pop	{r4, r7, pc}
  8015326:	bf00      	nop
  8015328:	20003f80 	.word	0x20003f80
- 801532c:	08031a14 	.word	0x08031a14
- 8015330:	0802f768 	.word	0x0802f768
+ 801532c:	08031a24 	.word	0x08031a24
+ 8015330:	0802f778 	.word	0x0802f778
 
 08015334 <LOGGER_IsEnabled>:
  8015334:	b480      	push	{r7}
@@ -47225,12 +47225,12 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8015af4:	41cdcd65 	.word	0x41cdcd65
  8015af8:	00000000 	.word	0x00000000
  8015afc:	c1cdcd65 	.word	0xc1cdcd65
- 8015b00:	0802f778 	.word	0x0802f778
- 8015b04:	0802f77c 	.word	0x0802f77c
+ 8015b00:	0802f788 	.word	0x0802f788
+ 8015b04:	0802f78c 	.word	0x0802f78c
  8015b08:	7fefffff 	.word	0x7fefffff
- 8015b0c:	0802f784 	.word	0x0802f784
- 8015b10:	0802f78c 	.word	0x0802f78c
- 8015b14:	08031a20 	.word	0x08031a20
+ 8015b0c:	0802f794 	.word	0x0802f794
+ 8015b10:	0802f79c 	.word	0x0802f79c
+ 8015b14:	08031a30 	.word	0x08031a30
  8015b18:	3fe00000 	.word	0x3fe00000
  8015b1c:	6c7b      	ldr	r3, [r7, #68]	; 0x44
  8015b1e:	3b01      	subs	r3, #1
@@ -49730,9 +49730,9 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801722e:	f7ea fa6b 	bl	8001708 <EXPECT_OnAbortHandler>
  8017232:	bf00      	nop
  8017234:	20000040 	.word	0x20000040
- 8017238:	080318ac 	.word	0x080318ac
- 801723c:	0802f790 	.word	0x0802f790
- 8017240:	0802f7f8 	.word	0x0802f7f8
+ 8017238:	080318bc 	.word	0x080318bc
+ 801723c:	0802f7a0 	.word	0x0802f7a0
+ 8017240:	0802f808 	.word	0x0802f808
  8017244:	2200      	movs	r2, #0
  8017246:	4916      	ldr	r1, [pc, #88]	; (80172a0 <f31ec2926d8265f853f9e0e8e92d0d3b7da49f79+0x378>)
  8017248:	4816      	ldr	r0, [pc, #88]	; (80172a4 <f31ec2926d8265f853f9e0e8e92d0d3b7da49f79+0x37c>)
@@ -49770,7 +49770,7 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801729e:	bf00      	nop
  80172a0:	08017855 	.word	0x08017855
  80172a4:	08017725 	.word	0x08017725
- 80172a8:	080318ac 	.word	0x080318ac
+ 80172a8:	080318bc 	.word	0x080318bc
 
 080172ac <f245cef569e100f3b51b8078c1d070e2f387d00a>:
  80172ac:	b5b0      	push	{r4, r5, r7, lr}
@@ -50090,15 +50090,15 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80175d6:	46bd      	mov	sp, r7
  80175d8:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
  80175dc:	20000040 	.word	0x20000040
- 80175e0:	080318ac 	.word	0x080318ac
+ 80175e0:	080318bc 	.word	0x080318bc
  80175e4:	08017319 	.word	0x08017319
  80175e8:	08017855 	.word	0x08017855
  80175ec:	08017725 	.word	0x08017725
- 80175f0:	0802f870 	.word	0x0802f870
- 80175f4:	0802f790 	.word	0x0802f790
- 80175f8:	0802f814 	.word	0x0802f814
+ 80175f0:	0802f880 	.word	0x0802f880
+ 80175f4:	0802f7a0 	.word	0x0802f7a0
+ 80175f8:	0802f824 	.word	0x0802f824
  80175fc:	002dc6c0 	.word	0x002dc6c0
- 8017600:	0802f840 	.word	0x0802f840
+ 8017600:	0802f850 	.word	0x0802f850
 
 08017604 <0ec428ec777fdcd1df5061356b63c4cb7d8159a6>:
  8017604:	b580      	push	{r7, lr}
@@ -50307,9 +50307,9 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8017840:	bd80      	pop	{r7, pc}
  8017842:	bf00      	nop
  8017844:	20000040 	.word	0x20000040
- 8017848:	080318ac 	.word	0x080318ac
- 801784c:	0802f8b0 	.word	0x0802f8b0
- 8017850:	0802f878 	.word	0x0802f878
+ 8017848:	080318bc 	.word	0x080318bc
+ 801784c:	0802f8c0 	.word	0x0802f8c0
+ 8017850:	0802f888 	.word	0x0802f888
 
 08017854 <c6bd410106c16f549c325b1ca136c82e89930dcb>:
  8017854:	b580      	push	{r7, lr}
@@ -50419,9 +50419,9 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8017970:	bd80      	pop	{r7, pc}
  8017972:	bf00      	nop
  8017974:	20000040 	.word	0x20000040
- 8017978:	080318ac 	.word	0x080318ac
- 801797c:	0802f8b0 	.word	0x0802f8b0
- 8017980:	0802f878 	.word	0x0802f878
+ 8017978:	080318bc 	.word	0x080318bc
+ 801797c:	0802f8c0 	.word	0x0802f8c0
+ 8017980:	0802f888 	.word	0x0802f888
 
 08017984 <joinRootStart>:
  8017984:	e92d 43f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, lr}
@@ -50595,9 +50595,9 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8017b24:	bd80      	pop	{r7, pc}
  8017b26:	bf00      	nop
  8017b28:	20000040 	.word	0x20000040
- 8017b2c:	08031918 	.word	0x08031918
- 8017b30:	0803191c 	.word	0x0803191c
- 8017b34:	080318ac 	.word	0x080318ac
+ 8017b2c:	08031928 	.word	0x08031928
+ 8017b30:	0803192c 	.word	0x0803192c
+ 8017b34:	080318bc 	.word	0x080318bc
  8017b38:	08017319 	.word	0x08017319
 
 08017b3c <activity_synchronize_startOfFrame>:
@@ -50909,8 +50909,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8017ec0:	bf00      	nop
  8017ec2:	e006      	b.n	8017ed2 <activity_synchronize_endOfFrame+0x35a>
  8017ec4:	20000040 	.word	0x20000040
- 8017ec8:	0802f8b0 	.word	0x0802f8b0
- 8017ecc:	0802f8b8 	.word	0x0802f8b8
+ 8017ec8:	0802f8c0 	.word	0x0802f8c0
+ 8017ecc:	0802f8c8 	.word	0x0802f8c8
  8017ed0:	bf00      	nop
  8017ed2:	f8d7 30c8 	ldr.w	r3, [r7, #200]	; 0xc8
  8017ed6:	f8d3 3184 	ldr.w	r3, [r3, #388]	; 0x184
@@ -50947,7 +50947,7 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8017f38:	37d4      	adds	r7, #212	; 0xd4
  8017f3a:	46bd      	mov	sp, r7
  8017f3c:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
- 8017f40:	080318ac 	.word	0x080318ac
+ 8017f40:	080318bc 	.word	0x080318bc
  8017f44:	08017319 	.word	0x08017319
 
 08017f48 <d83dd96794ccade75eabb291ff5f2fbc926c0ffb>:
@@ -51386,8 +51386,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80183b2:	46bd      	mov	sp, r7
  80183b4:	bd80      	pop	{r7, pc}
  80183b6:	bf00      	nop
- 80183b8:	0802f900 	.word	0x0802f900
- 80183bc:	0802f8e0 	.word	0x0802f8e0
+ 80183b8:	0802f910 	.word	0x0802f910
+ 80183bc:	0802f8f0 	.word	0x0802f8f0
 
 080183c0 <activity_ti3>:
  80183c0:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
@@ -51515,9 +51515,9 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80184f6:	3710      	adds	r7, #16
  80184f8:	46bd      	mov	sp, r7
  80184fa:	bd80      	pop	{r7, pc}
- 80184fc:	0802f900 	.word	0x0802f900
+ 80184fc:	0802f910 	.word	0x0802f910
  8018500:	20000040 	.word	0x20000040
- 8018504:	0802f908 	.word	0x0802f908
+ 8018504:	0802f918 	.word	0x0802f918
 
 08018508 <activity_ti4>:
  8018508:	b580      	push	{r7, lr}
@@ -51553,7 +51553,7 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8018550:	bd80      	pop	{r7, pc}
  8018552:	bf00      	nop
  8018554:	20000040 	.word	0x20000040
- 8018558:	080318ac 	.word	0x080318ac
+ 8018558:	080318bc 	.word	0x080318bc
  801855c:	08017605 	.word	0x08017605
 
 08018560 <activity_tie3>:
@@ -51576,9 +51576,9 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801858a:	3710      	adds	r7, #16
  801858c:	46bd      	mov	sp, r7
  801858e:	bd80      	pop	{r7, pc}
- 8018590:	0802f900 	.word	0x0802f900
+ 8018590:	0802f910 	.word	0x0802f910
  8018594:	20000040 	.word	0x20000040
- 8018598:	0802f930 	.word	0x0802f930
+ 8018598:	0802f940 	.word	0x0802f940
 
 0801859c <activity_ti5>:
  801859c:	b580      	push	{r7, lr}
@@ -51743,9 +51743,9 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801872e:	3710      	adds	r7, #16
  8018730:	46bd      	mov	sp, r7
  8018732:	bd80      	pop	{r7, pc}
- 8018734:	0802f900 	.word	0x0802f900
+ 8018734:	0802f910 	.word	0x0802f910
  8018738:	20000040 	.word	0x20000040
- 801873c:	0802f95c 	.word	0x0802f95c
+ 801873c:	0802f96c 	.word	0x0802f96c
 
 08018740 <activity_ti7>:
  8018740:	b580      	push	{r7, lr}
@@ -51861,7 +51861,7 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801884c:	bd80      	pop	{r7, pc}
  801884e:	bf00      	nop
  8018850:	20000040 	.word	0x20000040
- 8018854:	080318ac 	.word	0x080318ac
+ 8018854:	080318bc 	.word	0x080318bc
  8018858:	08017605 	.word	0x08017605
 
 0801885c <activity_tie6>:
@@ -51882,8 +51882,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8018882:	46bd      	mov	sp, r7
  8018884:	bd80      	pop	{r7, pc}
  8018886:	bf00      	nop
- 8018888:	0802f900 	.word	0x0802f900
- 801888c:	0802f98c 	.word	0x0802f98c
+ 8018888:	0802f910 	.word	0x0802f910
+ 801888c:	0802f99c 	.word	0x0802f99c
 
 08018890 <activity_ti9>:
  8018890:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
@@ -52173,8 +52173,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8018bde:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
  8018be2:	bf00      	nop
  8018be4:	20000040 	.word	0x20000040
- 8018be8:	0802f8b0 	.word	0x0802f8b0
- 8018bec:	0802f8b8 	.word	0x0802f8b8
+ 8018be8:	0802f8c0 	.word	0x0802f8c0
+ 8018bec:	0802f8c8 	.word	0x0802f8c8
 
 08018bf0 <activity_ri2>:
  8018bf0:	b580      	push	{r7, lr}
@@ -52252,9 +52252,9 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8018ca2:	3708      	adds	r7, #8
  8018ca4:	46bd      	mov	sp, r7
  8018ca6:	bd80      	pop	{r7, pc}
- 8018ca8:	0802f900 	.word	0x0802f900
+ 8018ca8:	0802f910 	.word	0x0802f910
  8018cac:	20000040 	.word	0x20000040
- 8018cb0:	0802f9ac 	.word	0x0802f9ac
+ 8018cb0:	0802f9bc 	.word	0x0802f9bc
 
 08018cb4 <activity_ri3>:
  8018cb4:	b580      	push	{r7, lr}
@@ -52356,7 +52356,7 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8018d94:	bd80      	pop	{r7, pc}
  8018d96:	bf00      	nop
  8018d98:	20000040 	.word	0x20000040
- 8018d9c:	080318ac 	.word	0x080318ac
+ 8018d9c:	080318bc 	.word	0x080318bc
  8018da0:	08017605 	.word	0x08017605
 
 08018da4 <activity_rie3>:
@@ -52379,9 +52379,9 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8018dce:	3710      	adds	r7, #16
  8018dd0:	46bd      	mov	sp, r7
  8018dd2:	bd80      	pop	{r7, pc}
- 8018dd4:	0802f900 	.word	0x0802f900
+ 8018dd4:	0802f910 	.word	0x0802f910
  8018dd8:	20000040 	.word	0x20000040
- 8018ddc:	0802f9dc 	.word	0x0802f9dc
+ 8018ddc:	0802f9ec 	.word	0x0802f9ec
 
 08018de0 <83d88540f7d4b89e9c3eaa07c396c9c08fef74b3>:
  8018de0:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
@@ -52650,8 +52650,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8019110:	e012      	b.n	8019138 <83d88540f7d4b89e9c3eaa07c396c9c08fef74b3+0x358>
  8019112:	bf00      	nop
  8019114:	20000040 	.word	0x20000040
- 8019118:	0802f8b0 	.word	0x0802f8b0
- 801911c:	0802f8b8 	.word	0x0802f8b8
+ 8019118:	0802f8c0 	.word	0x0802f8c0
+ 801911c:	0802f8c8 	.word	0x0802f8c8
  8019120:	f7f8 fcf6 	bl	8011b10 <98bf14dc0e749cb1b7db48b40e4393705fb7926a>
  8019124:	4603      	mov	r3, r0
  8019126:	2100      	movs	r1, #0
@@ -53007,7 +53007,7 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8019526:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
  801952a:	bf00      	nop
  801952c:	08017605 	.word	0x08017605
- 8019530:	080318ac 	.word	0x080318ac
+ 8019530:	080318bc 	.word	0x080318bc
 
 08019534 <activity_ri6>:
  8019534:	b580      	push	{r7, lr}
@@ -53092,9 +53092,9 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80195fa:	3710      	adds	r7, #16
  80195fc:	46bd      	mov	sp, r7
  80195fe:	bd80      	pop	{r7, pc}
- 8019600:	0802f900 	.word	0x0802f900
+ 8019600:	0802f910 	.word	0x0802f910
  8019604:	20000040 	.word	0x20000040
- 8019608:	0802fa0c 	.word	0x0802fa0c
+ 8019608:	0802fa1c 	.word	0x0802fa1c
 
 0801960c <activity_ri7>:
  801960c:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
@@ -53223,9 +53223,9 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8019742:	3710      	adds	r7, #16
  8019744:	46bd      	mov	sp, r7
  8019746:	bd80      	pop	{r7, pc}
- 8019748:	0802f900 	.word	0x0802f900
+ 8019748:	0802f910 	.word	0x0802f910
  801974c:	20000040 	.word	0x20000040
- 8019750:	0802fa40 	.word	0x0802fa40
+ 8019750:	0802fa50 	.word	0x0802fa50
 
 08019754 <activity_ri8>:
  8019754:	b580      	push	{r7, lr}
@@ -53261,7 +53261,7 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801979c:	bd80      	pop	{r7, pc}
  801979e:	bf00      	nop
  80197a0:	20000040 	.word	0x20000040
- 80197a4:	080318ac 	.word	0x080318ac
+ 80197a4:	080318bc 	.word	0x080318bc
  80197a8:	08017605 	.word	0x08017605
 
 080197ac <activity_rie6>:
@@ -53284,9 +53284,9 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80197d6:	3710      	adds	r7, #16
  80197d8:	46bd      	mov	sp, r7
  80197da:	bd80      	pop	{r7, pc}
- 80197dc:	0802f900 	.word	0x0802f900
+ 80197dc:	0802f910 	.word	0x0802f910
  80197e0:	20000040 	.word	0x20000040
- 80197e4:	0802fa6c 	.word	0x0802fa6c
+ 80197e4:	0802fa7c 	.word	0x0802fa7c
 
 080197e8 <activity_ri9>:
  80197e8:	b580      	push	{r7, lr}
@@ -53664,8 +53664,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8019b68:	bd90      	pop	{r4, r7, pc}
  8019b6a:	bf00      	nop
  8019b6c:	20000040 	.word	0x20000040
- 8019b70:	0802f8b0 	.word	0x0802f8b0
- 8019b74:	0802fa9c 	.word	0x0802fa9c
+ 8019b70:	0802f8c0 	.word	0x0802f8c0
+ 8019b74:	0802faac 	.word	0x0802faac
 
 08019b78 <processEb>:
  8019b78:	b580      	push	{r7, lr}
@@ -54262,9 +54262,9 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801a122:	e8bd 8fb0 	ldmia.w	sp!, {r4, r5, r7, r8, r9, sl, fp, pc}
  801a126:	bf00      	nop
  801a128:	20000040 	.word	0x20000040
- 801a12c:	080318ac 	.word	0x080318ac
- 801a130:	08031928 	.word	0x08031928
- 801a134:	08031920 	.word	0x08031920
+ 801a12c:	080318bc 	.word	0x080318bc
+ 801a130:	08031938 	.word	0x08031938
+ 801a134:	08031930 	.word	0x08031930
 
 0801a138 <synchronizeCellTimeOnAckPacket>:
  801a138:	e92d 4fb0 	stmdb	sp!, {r4, r5, r7, r8, r9, sl, fp, lr}
@@ -54329,8 +54329,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801a1ce:	e8bd 8fb0 	ldmia.w	sp!, {r4, r5, r7, r8, r9, sl, fp, pc}
  801a1d2:	bf00      	nop
  801a1d4:	20000040 	.word	0x20000040
- 801a1d8:	08031928 	.word	0x08031928
- 801a1dc:	08031920 	.word	0x08031920
+ 801a1d8:	08031938 	.word	0x08031938
+ 801a1dc:	08031930 	.word	0x08031930
 
 0801a1e0 <changeIsSync>:
  801a1e0:	b580      	push	{r7, lr}
@@ -55012,10 +55012,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801a896:	46bd      	mov	sp, r7
  801a898:	e8bd 8fb0 	ldmia.w	sp!, {r4, r5, r7, r8, r9, sl, fp, pc}
  801a89c:	20000040 	.word	0x20000040
- 801a8a0:	08031918 	.word	0x08031918
- 801a8a4:	0803191c 	.word	0x0803191c
- 801a8a8:	080318cc 	.word	0x080318cc
- 801a8ac:	080318d0 	.word	0x080318d0
+ 801a8a0:	08031928 	.word	0x08031928
+ 801a8a4:	0803192c 	.word	0x0803192c
+ 801a8a8:	080318dc 	.word	0x080318dc
+ 801a8ac:	080318e0 	.word	0x080318e0
 
 0801a8b0 <setState>:
  801a8b0:	b480      	push	{r7}
@@ -55296,7 +55296,7 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801ab64:	bd90      	pop	{r4, r7, pc}
  801ab66:	bf00      	nop
  801ab68:	20000040 	.word	0x20000040
- 801ab6c:	080318ac 	.word	0x080318ac
+ 801ab6c:	080318bc 	.word	0x080318bc
  801ab70:	08017319 	.word	0x08017319
  801ab74:	0801ab79 	.word	0x0801ab79
 
@@ -55381,7 +55381,7 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801ac4e:	e8bd 8fb0 	ldmia.w	sp!, {r4, r5, r7, r8, r9, sl, fp, pc}
  801ac52:	bf00      	nop
  801ac54:	20000040 	.word	0x20000040
- 801ac58:	080318ac 	.word	0x080318ac
+ 801ac58:	080318bc 	.word	0x080318bc
 
 0801ac5c <60f007314f15c808f67a076d33295282887c81e9>:
  801ac5c:	b480      	push	{r7}
@@ -55516,9 +55516,9 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801ad76:	46bd      	mov	sp, r7
  801ad78:	bc80      	pop	{r7}
  801ad7a:	4770      	bx	lr
- 801ad7c:	0803192c 	.word	0x0803192c
- 801ad80:	08031930 	.word	0x08031930
- 801ad84:	08031940 	.word	0x08031940
+ 801ad7c:	0803193c 	.word	0x0803193c
+ 801ad80:	08031940 	.word	0x08031940
+ 801ad84:	08031950 	.word	0x08031950
 
 0801ad88 <bcbd76277dc83b5a545ee18a3f2075697c040c84>:
  801ad88:	b480      	push	{r7}
@@ -55736,14 +55736,14 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801af94:	bd90      	pop	{r4, r7, pc}
  801af96:	bf00      	nop
  801af98:	20000040 	.word	0x20000040
- 801af9c:	0802fb34 	.word	0x0802fb34
- 801afa0:	0802fb3c 	.word	0x0802fb3c
- 801afa4:	0802fb28 	.word	0x0802fb28
- 801afa8:	0802fb50 	.word	0x0802fb50
- 801afac:	0802fb84 	.word	0x0802fb84
- 801afb0:	0802fbe8 	.word	0x0802fbe8
- 801afb4:	0802fc1c 	.word	0x0802fc1c
- 801afb8:	0802fc48 	.word	0x0802fc48
+ 801af9c:	0802fb44 	.word	0x0802fb44
+ 801afa0:	0802fb4c 	.word	0x0802fb4c
+ 801afa4:	0802fb38 	.word	0x0802fb38
+ 801afa8:	0802fb60 	.word	0x0802fb60
+ 801afac:	0802fb94 	.word	0x0802fb94
+ 801afb0:	0802fbf8 	.word	0x0802fbf8
+ 801afb4:	0802fc2c 	.word	0x0802fc2c
+ 801afb8:	0802fc58 	.word	0x0802fc58
 
 0801afbc <982333be2760117c5a90b228f88c7e9bbb3de31e>:
  801afbc:	b580      	push	{r7, lr}
@@ -56005,12 +56005,12 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801b1c8:	bc80      	pop	{r7}
  801b1ca:	4770      	bx	lr
  801b1cc:	20000040 	.word	0x20000040
- 801b1d0:	0802fc60 	.word	0x0802fc60
- 801b1d4:	0802fc80 	.word	0x0802fc80
- 801b1d8:	0802fc90 	.word	0x0802fc90
- 801b1dc:	0802fca4 	.word	0x0802fca4
- 801b1e0:	0802fcb8 	.word	0x0802fcb8
- 801b1e4:	0802fcc4 	.word	0x0802fcc4
+ 801b1d0:	0802fc70 	.word	0x0802fc70
+ 801b1d4:	0802fc90 	.word	0x0802fc90
+ 801b1d8:	0802fca0 	.word	0x0802fca0
+ 801b1dc:	0802fcb4 	.word	0x0802fcb4
+ 801b1e0:	0802fcc8 	.word	0x0802fcc8
+ 801b1e4:	0802fcd4 	.word	0x0802fcd4
 
 0801b1e8 <d3d7042d854d8905136f03fa99a8893947aafdc7>:
  801b1e8:	b580      	push	{r7, lr}
@@ -56231,9 +56231,9 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801b3ea:	46bd      	mov	sp, r7
  801b3ec:	bdb0      	pop	{r4, r5, r7, pc}
  801b3ee:	bf00      	nop
- 801b3f0:	0802fd1c 	.word	0x0802fd1c
- 801b3f4:	0802fcc8 	.word	0x0802fcc8
- 801b3f8:	0802fcf0 	.word	0x0802fcf0
+ 801b3f0:	0802fd2c 	.word	0x0802fd2c
+ 801b3f4:	0802fcd8 	.word	0x0802fcd8
+ 801b3f8:	0802fd00 	.word	0x0802fd00
 
 0801b3fc <a8d9689c957cda0372b2d720a687974af26c85d2>:
  801b3fc:	b480      	push	{r7}
@@ -56612,8 +56612,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801b71a:	46bd      	mov	sp, r7
  801b71c:	bd80      	pop	{r7, pc}
  801b71e:	bf00      	nop
- 801b720:	0802fd54 	.word	0x0802fd54
- 801b724:	0802fd24 	.word	0x0802fd24
+ 801b720:	0802fd64 	.word	0x0802fd64
+ 801b724:	0802fd34 	.word	0x0802fd34
  801b728:	0801c5ff 	.word	0x0801c5ff
  801b72c:	0801b731 	.word	0x0801b731
 
@@ -57061,8 +57061,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801bb2e:	46bd      	mov	sp, r7
  801bb30:	bdb0      	pop	{r4, r5, r7, pc}
  801bb32:	bf00      	nop
- 801bb34:	0802fd1c 	.word	0x0802fd1c
- 801bb38:	0802fd5c 	.word	0x0802fd5c
+ 801bb34:	0802fd2c 	.word	0x0802fd2c
+ 801bb38:	0802fd6c 	.word	0x0802fd6c
 
 0801bb3c <451af4d13f3981311b6c1d9d343aec3dcaf22e3d>:
  801bb3c:	b5b0      	push	{r4, r5, r7, lr}
@@ -57357,12 +57357,12 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801be78:	e0ba      	b.n	801bff0 <451af4d13f3981311b6c1d9d343aec3dcaf22e3d+0x4b4>
  801be7a:	bf00      	nop
  801be7c:	20000040 	.word	0x20000040
- 801be80:	0802fd1c 	.word	0x0802fd1c
- 801be84:	0802fd74 	.word	0x0802fd74
- 801be88:	0802fd98 	.word	0x0802fd98
- 801be8c:	0802fdb0 	.word	0x0802fdb0
- 801be90:	0802fd54 	.word	0x0802fd54
- 801be94:	0802fdec 	.word	0x0802fdec
+ 801be80:	0802fd2c 	.word	0x0802fd2c
+ 801be84:	0802fd84 	.word	0x0802fd84
+ 801be88:	0802fda8 	.word	0x0802fda8
+ 801be8c:	0802fdc0 	.word	0x0802fdc0
+ 801be90:	0802fd64 	.word	0x0802fd64
+ 801be94:	0802fdfc 	.word	0x0802fdfc
  801be98:	f897 3102 	ldrb.w	r3, [r7, #258]	; 0x102
  801be9c:	2b05      	cmp	r3, #5
  801be9e:	f040 80a7 	bne.w	801bff0 <451af4d13f3981311b6c1d9d343aec3dcaf22e3d+0x4b4>
@@ -57641,14 +57641,14 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801c1d0:	f7ff face 	bl	801b770 <857de3c8f5260b81d9c8f1309c962f70e86f8d45>
  801c1d4:	e059      	b.n	801c28a <451af4d13f3981311b6c1d9d343aec3dcaf22e3d+0x74e>
  801c1d6:	bf00      	nop
- 801c1d8:	0802fd1c 	.word	0x0802fd1c
- 801c1dc:	0802fe44 	.word	0x0802fe44
- 801c1e0:	0802fd54 	.word	0x0802fd54
- 801c1e4:	0802fe78 	.word	0x0802fe78
- 801c1e8:	0802fd98 	.word	0x0802fd98
- 801c1ec:	0802ff10 	.word	0x0802ff10
- 801c1f0:	0802fea0 	.word	0x0802fea0
- 801c1f4:	0802fec0 	.word	0x0802fec0
+ 801c1d8:	0802fd2c 	.word	0x0802fd2c
+ 801c1dc:	0802fe54 	.word	0x0802fe54
+ 801c1e0:	0802fd64 	.word	0x0802fd64
+ 801c1e4:	0802fe88 	.word	0x0802fe88
+ 801c1e8:	0802fda8 	.word	0x0802fda8
+ 801c1ec:	0802ff20 	.word	0x0802ff20
+ 801c1f0:	0802feb0 	.word	0x0802feb0
+ 801c1f4:	0802fed0 	.word	0x0802fed0
  801c1f8:	f8d7 3158 	ldr.w	r3, [r7, #344]	; 0x158
  801c1fc:	f993 3003 	ldrsb.w	r3, [r3, #3]
  801c200:	2b00      	cmp	r3, #0
@@ -57836,8 +57836,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801c3f0:	f507 77b4 	add.w	r7, r7, #360	; 0x168
  801c3f4:	46bd      	mov	sp, r7
  801c3f6:	bdb0      	pop	{r4, r5, r7, pc}
- 801c3f8:	0802fd1c 	.word	0x0802fd1c
- 801c3fc:	0802fee8 	.word	0x0802fee8
+ 801c3f8:	0802fd2c 	.word	0x0802fd2c
+ 801c3fc:	0802fef8 	.word	0x0802fef8
 
 0801c400 <73cbc6b3efc5bccd854bcb41733d9be650914b6e>:
  801c400:	b580      	push	{r7, lr}
@@ -57934,7 +57934,7 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801c4c6:	46bd      	mov	sp, r7
  801c4c8:	bd80      	pop	{r7, pc}
  801c4ca:	bf00      	nop
- 801c4cc:	080318cc 	.word	0x080318cc
+ 801c4cc:	080318dc 	.word	0x080318dc
  801c4d0:	aaaaaaab 	.word	0xaaaaaaab
 
 0801c4d4 <getRandomChannelOffset>:
@@ -57951,7 +57951,7 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801c4ee:	b2db      	uxtb	r3, r3
  801c4f0:	4618      	mov	r0, r3
  801c4f2:	bd80      	pop	{r7, pc}
- 801c4f4:	080318cc 	.word	0x080318cc
+ 801c4f4:	080318dc 	.word	0x080318dc
 
 0801c4f8 <getRandomSlotOffsetFromAvailableRange>:
  801c4f8:	b580      	push	{r7, lr}
@@ -58230,8 +58230,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801c7b0:	376c      	adds	r7, #108	; 0x6c
  801c7b2:	46bd      	mov	sp, r7
  801c7b4:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
- 801c7b8:	0802ff10 	.word	0x0802ff10
- 801c7bc:	0802ff18 	.word	0x0802ff18
+ 801c7b8:	0802ff20 	.word	0x0802ff20
+ 801c7bc:	0802ff28 	.word	0x0802ff28
 
 0801c7c0 <ENDIANNESS_NativeToLittle>:
  801c7c0:	b580      	push	{r7, lr}
@@ -58773,14 +58773,14 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801ccb6:	f7f8 fb04 	bl	80152c2 <LOGGER_EndSection>
  801ccba:	e064      	b.n	801cd86 <d34d9cc57da987921722d6f0e44d498b73ec396e+0x386>
  801ccbc:	20000040 	.word	0x20000040
- 801ccc0:	0802ffe4 	.word	0x0802ffe4
- 801ccc4:	0802ff38 	.word	0x0802ff38
- 801ccc8:	0802ff50 	.word	0x0802ff50
- 801cccc:	0802ff58 	.word	0x0802ff58
- 801ccd0:	0802ff64 	.word	0x0802ff64
- 801ccd4:	0802ffec 	.word	0x0802ffec
- 801ccd8:	0802ff98 	.word	0x0802ff98
- 801ccdc:	0802ffac 	.word	0x0802ffac
+ 801ccc0:	0802fff4 	.word	0x0802fff4
+ 801ccc4:	0802ff48 	.word	0x0802ff48
+ 801ccc8:	0802ff60 	.word	0x0802ff60
+ 801cccc:	0802ff68 	.word	0x0802ff68
+ 801ccd0:	0802ff74 	.word	0x0802ff74
+ 801ccd4:	0802fffc 	.word	0x0802fffc
+ 801ccd8:	0802ffa8 	.word	0x0802ffa8
+ 801ccdc:	0802ffbc 	.word	0x0802ffbc
  801cce0:	f7f8 fadc 	bl	801529c <LOGGER_StartSection>
  801cce4:	4603      	mov	r3, r0
  801cce6:	2b00      	cmp	r3, #0
@@ -58875,11 +58875,11 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801cdca:	46bd      	mov	sp, r7
  801cdcc:	bdb0      	pop	{r4, r5, r7, pc}
  801cdce:	bf00      	nop
- 801cdd0:	0802ffec 	.word	0x0802ffec
- 801cdd4:	0802ffc4 	.word	0x0802ffc4
- 801cdd8:	0802ff50 	.word	0x0802ff50
- 801cddc:	0802ff58 	.word	0x0802ff58
- 801cde0:	0802ff64 	.word	0x0802ff64
+ 801cdd0:	0802fffc 	.word	0x0802fffc
+ 801cdd4:	0802ffd4 	.word	0x0802ffd4
+ 801cdd8:	0802ff60 	.word	0x0802ff60
+ 801cddc:	0802ff68 	.word	0x0802ff68
+ 801cde0:	0802ff74 	.word	0x0802ff74
 
 0801cde4 <77238aa43a8b504c643ddf656419f5fe633c06fa>:
  801cde4:	b580      	push	{r7, lr}
@@ -59139,11 +59139,11 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801d03c:	bd80      	pop	{r7, pc}
  801d03e:	bf00      	nop
  801d040:	20000040 	.word	0x20000040
- 801d044:	0802ffe4 	.word	0x0802ffe4
- 801d048:	0802fff4 	.word	0x0802fff4
- 801d04c:	08030058 	.word	0x08030058
- 801d050:	0803001c 	.word	0x0803001c
- 801d054:	08030030 	.word	0x08030030
+ 801d044:	0802fff4 	.word	0x0802fff4
+ 801d048:	08030004 	.word	0x08030004
+ 801d04c:	08030068 	.word	0x08030068
+ 801d050:	0803002c 	.word	0x0803002c
+ 801d054:	08030040 	.word	0x08030040
 
 0801d058 <SCHEDULE_GetCellInfo>:
  801d058:	b5b0      	push	{r4, r5, r7, lr}
@@ -59659,8 +59659,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801d4bc:	46bd      	mov	sp, r7
  801d4be:	bd80      	pop	{r7, pc}
  801d4c0:	20000040 	.word	0x20000040
- 801d4c4:	0802ffe4 	.word	0x0802ffe4
- 801d4c8:	08030060 	.word	0x08030060
+ 801d4c4:	0802fff4 	.word	0x0802fff4
+ 801d4c8:	08030070 	.word	0x08030070
 
 0801d4cc <6ddbbbac57a040e4656a8033d785bd5c35bb4db8>:
  801d4cc:	b580      	push	{r7, lr}
@@ -60007,8 +60007,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801d7dc:	46bd      	mov	sp, r7
  801d7de:	bdb0      	pop	{r4, r5, r7, pc}
  801d7e0:	20000040 	.word	0x20000040
- 801d7e4:	08030084 	.word	0x08030084
- 801d7e8:	080300ec 	.word	0x080300ec
+ 801d7e4:	08030094 	.word	0x08030094
+ 801d7e8:	080300fc 	.word	0x080300fc
 
 0801d7ec <265e4cb026b8783377b1f22e25c3b310527be0c4>:
  801d7ec:	b580      	push	{r7, lr}
@@ -60068,8 +60068,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801d870:	46bd      	mov	sp, r7
  801d872:	bd80      	pop	{r7, pc}
  801d874:	20000040 	.word	0x20000040
- 801d878:	08030084 	.word	0x08030084
- 801d87c:	080300ec 	.word	0x080300ec
+ 801d878:	08030094 	.word	0x08030094
+ 801d87c:	080300fc 	.word	0x080300fc
 
 0801d880 <23fc3861a84c8d8f435c2599ea00b6593300a215>:
  801d880:	b580      	push	{r7, lr}
@@ -60104,8 +60104,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801d8c8:	bd80      	pop	{r7, pc}
  801d8ca:	bf00      	nop
  801d8cc:	20000040 	.word	0x20000040
- 801d8d0:	08030084 	.word	0x08030084
- 801d8d4:	080300ec 	.word	0x080300ec
+ 801d8d0:	08030094 	.word	0x08030094
+ 801d8d4:	080300fc 	.word	0x080300fc
 
 0801d8d8 <b800951da4b2039f1ee67c6e225564a563003bc0>:
  801d8d8:	b580      	push	{r7, lr}
@@ -60138,8 +60138,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801d91c:	bd80      	pop	{r7, pc}
  801d91e:	bf00      	nop
  801d920:	20000040 	.word	0x20000040
- 801d924:	08030084 	.word	0x08030084
- 801d928:	080300ec 	.word	0x080300ec
+ 801d924:	08030094 	.word	0x08030094
+ 801d928:	080300fc 	.word	0x080300fc
 
 0801d92c <ffe29f5c9712609bba4ef23834769dd10ed867f0>:
  801d92c:	b5b0      	push	{r4, r5, r7, lr}
@@ -60366,8 +60366,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801dba8:	46bd      	mov	sp, r7
  801dbaa:	bdb0      	pop	{r4, r5, r7, pc}
  801dbac:	20000040 	.word	0x20000040
- 801dbb0:	08030084 	.word	0x08030084
- 801dbb4:	080300ec 	.word	0x080300ec
+ 801dbb0:	08030094 	.word	0x08030094
+ 801dbb4:	080300fc 	.word	0x080300fc
 
 0801dbb8 <132157aa3fd4bf1277c4734fe270cbaef9b35a98>:
  801dbb8:	b580      	push	{r7, lr}
@@ -60400,8 +60400,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801dbfc:	bd80      	pop	{r7, pc}
  801dbfe:	bf00      	nop
  801dc00:	20000040 	.word	0x20000040
- 801dc04:	08030084 	.word	0x08030084
- 801dc08:	080300ec 	.word	0x080300ec
+ 801dc04:	08030094 	.word	0x08030094
+ 801dc08:	080300fc 	.word	0x080300fc
 
 0801dc0c <0be11d8c56927ea5d7f03e6fc26e8da8ab6824cf>:
  801dc0c:	b580      	push	{r7, lr}
@@ -60434,8 +60434,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801dc50:	bd80      	pop	{r7, pc}
  801dc52:	bf00      	nop
  801dc54:	20000040 	.word	0x20000040
- 801dc58:	08030084 	.word	0x08030084
- 801dc5c:	080300ec 	.word	0x080300ec
+ 801dc58:	08030094 	.word	0x08030094
+ 801dc5c:	080300fc 	.word	0x080300fc
 
 0801dc60 <e1a4ca54296e83210dff3006a7ef95c89a4943bb>:
  801dc60:	b580      	push	{r7, lr}
@@ -60656,8 +60656,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801de60:	46bd      	mov	sp, r7
  801de62:	bd80      	pop	{r7, pc}
  801de64:	20000040 	.word	0x20000040
- 801de68:	08030128 	.word	0x08030128
- 801de6c:	08030104 	.word	0x08030104
+ 801de68:	08030138 	.word	0x08030138
+ 801de6c:	08030114 	.word	0x08030114
 
 0801de70 <SCHEDULE_GetCellsCount>:
  801de70:	b580      	push	{r7, lr}
@@ -60734,8 +60734,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801df10:	bd80      	pop	{r7, pc}
  801df12:	bf00      	nop
  801df14:	20000040 	.word	0x20000040
- 801df18:	08030084 	.word	0x08030084
- 801df1c:	080300ec 	.word	0x080300ec
+ 801df18:	08030094 	.word	0x08030094
+ 801df1c:	080300fc 	.word	0x080300fc
 
 0801df20 <aeb5f65936f4e5306bdeeda4df8abd03e176b12f>:
  801df20:	b580      	push	{r7, lr}
@@ -60873,8 +60873,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801e070:	46bd      	mov	sp, r7
  801e072:	bd80      	pop	{r7, pc}
  801e074:	20000040 	.word	0x20000040
- 801e078:	08030084 	.word	0x08030084
- 801e07c:	080300ec 	.word	0x080300ec
+ 801e078:	08030094 	.word	0x08030094
+ 801e07c:	080300fc 	.word	0x080300fc
 
 0801e080 <4599ddd83c8ba8887c16bb3b34fd73d1aeebea25>:
  801e080:	b580      	push	{r7, lr}
@@ -61137,7 +61137,7 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801e29c:	46bd      	mov	sp, r7
  801e29e:	bdb0      	pop	{r4, r5, r7, pc}
  801e2a0:	20000040 	.word	0x20000040
- 801e2a4:	08031924 	.word	0x08031924
+ 801e2a4:	08031934 	.word	0x08031934
 
 0801e2a8 <5b77f5d059012f38360090be73e77f682e6af1b1>:
  801e2a8:	b590      	push	{r4, r7, lr}
@@ -61183,7 +61183,7 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801e306:	bf00      	nop
  801e308:	20000040 	.word	0x20000040
  801e30c:	0801f2a9 	.word	0x0801f2a9
- 801e310:	080318ac 	.word	0x080318ac
+ 801e310:	080318bc 	.word	0x080318bc
  801e314:	0801f32b 	.word	0x0801f32b
 
 0801e318 <ae19410868335b64a066b6d27dd8944b8c55271b>:
@@ -61488,15 +61488,15 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801e608:	e072      	b.n	801e6f0 <14badbfcf8ba87e6cb548e87226eea3b20d9e928+0x358>
  801e60a:	bf00      	nop
  801e60c:	20000040 	.word	0x20000040
- 801e610:	08030224 	.word	0x08030224
- 801e614:	08030288 	.word	0x08030288
- 801e618:	0803043c 	.word	0x0803043c
- 801e61c:	0803029c 	.word	0x0803029c
- 801e620:	080318ac 	.word	0x080318ac
+ 801e610:	08030234 	.word	0x08030234
+ 801e614:	08030298 	.word	0x08030298
+ 801e618:	0803044c 	.word	0x0803044c
+ 801e61c:	080302ac 	.word	0x080302ac
+ 801e620:	080318bc 	.word	0x080318bc
  801e624:	0801f6d1 	.word	0x0801f6d1
- 801e628:	080302c8 	.word	0x080302c8
- 801e62c:	08030304 	.word	0x08030304
- 801e630:	08030338 	.word	0x08030338
+ 801e628:	080302d8 	.word	0x080302d8
+ 801e62c:	08030314 	.word	0x08030314
+ 801e630:	08030348 	.word	0x08030348
  801e634:	f997 2077 	ldrsb.w	r2, [r7, #119]	; 0x77
  801e638:	4613      	mov	r3, r2
  801e63a:	009b      	lsls	r3, r3, #2
@@ -62178,10 +62178,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801ed5a:	377c      	adds	r7, #124	; 0x7c
  801ed5c:	46bd      	mov	sp, r7
  801ed5e:	bdf0      	pop	{r4, r5, r6, r7, pc}
- 801ed60:	08030444 	.word	0x08030444
+ 801ed60:	08030454 	.word	0x08030454
  801ed64:	20000278 	.word	0x20000278
- 801ed68:	08030350 	.word	0x08030350
- 801ed6c:	080303c4 	.word	0x080303c4
+ 801ed68:	08030360 	.word	0x08030360
+ 801ed6c:	080303d4 	.word	0x080303d4
 
 0801ed70 <84a9c9a6c63997e804410fedf3e4beedf650a414>:
  801ed70:	b580      	push	{r7, lr}
@@ -62367,11 +62367,11 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801ef38:	46bd      	mov	sp, r7
  801ef3a:	bd80      	pop	{r7, pc}
  801ef3c:	20000040 	.word	0x20000040
- 801ef40:	080304a0 	.word	0x080304a0
- 801ef44:	0803044c 	.word	0x0803044c
- 801ef48:	080304a8 	.word	0x080304a8
- 801ef4c:	08030474 	.word	0x08030474
- 801ef50:	0803048c 	.word	0x0803048c
+ 801ef40:	080304b0 	.word	0x080304b0
+ 801ef44:	0803045c 	.word	0x0803045c
+ 801ef48:	080304b8 	.word	0x080304b8
+ 801ef4c:	08030484 	.word	0x08030484
+ 801ef50:	0803049c 	.word	0x0803049c
 
 0801ef54 <b5c72b6730fdfd332fa9751af01c9df74e6e3448>:
  801ef54:	b5b0      	push	{r4, r5, r7, lr}
@@ -62612,14 +62612,14 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801f1de:	46bd      	mov	sp, r7
  801f1e0:	bdb0      	pop	{r4, r5, r7, pc}
  801f1e2:	bf00      	nop
- 801f1e4:	080304a8 	.word	0x080304a8
- 801f1e8:	080304b0 	.word	0x080304b0
- 801f1ec:	080304d4 	.word	0x080304d4
- 801f1f0:	08030444 	.word	0x08030444
- 801f1f4:	08030504 	.word	0x08030504
- 801f1f8:	0803043c 	.word	0x0803043c
- 801f1fc:	08030514 	.word	0x08030514
- 801f200:	08030534 	.word	0x08030534
+ 801f1e4:	080304b8 	.word	0x080304b8
+ 801f1e8:	080304c0 	.word	0x080304c0
+ 801f1ec:	080304e4 	.word	0x080304e4
+ 801f1f0:	08030454 	.word	0x08030454
+ 801f1f4:	08030514 	.word	0x08030514
+ 801f1f8:	0803044c 	.word	0x0803044c
+ 801f1fc:	08030524 	.word	0x08030524
+ 801f200:	08030544 	.word	0x08030544
 
 0801f204 <send_internal>:
  801f204:	b590      	push	{r4, r7, lr}
@@ -62985,11 +62985,11 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801f568:	bdf0      	pop	{r4, r5, r6, r7, pc}
  801f56a:	bf00      	nop
  801f56c:	20000040 	.word	0x20000040
- 801f570:	0803043c 	.word	0x0803043c
- 801f574:	08030338 	.word	0x08030338
- 801f578:	08031a70 	.word	0x08031a70
- 801f57c:	080304a8 	.word	0x080304a8
- 801f580:	08030558 	.word	0x08030558
+ 801f570:	0803044c 	.word	0x0803044c
+ 801f574:	08030348 	.word	0x08030348
+ 801f578:	08031a80 	.word	0x08031a80
+ 801f57c:	080304b8 	.word	0x080304b8
+ 801f580:	08030568 	.word	0x08030568
 
 0801f584 <sendKA>:
  801f584:	b5b0      	push	{r4, r5, r7, lr}
@@ -63125,8 +63125,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801f6c0:	bdb0      	pop	{r4, r5, r7, pc}
  801f6c2:	bf00      	nop
  801f6c4:	20000040 	.word	0x20000040
- 801f6c8:	0803043c 	.word	0x0803043c
- 801f6cc:	08030338 	.word	0x08030338
+ 801f6c8:	0803044c 	.word	0x0803044c
+ 801f6cc:	08030348 	.word	0x08030348
 
 0801f6d0 <2c5aa1cbb5cbaefbc2f62010f757fa213ae59f57>:
  801f6d0:	b580      	push	{r7, lr}
@@ -63173,8 +63173,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801f736:	46bd      	mov	sp, r7
  801f738:	bd80      	pop	{r7, pc}
  801f73a:	bf00      	nop
- 801f73c:	080304a8 	.word	0x080304a8
- 801f740:	0803056c 	.word	0x0803056c
+ 801f73c:	080304b8 	.word	0x080304b8
+ 801f740:	0803057c 	.word	0x0803057c
 
 0801f744 <six2six_sendDone>:
  801f744:	b580      	push	{r7, lr}
@@ -63415,17 +63415,17 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801f9cc:	bd80      	pop	{r7, pc}
  801f9ce:	bf00      	nop
  801f9d0:	20000040 	.word	0x20000040
- 801f9d4:	0803043c 	.word	0x0803043c
+ 801f9d4:	0803044c 	.word	0x0803044c
  801f9d8:	20000278 	.word	0x20000278
- 801f9dc:	08030588 	.word	0x08030588
- 801f9e0:	08030618 	.word	0x08030618
- 801f9e4:	080305b4 	.word	0x080305b4
- 801f9e8:	080318ac 	.word	0x080318ac
+ 801f9dc:	08030598 	.word	0x08030598
+ 801f9e0:	08030628 	.word	0x08030628
+ 801f9e4:	080305c4 	.word	0x080305c4
+ 801f9e8:	080318bc 	.word	0x080318bc
  801f9ec:	0801f6d1 	.word	0x0801f6d1
- 801f9f0:	08030444 	.word	0x08030444
- 801f9f4:	080305e0 	.word	0x080305e0
- 801f9f8:	080305f0 	.word	0x080305f0
- 801f9fc:	08030600 	.word	0x08030600
+ 801f9f0:	08030454 	.word	0x08030454
+ 801f9f4:	080305f0 	.word	0x080305f0
+ 801f9f8:	08030600 	.word	0x08030600
+ 801f9fc:	08030610 	.word	0x08030610
 
 0801fa00 <d83dd96794ccade75eabb291ff5f2fbc926c0ffb>:
  801fa00:	b5b0      	push	{r4, r5, r7, lr}
@@ -63622,8 +63622,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801fbfe:	46bd      	mov	sp, r7
  801fc00:	bdb0      	pop	{r4, r5, r7, pc}
  801fc02:	bf00      	nop
- 801fc04:	0803043c 	.word	0x0803043c
- 801fc08:	08030620 	.word	0x08030620
+ 801fc04:	0803044c 	.word	0x0803044c
+ 801fc08:	08030630 	.word	0x08030630
 
 0801fc0c <six2six_notifyReceive>:
  801fc0c:	b5b0      	push	{r4, r5, r7, lr}
@@ -63904,19 +63904,19 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  801ff48:	f887 3127 	strb.w	r3, [r7, #295]	; 0x127
  801ff4c:	f000 be3d 	b.w	8020bca <six2six_notifyReceive+0xfbe>
  801ff50:	20000040 	.word	0x20000040
- 801ff54:	08030224 	.word	0x08030224
- 801ff58:	08030634 	.word	0x08030634
- 801ff5c:	08030444 	.word	0x08030444
+ 801ff54:	08030234 	.word	0x08030234
+ 801ff58:	08030644 	.word	0x08030644
+ 801ff5c:	08030454 	.word	0x08030454
  801ff60:	20000278 	.word	0x20000278
- 801ff64:	08030648 	.word	0x08030648
- 801ff68:	0803043c 	.word	0x0803043c
- 801ff6c:	08030338 	.word	0x08030338
- 801ff70:	08030668 	.word	0x08030668
- 801ff74:	0803067c 	.word	0x0803067c
- 801ff78:	08030690 	.word	0x08030690
- 801ff7c:	080306ac 	.word	0x080306ac
- 801ff80:	080306d8 	.word	0x080306d8
- 801ff84:	08030700 	.word	0x08030700
+ 801ff64:	08030658 	.word	0x08030658
+ 801ff68:	0803044c 	.word	0x0803044c
+ 801ff6c:	08030348 	.word	0x08030348
+ 801ff70:	08030678 	.word	0x08030678
+ 801ff74:	0803068c 	.word	0x0803068c
+ 801ff78:	080306a0 	.word	0x080306a0
+ 801ff7c:	080306bc 	.word	0x080306bc
+ 801ff80:	080306e8 	.word	0x080306e8
+ 801ff84:	08030710 	.word	0x08030710
  801ff88:	f8d7 3148 	ldr.w	r3, [r7, #328]	; 0x148
  801ff8c:	685a      	ldr	r2, [r3, #4]
  801ff8e:	f897 3140 	ldrb.w	r3, [r7, #320]	; 0x140
@@ -64332,10 +64332,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8020440:	2304      	movs	r3, #4
  8020442:	f8a7 311e 	strh.w	r3, [r7, #286]	; 0x11e
  8020446:	e06f      	b.n	8020528 <six2six_notifyReceive+0x91c>
- 8020448:	0803043c 	.word	0x0803043c
- 802044c:	08030718 	.word	0x08030718
- 8020450:	080304a8 	.word	0x080304a8
- 8020454:	08030728 	.word	0x08030728
+ 8020448:	0803044c 	.word	0x0803044c
+ 802044c:	08030728 	.word	0x08030728
+ 8020450:	080304b8 	.word	0x080304b8
+ 8020454:	08030738 	.word	0x08030738
  8020458:	f9b7 211e 	ldrsh.w	r2, [r7, #286]	; 0x11e
  802045c:	f8d7 110c 	ldr.w	r1, [r7, #268]	; 0x10c
  8020460:	4613      	mov	r3, r2
@@ -64681,10 +64681,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80207e8:	f8a7 311a 	strh.w	r3, [r7, #282]	; 0x11a
  80207ec:	e094      	b.n	8020918 <six2six_notifyReceive+0xd0c>
  80207ee:	bf00      	nop
- 80207f0:	080304a8 	.word	0x080304a8
- 80207f4:	08030740 	.word	0x08030740
- 80207f8:	0803043c 	.word	0x0803043c
- 80207fc:	08030764 	.word	0x08030764
+ 80207f0:	080304b8 	.word	0x080304b8
+ 80207f4:	08030750 	.word	0x08030750
+ 80207f8:	0803044c 	.word	0x0803044c
+ 80207fc:	08030774 	.word	0x08030774
  8020800:	f8d7 3148 	ldr.w	r3, [r7, #328]	; 0x148
  8020804:	685a      	ldr	r2, [r3, #4]
  8020806:	f897 3140 	ldrb.w	r3, [r7, #320]	; 0x140
@@ -65070,8 +65070,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8020c10:	f883 2095 	strb.w	r2, [r3, #149]	; 0x95
  8020c14:	e00a      	b.n	8020c2c <six2six_notifyReceive+0x1020>
  8020c16:	bf00      	nop
- 8020c18:	0803043c 	.word	0x0803043c
- 8020c1c:	08030764 	.word	0x08030764
+ 8020c18:	0803044c 	.word	0x0803044c
+ 8020c1c:	08030774 	.word	0x08030774
  8020c20:	f8d7 310c 	ldr.w	r3, [r7, #268]	; 0x10c
  8020c24:	f897 2123 	ldrb.w	r2, [r7, #291]	; 0x123
  8020c28:	f883 2095 	strb.w	r2, [r3, #149]	; 0x95
@@ -65430,14 +65430,14 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8021048:	4618      	mov	r0, r3
  802104a:	f00a f855 	bl	802b0f8 <memset>
  802104e:	e096      	b.n	802117e <six2six_notifyReceive+0x1572>
- 8021050:	08030444 	.word	0x08030444
+ 8021050:	08030454 	.word	0x08030454
  8021054:	20000298 	.word	0x20000298
- 8021058:	08030774 	.word	0x08030774
- 802105c:	080304a8 	.word	0x080304a8
- 8021060:	08030794 	.word	0x08030794
- 8021064:	0803043c 	.word	0x0803043c
- 8021068:	080307c0 	.word	0x080307c0
- 802106c:	08030808 	.word	0x08030808
+ 8021058:	08030784 	.word	0x08030784
+ 802105c:	080304b8 	.word	0x080304b8
+ 8021060:	080307a4 	.word	0x080307a4
+ 8021064:	0803044c 	.word	0x0803044c
+ 8021068:	080307d0 	.word	0x080307d0
+ 802106c:	08030818 	.word	0x08030818
  8021070:	f8d7 3148 	ldr.w	r3, [r7, #328]	; 0x148
  8021074:	685a      	ldr	r2, [r3, #4]
  8021076:	f897 3140 	ldrb.w	r3, [r7, #320]	; 0x140
@@ -65802,13 +65802,13 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8021468:	4618      	mov	r0, r3
  802146a:	f009 fe45 	bl	802b0f8 <memset>
  802146e:	e09a      	b.n	80215a6 <six2six_notifyReceive+0x199a>
- 8021470:	0803043c 	.word	0x0803043c
- 8021474:	08030850 	.word	0x08030850
- 8021478:	08030444 	.word	0x08030444
- 802147c:	080305e0 	.word	0x080305e0
- 8021480:	080305f0 	.word	0x080305f0
- 8021484:	0803089c 	.word	0x0803089c
- 8021488:	080308e4 	.word	0x080308e4
+ 8021470:	0803044c 	.word	0x0803044c
+ 8021474:	08030860 	.word	0x08030860
+ 8021478:	08030454 	.word	0x08030454
+ 802147c:	080305f0 	.word	0x080305f0
+ 8021480:	08030600 	.word	0x08030600
+ 8021484:	080308ac 	.word	0x080308ac
+ 8021488:	080308f4 	.word	0x080308f4
  802148c:	f8d7 3148 	ldr.w	r3, [r7, #328]	; 0x148
  8021490:	685a      	ldr	r2, [r3, #4]
  8021492:	f897 3140 	ldrb.w	r3, [r7, #320]	; 0x140
@@ -66020,12 +66020,12 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80216da:	46bd      	mov	sp, r7
  80216dc:	bdb0      	pop	{r4, r5, r7, pc}
  80216de:	bf00      	nop
- 80216e0:	0803043c 	.word	0x0803043c
- 80216e4:	0803092c 	.word	0x0803092c
- 80216e8:	08030974 	.word	0x08030974
- 80216ec:	080304a8 	.word	0x080304a8
+ 80216e0:	0803044c 	.word	0x0803044c
+ 80216e4:	0803093c 	.word	0x0803093c
+ 80216e8:	08030984 	.word	0x08030984
+ 80216ec:	080304b8 	.word	0x080304b8
  80216f0:	20000298 	.word	0x20000298
- 80216f4:	08030998 	.word	0x08030998
+ 80216f4:	080309a8 	.word	0x080309a8
 
 080216f8 <addCells>:
  80216f8:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -66136,8 +66136,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80217fa:	372c      	adds	r7, #44	; 0x2c
  80217fc:	46bd      	mov	sp, r7
  80217fe:	bdf0      	pop	{r4, r5, r6, r7, pc}
- 8021800:	0803043c 	.word	0x0803043c
- 8021804:	080309ac 	.word	0x080309ac
+ 8021800:	0803044c 	.word	0x0803044c
+ 8021804:	080309bc 	.word	0x080309bc
 
 08021808 <removeCells>:
  8021808:	b580      	push	{r7, lr}
@@ -66579,8 +66579,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8021bda:	46bd      	mov	sp, r7
  8021bdc:	bdb0      	pop	{r4, r5, r7, pc}
  8021bde:	bf00      	nop
- 8021be0:	0803043c 	.word	0x0803043c
- 8021be4:	080309c4 	.word	0x080309c4
+ 8021be0:	0803044c 	.word	0x0803044c
+ 8021be4:	080309d4 	.word	0x080309d4
 
 08021be8 <13ccdc5f94324d1909629c7f21aeb736294bb0ba>:
  8021be8:	b590      	push	{r4, r7, lr}
@@ -66883,9 +66883,9 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8021ee6:	46bd      	mov	sp, r7
  8021ee8:	bd90      	pop	{r4, r7, pc}
  8021eea:	bf00      	nop
- 8021eec:	080309fc 	.word	0x080309fc
- 8021ef0:	080309d8 	.word	0x080309d8
- 8021ef4:	08031aa4 	.word	0x08031aa4
+ 8021eec:	08030a0c 	.word	0x08030a0c
+ 8021ef0:	080309e8 	.word	0x080309e8
+ 8021ef4:	08031ab4 	.word	0x08031ab4
 
 08021ef8 <3e6bcf4afb14bf9f609f14ef4ad27a2385bb5ae5>:
  8021ef8:	b580      	push	{r7, lr}
@@ -67402,13 +67402,13 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8022450:	0802248b 	.word	0x0802248b
  8022454:	08022479 	.word	0x08022479
  8022458:	08022533 	.word	0x08022533
- 802245c:	080309fc 	.word	0x080309fc
- 8022460:	08030a04 	.word	0x08030a04
- 8022464:	08030a80 	.word	0x08030a80
- 8022468:	08030a18 	.word	0x08030a18
- 802246c:	08030a34 	.word	0x08030a34
- 8022470:	08030a50 	.word	0x08030a50
- 8022474:	08030a60 	.word	0x08030a60
+ 802245c:	08030a0c 	.word	0x08030a0c
+ 8022460:	08030a14 	.word	0x08030a14
+ 8022464:	08030a90 	.word	0x08030a90
+ 8022468:	08030a28 	.word	0x08030a28
+ 802246c:	08030a44 	.word	0x08030a44
+ 8022470:	08030a60 	.word	0x08030a60
+ 8022474:	08030a70 	.word	0x08030a70
  8022478:	2101      	movs	r1, #1
  802247a:	68f8      	ldr	r0, [r7, #12]
  802247c:	f007 f80a 	bl	8029494 <2c8c667690c01bde438685a4c74ee211f27a3939>
@@ -67547,8 +67547,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80225be:	3770      	adds	r7, #112	; 0x70
  80225c0:	46bd      	mov	sp, r7
  80225c2:	bd80      	pop	{r7, pc}
- 80225c4:	08030a80 	.word	0x08030a80
- 80225c8:	08030a70 	.word	0x08030a70
+ 80225c4:	08030a90 	.word	0x08030a90
+ 80225c8:	08030a80 	.word	0x08030a80
 
 080225cc <fdb5ac47f2c02ab26c1329e13b6119b2272b663d>:
  80225cc:	b5b0      	push	{r4, r5, r7, lr}
@@ -67939,9 +67939,9 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80229c6:	7c12      	ldrb	r2, [r2, #16]
  80229c8:	741a      	strb	r2, [r3, #16]
  80229ca:	e0a7      	b.n	8022b1c <fdb5ac47f2c02ab26c1329e13b6119b2272b663d+0x550>
- 80229cc:	080309fc 	.word	0x080309fc
- 80229d0:	08030a88 	.word	0x08030a88
- 80229d4:	08031aa4 	.word	0x08031aa4
+ 80229cc:	08030a0c 	.word	0x08030a0c
+ 80229d0:	08030a98 	.word	0x08030a98
+ 80229d4:	08031ab4 	.word	0x08031ab4
  80229d8:	f897 307a 	ldrb.w	r3, [r7, #122]	; 0x7a
  80229dc:	3b01      	subs	r3, #1
  80229de:	2b08      	cmp	r3, #8
@@ -68135,8 +68135,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8022bca:	3780      	adds	r7, #128	; 0x80
  8022bcc:	46bd      	mov	sp, r7
  8022bce:	bdb0      	pop	{r4, r5, r7, pc}
- 8022bd0:	080309fc 	.word	0x080309fc
- 8022bd4:	08030a88 	.word	0x08030a88
+ 8022bd0:	08030a0c 	.word	0x08030a0c
+ 8022bd4:	08030a98 	.word	0x08030a98
 
 08022bd8 <retrieveIphcHeader>:
  8022bd8:	b5b0      	push	{r4, r5, r7, lr}
@@ -68533,10 +68533,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8023064:	22ff      	movs	r2, #255	; 0xff
  8023066:	f883 2024 	strb.w	r2, [r3, #36]	; 0x24
  802306a:	e016      	b.n	802309a <retrieveIphcHeader+0x4c2>
- 802306c:	080309fc 	.word	0x080309fc
- 8023070:	08030a9c 	.word	0x08030a9c
- 8023074:	08030abc 	.word	0x08030abc
- 8023078:	08030acc 	.word	0x08030acc
+ 802306c:	08030a0c 	.word	0x08030a0c
+ 8023070:	08030aac 	.word	0x08030aac
+ 8023074:	08030acc 	.word	0x08030acc
+ 8023078:	08030adc 	.word	0x08030adc
  802307c:	4ada      	ldr	r2, [pc, #872]	; (80233e8 <retrieveIphcHeader+0x810>)
  802307e:	f107 034c 	add.w	r3, r7, #76	; 0x4c
  8023082:	e892 0003 	ldmia.w	r2, {r0, r1}
@@ -68864,11 +68864,11 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80233dc:	080234dd 	.word	0x080234dd
  80233e0:	08023437 	.word	0x08023437
  80233e4:	080233fd 	.word	0x080233fd
- 80233e8:	080309fc 	.word	0x080309fc
- 80233ec:	08030adc 	.word	0x08030adc
- 80233f0:	08030af0 	.word	0x08030af0
- 80233f4:	08031a94 	.word	0x08031a94
- 80233f8:	08030b00 	.word	0x08030b00
+ 80233e8:	08030a0c 	.word	0x08030a0c
+ 80233ec:	08030aec 	.word	0x08030aec
+ 80233f0:	08030b00 	.word	0x08030b00
+ 80233f4:	08031aa4 	.word	0x08031aa4
+ 80233f8:	08030b10 	.word	0x08030b10
  80233fc:	2005      	movs	r0, #5
  80233fe:	f7e9 fdfd 	bl	800cffc <976f1995b2c83947a84b9c8a6775d2e1dcb20b1a>
  8023402:	4605      	mov	r5, r0
@@ -69284,10 +69284,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  802384e:	46bd      	mov	sp, r7
  8023850:	bdb0      	pop	{r4, r5, r7, pc}
  8023852:	bf00      	nop
- 8023854:	080309fc 	.word	0x080309fc
- 8023858:	08030b00 	.word	0x08030b00
- 802385c:	08031aa4 	.word	0x08031aa4
- 8023860:	08030b10 	.word	0x08030b10
+ 8023854:	08030a0c 	.word	0x08030a0c
+ 8023858:	08030b10 	.word	0x08030b10
+ 802385c:	08031ab4 	.word	0x08031ab4
+ 8023860:	08030b20 	.word	0x08030b20
 
 08023864 <prependIPv6HopByHopHeader>:
  8023864:	b580      	push	{r7, lr}
@@ -69487,8 +69487,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8023a1a:	3718      	adds	r7, #24
  8023a1c:	46bd      	mov	sp, r7
  8023a1e:	bd80      	pop	{r7, pc}
- 8023a20:	080309fc 	.word	0x080309fc
- 8023a24:	08030b24 	.word	0x08030b24
+ 8023a20:	08030a0c 	.word	0x08030a0c
+ 8023a24:	08030b34 	.word	0x08030b34
 
 08023a28 <4d7cfa5396c1a70e5b044281b148d10ac7c5b95b>:
  8023a28:	b480      	push	{r7}
@@ -70043,14 +70043,14 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8023ff6:	46bd      	mov	sp, r7
  8023ff8:	bd80      	pop	{r7, pc}
  8023ffa:	bf00      	nop
- 8023ffc:	08030bfc 	.word	0x08030bfc
- 8024000:	08030b40 	.word	0x08030b40
- 8024004:	08030b54 	.word	0x08030b54
- 8024008:	08030b60 	.word	0x08030b60
- 802400c:	08030b74 	.word	0x08030b74
- 8024010:	08030b90 	.word	0x08030b90
- 8024014:	08030bac 	.word	0x08030bac
- 8024018:	08030bd4 	.word	0x08030bd4
+ 8023ffc:	08030c0c 	.word	0x08030c0c
+ 8024000:	08030b50 	.word	0x08030b50
+ 8024004:	08030b64 	.word	0x08030b64
+ 8024008:	08030b70 	.word	0x08030b70
+ 802400c:	08030b84 	.word	0x08030b84
+ 8024010:	08030ba0 	.word	0x08030ba0
+ 8024014:	08030bbc 	.word	0x08030bbc
+ 8024018:	08030be4 	.word	0x08030be4
 
 0802401c <fbb5d9264f687a3d3875788e4c96e7f3a0b73ecb>:
  802401c:	b580      	push	{r7, lr}
@@ -70382,16 +70382,16 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  802438e:	46bd      	mov	sp, r7
  8024390:	bd80      	pop	{r7, pc}
  8024392:	bf00      	nop
- 8024394:	08030ce0 	.word	0x08030ce0
- 8024398:	08030c04 	.word	0x08030c04
- 802439c:	08030c14 	.word	0x08030c14
- 80243a0:	08030c34 	.word	0x08030c34
- 80243a4:	08030ce8 	.word	0x08030ce8
- 80243a8:	08030c44 	.word	0x08030c44
- 80243ac:	08030c74 	.word	0x08030c74
- 80243b0:	08030bfc 	.word	0x08030bfc
- 80243b4:	08030c8c 	.word	0x08030c8c
- 80243b8:	08030cc0 	.word	0x08030cc0
+ 8024394:	08030cf0 	.word	0x08030cf0
+ 8024398:	08030c14 	.word	0x08030c14
+ 802439c:	08030c24 	.word	0x08030c24
+ 80243a0:	08030c44 	.word	0x08030c44
+ 80243a4:	08030cf8 	.word	0x08030cf8
+ 80243a8:	08030c54 	.word	0x08030c54
+ 80243ac:	08030c84 	.word	0x08030c84
+ 80243b0:	08030c0c 	.word	0x08030c0c
+ 80243b4:	08030c9c 	.word	0x08030c9c
+ 80243b8:	08030cd0 	.word	0x08030cd0
 
 080243bc <getNextHop>:
  80243bc:	b580      	push	{r7, lr}
@@ -70535,8 +70535,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80244fa:	46bd      	mov	sp, r7
  80244fc:	bd80      	pop	{r7, pc}
  80244fe:	bf00      	nop
- 8024500:	08030bfc 	.word	0x08030bfc
- 8024504:	08030cf0 	.word	0x08030cf0
+ 8024500:	08030c0c 	.word	0x08030c0c
+ 8024504:	08030d00 	.word	0x08030d00
 
 08024508 <send_internal_SourceRouting>:
  8024508:	b5b0      	push	{r4, r5, r7, lr}
@@ -71601,10 +71601,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  802504c:	f507 7790 	add.w	r7, r7, #288	; 0x120
  8025050:	46bd      	mov	sp, r7
  8025052:	bdb0      	pop	{r4, r5, r7, pc}
- 8025054:	08030bfc 	.word	0x08030bfc
- 8025058:	08030cfc 	.word	0x08030cfc
- 802505c:	08030c04 	.word	0x08030c04
- 8025060:	08030c34 	.word	0x08030c34
+ 8025054:	08030c0c 	.word	0x08030c0c
+ 8025058:	08030d0c 	.word	0x08030d0c
+ 802505c:	08030c14 	.word	0x08030c14
+ 8025060:	08030c44 	.word	0x08030c44
 
 08025064 <ff79dcb9f0638f1ac99659a38f02861c009c540c>:
  8025064:	b580      	push	{r7, lr}
@@ -71754,8 +71754,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8025192:	46bd      	mov	sp, r7
  8025194:	bd80      	pop	{r7, pc}
  8025196:	bf00      	nop
- 8025198:	08030d30 	.word	0x08030d30
- 802519c:	08030d10 	.word	0x08030d10
+ 8025198:	08030d40 	.word	0x08030d40
+ 802519c:	08030d20 	.word	0x08030d20
 
 080251a0 <0f2b82323c2b2a010fa19b971d87ff5fc3a714e2>:
  80251a0:	b580      	push	{r7, lr}
@@ -71803,8 +71803,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8025206:	46bd      	mov	sp, r7
  8025208:	bd80      	pop	{r7, pc}
  802520a:	bf00      	nop
- 802520c:	08030d30 	.word	0x08030d30
- 8025210:	08030d10 	.word	0x08030d10
+ 802520c:	08030d40 	.word	0x08030d40
+ 8025210:	08030d20 	.word	0x08030d20
 
 08025214 <df2f78a5f231f323fc241372a3a00cee3087c107>:
  8025214:	b480      	push	{r7}
@@ -71884,8 +71884,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80252b8:	46bd      	mov	sp, r7
  80252ba:	bd80      	pop	{r7, pc}
  80252bc:	20000040 	.word	0x20000040
- 80252c0:	08030d6c 	.word	0x08030d6c
- 80252c4:	08030d74 	.word	0x08030d74
+ 80252c0:	08030d7c 	.word	0x08030d7c
+ 80252c4:	08030d84 	.word	0x08030d84
 
 080252c8 <1d79bc66ce5e0a5814d212e24315240b99f665c4>:
  80252c8:	b5b0      	push	{r4, r5, r7, lr}
@@ -72035,11 +72035,11 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8025428:	46bd      	mov	sp, r7
  802542a:	bdb0      	pop	{r4, r5, r7, pc}
  802542c:	20000040 	.word	0x20000040
- 8025430:	08030ddc 	.word	0x08030ddc
- 8025434:	08030d8c 	.word	0x08030d8c
- 8025438:	08030d6c 	.word	0x08030d6c
- 802543c:	08030d48 	.word	0x08030d48
- 8025440:	08030da4 	.word	0x08030da4
+ 8025430:	08030dec 	.word	0x08030dec
+ 8025434:	08030d9c 	.word	0x08030d9c
+ 8025438:	08030d7c 	.word	0x08030d7c
+ 802543c:	08030d58 	.word	0x08030d58
+ 8025440:	08030db4 	.word	0x08030db4
 
 08025444 <4d7cfa5396c1a70e5b044281b148d10ac7c5b95b>:
  8025444:	b480      	push	{r7}
@@ -72267,7 +72267,7 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  802565c:	bdb0      	pop	{r4, r5, r7, pc}
  802565e:	bf00      	nop
  8025660:	20000040 	.word	0x20000040
- 8025664:	08031ab0 	.word	0x08031ab0
+ 8025664:	08031ac0 	.word	0x08031ac0
 
 08025668 <a60e70bd13e8775612e7fe5ae94a36c965317289>:
  8025668:	b580      	push	{r7, lr}
@@ -72296,7 +72296,7 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  802569c:	46bd      	mov	sp, r7
  802569e:	bd80      	pop	{r7, pc}
  80256a0:	20000040 	.word	0x20000040
- 80256a4:	080318ac 	.word	0x080318ac
+ 80256a4:	080318bc 	.word	0x080318bc
  80256a8:	08026ee1 	.word	0x08026ee1
 
 080256ac <14e0e80443fa04d4f8b6b44eccb243ea385eea36>:
@@ -72524,15 +72524,15 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80258e8:	46bd      	mov	sp, r7
  80258ea:	bd80      	pop	{r7, pc}
  80258ec:	20000040 	.word	0x20000040
- 80258f0:	08030e9c 	.word	0x08030e9c
- 80258f4:	08030de4 	.word	0x08030de4
- 80258f8:	08030ea4 	.word	0x08030ea4
- 80258fc:	08030dfc 	.word	0x08030dfc
- 8025900:	08030e18 	.word	0x08030e18
- 8025904:	08030e30 	.word	0x08030e30
- 8025908:	08030eac 	.word	0x08030eac
- 802590c:	08030e58 	.word	0x08030e58
- 8025910:	08030e7c 	.word	0x08030e7c
+ 80258f0:	08030eac 	.word	0x08030eac
+ 80258f4:	08030df4 	.word	0x08030df4
+ 80258f8:	08030eb4 	.word	0x08030eb4
+ 80258fc:	08030e0c 	.word	0x08030e0c
+ 8025900:	08030e28 	.word	0x08030e28
+ 8025904:	08030e40 	.word	0x08030e40
+ 8025908:	08030ebc 	.word	0x08030ebc
+ 802590c:	08030e68 	.word	0x08030e68
+ 8025910:	08030e8c 	.word	0x08030e8c
 
 08025914 <21f9d235812fd7009c72aa387ad7cecd1ecb2e68>:
  8025914:	b580      	push	{r7, lr}
@@ -72595,8 +72595,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80259ac:	46bd      	mov	sp, r7
  80259ae:	bd80      	pop	{r7, pc}
  80259b0:	20000040 	.word	0x20000040
- 80259b4:	08030e9c 	.word	0x08030e9c
- 80259b8:	08030eb4 	.word	0x08030eb4
+ 80259b4:	08030eac 	.word	0x08030eac
+ 80259b8:	08030ec4 	.word	0x08030ec4
 
 080259bc <93f4deb1287f872116dccf0c4dae004ac9b29b84>:
  80259bc:	b580      	push	{r7, lr}
@@ -72702,8 +72702,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8025ab8:	bd80      	pop	{r7, pc}
  8025aba:	bf00      	nop
  8025abc:	20000040 	.word	0x20000040
- 8025ac0:	08030eac 	.word	0x08030eac
- 8025ac4:	08030ecc 	.word	0x08030ecc
+ 8025ac0:	08030ebc 	.word	0x08030ebc
+ 8025ac4:	08030edc 	.word	0x08030edc
 
 08025ac8 <71fc6a01fbd1c77ffbfd7cfdab3a822a00183bc2>:
  8025ac8:	b580      	push	{r7, lr}
@@ -73051,13 +73051,13 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8025e24:	46bd      	mov	sp, r7
  8025e26:	bd80      	pop	{r7, pc}
  8025e28:	20000040 	.word	0x20000040
- 8025e2c:	08030ea4 	.word	0x08030ea4
- 8025e30:	08030ee8 	.word	0x08030ee8
- 8025e34:	08030e9c 	.word	0x08030e9c
- 8025e38:	08030f00 	.word	0x08030f00
- 8025e3c:	08030f1c 	.word	0x08030f1c
+ 8025e2c:	08030eb4 	.word	0x08030eb4
+ 8025e30:	08030ef8 	.word	0x08030ef8
+ 8025e34:	08030eac 	.word	0x08030eac
+ 8025e38:	08030f10 	.word	0x08030f10
+ 8025e3c:	08030f2c 	.word	0x08030f2c
  8025e40:	08026359 	.word	0x08026359
- 8025e44:	08030f38 	.word	0x08030f38
+ 8025e44:	08030f48 	.word	0x08030f48
 
 08025e48 <indicateRxDIO>:
  8025e48:	b590      	push	{r4, r7, lr}
@@ -73354,8 +73354,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80260ec:	e01d      	b.n	802612a <indicateRxDIO+0x2e2>
  80260ee:	bf00      	nop
  80260f0:	20000040 	.word	0x20000040
- 80260f4:	08030eac 	.word	0x08030eac
- 80260f8:	08030f6c 	.word	0x08030f6c
+ 80260f4:	08030ebc 	.word	0x08030ebc
+ 80260f8:	08030f7c 	.word	0x08030f7c
  80260fc:	2301      	movs	r3, #1
  80260fe:	f887 306e 	strb.w	r3, [r7, #110]	; 0x6e
  8026102:	f897 2027 	ldrb.w	r2, [r7, #39]	; 0x27
@@ -73589,11 +73589,11 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  802633c:	bd80      	pop	{r7, pc}
  802633e:	bf00      	nop
  8026340:	20000040 	.word	0x20000040
- 8026344:	08030ea4 	.word	0x08030ea4
- 8026348:	08030ee8 	.word	0x08030ee8
- 802634c:	08030e9c 	.word	0x08030e9c
- 8026350:	08030f8c 	.word	0x08030f8c
- 8026354:	08030fa8 	.word	0x08030fa8
+ 8026344:	08030eb4 	.word	0x08030eb4
+ 8026348:	08030ef8 	.word	0x08030ef8
+ 802634c:	08030eac 	.word	0x08030eac
+ 8026350:	08030f9c 	.word	0x08030f9c
+ 8026354:	08030fb8 	.word	0x08030fb8
 
 08026358 <cef630f5a74a35314667ebee3f885b52bc89b138>:
  8026358:	b5b0      	push	{r4, r5, r7, lr}
@@ -73805,8 +73805,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8026532:	46bd      	mov	sp, r7
  8026534:	bdb0      	pop	{r4, r5, r7, pc}
  8026536:	bf00      	nop
- 8026538:	08030e9c 	.word	0x08030e9c
- 802653c:	08030fdc 	.word	0x08030fdc
+ 8026538:	08030eac 	.word	0x08030eac
+ 802653c:	08030fec 	.word	0x08030fec
 
 08026540 <ddcc96d14128f39f258a026a92cbd4c2383286b1>:
  8026540:	b590      	push	{r4, r7, lr}
@@ -74169,13 +74169,13 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80268c0:	01312d00 	.word	0x01312d00
  80268c4:	00989680 	.word	0x00989680
  80268c8:	080265c5 	.word	0x080265c5
- 80268cc:	08030e9c 	.word	0x08030e9c
- 80268d0:	08030fdc 	.word	0x08030fdc
- 80268d4:	08030ea4 	.word	0x08030ea4
- 80268d8:	08030ff4 	.word	0x08030ff4
+ 80268cc:	08030eac 	.word	0x08030eac
+ 80268d0:	08030fec 	.word	0x08030fec
+ 80268d4:	08030eb4 	.word	0x08030eb4
+ 80268d8:	08031004 	.word	0x08031004
  80268dc:	01c9c380 	.word	0x01c9c380
- 80268e0:	08030eac 	.word	0x08030eac
- 80268e4:	08031008 	.word	0x08031008
+ 80268e0:	08030ebc 	.word	0x08030ebc
+ 80268e4:	08031018 	.word	0x08031018
 
 080268e8 <e1f51aec36766790a9d7657a41d61426b11f2b8a>:
  80268e8:	b590      	push	{r4, r7, lr}
@@ -74405,14 +74405,14 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8026b26:	46bd      	mov	sp, r7
  8026b28:	bd80      	pop	{r7, pc}
  8026b2a:	bf00      	nop
- 8026b2c:	08030e9c 	.word	0x08030e9c
- 8026b30:	08031028 	.word	0x08031028
+ 8026b2c:	08030eac 	.word	0x08030eac
+ 8026b30:	08031038 	.word	0x08031038
  8026b34:	08026b4d 	.word	0x08026b4d
  8026b38:	08026a61 	.word	0x08026a61
  8026b3c:	01312d00 	.word	0x01312d00
- 8026b40:	080310a0 	.word	0x080310a0
- 8026b44:	08031048 	.word	0x08031048
- 8026b48:	08031068 	.word	0x08031068
+ 8026b40:	080310b0 	.word	0x080310b0
+ 8026b44:	08031058 	.word	0x08031058
+ 8026b48:	08031078 	.word	0x08031078
 
 08026b4c <4f4dc29a98d88a83f2cd0a43b93264ecdaee8897>:
  8026b4c:	b5b0      	push	{r4, r5, r7, lr}
@@ -74760,12 +74760,12 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8026eba:	3778      	adds	r7, #120	; 0x78
  8026ebc:	46bd      	mov	sp, r7
  8026ebe:	bdb0      	pop	{r4, r5, r7, pc}
- 8026ec0:	08030e9c 	.word	0x08030e9c
- 8026ec4:	080310a8 	.word	0x080310a8
- 8026ec8:	08030ea4 	.word	0x08030ea4
- 8026ecc:	080310d4 	.word	0x080310d4
- 8026ed0:	08030eac 	.word	0x08030eac
- 8026ed4:	080310e8 	.word	0x080310e8
+ 8026ec0:	08030eac 	.word	0x08030eac
+ 8026ec4:	080310b8 	.word	0x080310b8
+ 8026ec8:	08030eb4 	.word	0x08030eb4
+ 8026ecc:	080310e4 	.word	0x080310e4
+ 8026ed0:	08030ebc 	.word	0x08030ebc
+ 8026ed4:	080310f8 	.word	0x080310f8
  8026ed8:	08026a61 	.word	0x08026a61
  8026edc:	01312d00 	.word	0x01312d00
 
@@ -75066,11 +75066,11 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8027220:	2300      	movs	r3, #0
  8027222:	f887 30ef 	strb.w	r3, [r7, #239]	; 0xef
  8027226:	e136      	b.n	8027496 <6773c6fdd8d1f676d1a2ac33c560f77f2ded24f0+0x4b6>
- 8027228:	08030e9c 	.word	0x08030e9c
- 802722c:	08031104 	.word	0x08031104
- 8027230:	080318ac 	.word	0x080318ac
+ 8027228:	08030eac 	.word	0x08030eac
+ 802722c:	08031114 	.word	0x08031114
+ 8027230:	080318bc 	.word	0x080318bc
  8027234:	02aea540 	.word	0x02aea540
- 8027238:	08031110 	.word	0x08031110
+ 8027238:	08031120 	.word	0x08031120
  802723c:	f897 30ef 	ldrb.w	r3, [r7, #239]	; 0xef
  8027240:	4618      	mov	r0, r3
  8027242:	f7e6 ff21 	bl	800e088 <f978182667c580e22e6ae7bda9ab6a3b6ebffcb1>
@@ -75536,15 +75536,15 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80277a2:	f507 7782 	add.w	r7, r7, #260	; 0x104
  80277a6:	46bd      	mov	sp, r7
  80277a8:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
- 80277ac:	08030ea4 	.word	0x08030ea4
- 80277b0:	0803112c 	.word	0x0803112c
- 80277b4:	08031148 	.word	0x08031148
- 80277b8:	0803116c 	.word	0x0803116c
- 80277bc:	08030e9c 	.word	0x08030e9c
- 80277c0:	08031200 	.word	0x08031200
+ 80277ac:	08030eb4 	.word	0x08030eb4
+ 80277b0:	0803113c 	.word	0x0803113c
+ 80277b4:	08031158 	.word	0x08031158
+ 80277b8:	0803117c 	.word	0x0803117c
+ 80277bc:	08030eac 	.word	0x08030eac
+ 80277c0:	08031210 	.word	0x08031210
  80277c4:	08026359 	.word	0x08026359
- 80277c8:	080310a0 	.word	0x080310a0
- 80277cc:	0803121c 	.word	0x0803121c
+ 80277c8:	080310b0 	.word	0x080310b0
+ 80277cc:	0803122c 	.word	0x0803122c
 
 080277d0 <b9ad13487f540c7a6a8fb22e7ad3e32092d0d437>:
  80277d0:	b580      	push	{r7, lr}
@@ -76581,7 +76581,7 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8028052:	46bd      	mov	sp, r7
  8028054:	bc80      	pop	{r7}
  8028056:	4770      	bx	lr
- 8028058:	08031ac0 	.word	0x08031ac0
+ 8028058:	08031ad0 	.word	0x08031ad0
 
 0802805c <c5868198428dfaffddb0900c3d01452778b19d11>:
  802805c:	b480      	push	{r7}
@@ -76987,9 +76987,9 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80283e4:	e03b      	b.n	802845e <09c9c31144d89e446fc56189171072a9b46992fd+0x2d6>
  80283e6:	bf00      	nop
  80283e8:	20000040 	.word	0x20000040
- 80283ec:	0803129c 	.word	0x0803129c
- 80283f0:	0803124c 	.word	0x0803124c
- 80283f4:	0803127c 	.word	0x0803127c
+ 80283ec:	080312ac 	.word	0x080312ac
+ 80283f0:	0803125c 	.word	0x0803125c
+ 80283f4:	0803128c 	.word	0x0803128c
  80283f8:	2108      	movs	r1, #8
  80283fa:	6af8      	ldr	r0, [r7, #44]	; 0x2c
  80283fc:	f001 f84a 	bl	8029494 <2c8c667690c01bde438685a4c74ee211f27a3939>
@@ -77074,8 +77074,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80284b6:	46bd      	mov	sp, r7
  80284b8:	bd80      	pop	{r7, pc}
  80284ba:	bf00      	nop
- 80284bc:	0803129c 	.word	0x0803129c
- 80284c0:	080312a4 	.word	0x080312a4
+ 80284bc:	080312ac 	.word	0x080312ac
+ 80284c0:	080312b4 	.word	0x080312b4
 
 080284c4 <078582282b526a1ec1227869e1581c8a1811b440>:
  80284c4:	b590      	push	{r4, r7, lr}
@@ -77411,10 +77411,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80287c4:	46bd      	mov	sp, r7
  80287c6:	bd90      	pop	{r4, r7, pc}
  80287c8:	20000040 	.word	0x20000040
- 80287cc:	080312f4 	.word	0x080312f4
- 80287d0:	080312bc 	.word	0x080312bc
- 80287d4:	080312fc 	.word	0x080312fc
- 80287d8:	080312d0 	.word	0x080312d0
+ 80287cc:	08031304 	.word	0x08031304
+ 80287d0:	080312cc 	.word	0x080312cc
+ 80287d4:	0803130c 	.word	0x0803130c
+ 80287d8:	080312e0 	.word	0x080312e0
 
 080287dc <dfc328393dc363adf936780696ec1bbccb146c7c>:
  80287dc:	b590      	push	{r4, r7, lr}
@@ -78902,8 +78902,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80294f6:	46bd      	mov	sp, r7
  80294f8:	bd80      	pop	{r7, pc}
  80294fa:	bf00      	nop
- 80294fc:	08031360 	.word	0x08031360
- 8029500:	08031304 	.word	0x08031304
+ 80294fc:	08031370 	.word	0x08031370
+ 8029500:	08031314 	.word	0x08031314
 
 08029504 <ff892c7eaabf8efd6c6e5ae8237236c0bbd2a52f>:
  8029504:	b580      	push	{r7, lr}
@@ -78951,8 +78951,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8029562:	46bd      	mov	sp, r7
  8029564:	bd80      	pop	{r7, pc}
  8029566:	bf00      	nop
- 8029568:	08031398 	.word	0x08031398
- 802956c:	08031368 	.word	0x08031368
+ 8029568:	080313a8 	.word	0x080313a8
+ 802956c:	08031378 	.word	0x08031378
 
 08029570 <8e6752ac2d9b20609d8f3fbb2926e67e2817e11d>:
  8029570:	b580      	push	{r7, lr}
@@ -78994,8 +78994,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  80295c2:	3710      	adds	r7, #16
  80295c4:	46bd      	mov	sp, r7
  80295c6:	bd80      	pop	{r7, pc}
- 80295c8:	08031360 	.word	0x08031360
- 80295cc:	080313a0 	.word	0x080313a0
+ 80295c8:	08031370 	.word	0x08031370
+ 80295cc:	080313b0 	.word	0x080313b0
 
 080295d0 <d03cdfa9a9d75424e5e85d984afc48a1c5ef4b9d>:
  80295d0:	b580      	push	{r7, lr}
@@ -79037,8 +79037,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8029622:	46bd      	mov	sp, r7
  8029624:	bd80      	pop	{r7, pc}
  8029626:	bf00      	nop
- 8029628:	08031398 	.word	0x08031398
- 802962c:	080313ec 	.word	0x080313ec
+ 8029628:	080313a8 	.word	0x080313a8
+ 802962c:	080313fc 	.word	0x080313fc
 
 08029630 <a535af25ff723431653a1b4a4f5b09e3a0cbb8b5>:
  8029630:	b580      	push	{r7, lr}
@@ -79268,8 +79268,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  8029842:	3708      	adds	r7, #8
  8029844:	46bd      	mov	sp, r7
  8029846:	bd80      	pop	{r7, pc}
- 8029848:	0803141c 	.word	0x0803141c
- 802984c:	0803148c 	.word	0x0803148c
+ 8029848:	0803142c 	.word	0x0803142c
+ 802984c:	0803149c 	.word	0x0803149c
 
 08029850 <ce0285fec3b54ee5ef5bed56217c18d06982ab6c>:
  8029850:	b480      	push	{r7}
@@ -80622,12 +80622,12 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  802a4ee:	3728      	adds	r7, #40	; 0x28
  802a4f0:	46bd      	mov	sp, r7
  802a4f2:	bd80      	pop	{r7, pc}
- 802a4f4:	0803156c 	.word	0x0803156c
- 802a4f8:	080314a8 	.word	0x080314a8
- 802a4fc:	080314cc 	.word	0x080314cc
- 802a500:	080314d8 	.word	0x080314d8
- 802a504:	080314f0 	.word	0x080314f0
- 802a508:	08031558 	.word	0x08031558
+ 802a4f4:	0803157c 	.word	0x0803157c
+ 802a4f8:	080314b8 	.word	0x080314b8
+ 802a4fc:	080314dc 	.word	0x080314dc
+ 802a500:	080314e8 	.word	0x080314e8
+ 802a504:	08031500 	.word	0x08031500
+ 802a508:	08031568 	.word	0x08031568
 
 0802a50c <93646682ea820ae310ba1b54d0fccca9d773749e>:
  802a50c:	b5b0      	push	{r4, r5, r7, lr}
@@ -82114,10 +82114,10 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  802b20a:	4798      	blx	r3
  802b20c:	3601      	adds	r6, #1
  802b20e:	e7f2      	b.n	802b1f6 <__libc_init_array+0x1e>
- 802b210:	08031b00 	.word	0x08031b00
- 802b214:	08031b00 	.word	0x08031b00
- 802b218:	08031b00 	.word	0x08031b00
- 802b21c:	08031b04 	.word	0x08031b04
+ 802b210:	08031b10 	.word	0x08031b10
+ 802b214:	08031b10 	.word	0x08031b10
+ 802b218:	08031b10 	.word	0x08031b10
+ 802b21c:	08031b14 	.word	0x08031b14
 
 0802b220 <__retarget_lock_init_recursive>:
  802b220:	4770      	bx	lr
@@ -82497,9 +82497,9 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  802b57c:	4638      	mov	r0, r7
  802b57e:	f000 f9bb 	bl	802b8f8 <_printf_i>
  802b582:	e7eb      	b.n	802b55c <_svfiprintf_r+0x1c0>
- 802b584:	08031ac4 	.word	0x08031ac4
- 802b588:	08031aca 	.word	0x08031aca
- 802b58c:	08031ace 	.word	0x08031ace
+ 802b584:	08031ad4 	.word	0x08031ad4
+ 802b588:	08031ada 	.word	0x08031ada
+ 802b58c:	08031ade 	.word	0x08031ade
  802b590:	00000000 	.word	0x00000000
  802b594:	0802b2e9 	.word	0x0802b2e9
 
@@ -82769,9 +82769,9 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  802b800:	4630      	mov	r0, r6
  802b802:	f000 f879 	bl	802b8f8 <_printf_i>
  802b806:	e7e4      	b.n	802b7d2 <_vfiprintf_r+0x1ea>
- 802b808:	08031ac4 	.word	0x08031ac4
- 802b80c:	08031aca 	.word	0x08031aca
- 802b810:	08031ace 	.word	0x08031ace
+ 802b808:	08031ad4 	.word	0x08031ad4
+ 802b80c:	08031ada 	.word	0x08031ada
+ 802b810:	08031ade 	.word	0x08031ade
  802b814:	00000000 	.word	0x00000000
  802b818:	0802b5c3 	.word	0x0802b5c3
 
@@ -83106,8 +83106,8 @@ bool _rom CoAP_UriOptionsAreEqual(CoAP_option_t* OptListA, CoAP_option_t* OptLis
  802bb2c:	f104 0619 	add.w	r6, r4, #25
  802bb30:	e7f5      	b.n	802bb1e <_printf_i+0x226>
  802bb32:	bf00      	nop
- 802bb34:	08031ad5 	.word	0x08031ad5
- 802bb38:	08031ae6 	.word	0x08031ae6
+ 802bb34:	08031ae5 	.word	0x08031ae5
+ 802bb38:	08031af6 	.word	0x08031af6
 
 0802bb3c <__sflush_r>:
  802bb3c:	898a      	ldrh	r2, [r1, #12]
