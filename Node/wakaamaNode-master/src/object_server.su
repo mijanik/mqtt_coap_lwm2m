@@ -1,0 +1,2 @@
+../wakaamaNode-master/src/object_server.c:35:6:server_object_write_verify_cb	24	static
+../wakaamaNode-master/src/object_server.c:52:6:init_server_object	80	static

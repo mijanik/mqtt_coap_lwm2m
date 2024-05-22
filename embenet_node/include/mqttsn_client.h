@@ -1,8 +1,8 @@
 /**
 @file
-@license   Commercial
-@copyright (c) 2023 EMBETECH SP. Z O.O. All rights reserved.
-@version   1.1.4417
+@license   $License$
+@copyright $Copyright$
+@version   $Revision$
 @purpose   embeNET MQTT-SN client
 @brief     MQTT-SN client API declaration
 
@@ -108,11 +108,14 @@ typedef enum {
 #define MQTTSN_MAX_CLIENT_ID_LENGTH 23
 
 /// Gateway response timeout in milliseconds, after which the client assumes the gateway is not responding
-#define MQTTSN_CLIENT_GATEWAY_RESPONSE_TIMEOUT_MS 5000
+#define MQTTSN_CLIENT_GATEWAY_RESPONSE_TIMEOUT_MS 10000
 /// Maximum number of topics that the client can subscribe to
 #define MQTTSN_CLIENT_MAX_TOPICS_TO_SUBSCRIBE 10
 /// Maximum number of topics that the client can publish to
 #define MQTTSN_CLIENT_MAX_TOPICS_TO_PUBLISH 10
+/// Maximum number of consecutive PINGRESP messages that can be lost before the client assumes the gateway is not responding
+#define MQTTSN_CLIENT_MAX_PINGRESP_LOST 3
+
 
 /// Type describing topic id
 typedef uint16_t MQTTSNTopicId;
@@ -167,6 +170,20 @@ typedef void (*MQTTSNOnTopicRegisteredByClient)(const struct MQTTSNClient* clien
 typedef void (*MQTTSNOnTopicRegisteredByGateway)(struct MQTTSNClient* client, MQTTSNTopicId topicId, const char* topicName);
 
 /**
+ * @brief Callback function type describing a function that is called when the client successfully subscribes to a topic.
+ *
+ * This callback is called as a result of client trying to subscribe to a topic.
+ * It is called when the gateway acknowledges the topic subscription.
+ *
+ * @param[in] client pointer to the MQTT-SN client description structure
+ * @param[in] topicId topic id
+ * @param[in] topicName topic name
+ *
+ */
+typedef void (*MQTTSNOnTopicSubscribedByClient)(const struct MQTTSNClient* client, MQTTSNTopicId topicId, const char* topicName);
+
+
+/**
  * @brief Callback function type describing a function that is called when a message is received on a topic.
  *
  * This callback is called when a message is received on a topic that the client subscribed to.
@@ -201,6 +218,8 @@ typedef struct MQTTSNTopicDescriptor {
     size_t topicNameLen;
     /// Callback that will be called when this topic is registered by client
     MQTTSNOnTopicRegisteredByClient onTopicRegisteredByClient;
+    /// Callback that will be called when this topic is subscribed to by client
+    MQTTSNOnTopicSubscribedByClient onTopicSubscribedByClient;
     /// Callback that will be called when a published message is received on this topic
     MQTTSNOnPublishReceived onPublishReceived;
 } MQTTSNTopicDescriptor;
@@ -233,10 +252,14 @@ typedef struct MQTTSNClient {
     EMBENET_TaskId pingTaskId;
     /// Id of the timeout task, by which the task is referenced.
     EMBENET_TaskId timeoutTaskId;
+    /// Message type that is currently expected to be received from the gateway
+    uint8_t expectedMessageType;
     /// Time (in seconds) after which the gateway assumes the client is disconnected, if no message from client in that time is received
     uint16_t keepAliveTime;
     /// Minimum time between messages sent from the client. When no user messages are sent, PING should be sent instead. This value should be less than keepAliveTime
     uint16_t pingPeriod;
+    /// Number of consecutive PINGRESP messages that were lost
+    uint8_t pingRespLost;
     /// Last time the client received packet from server
     uint64_t lastPacketReceptionTime;
     /// Last time at which the client sent packet to server
@@ -297,9 +320,9 @@ void MQTTSN_CLIENT_Deinit(MQTTSNClient* client);
  * @param[in] gatewayAddress IPv6 address of the MQTT Gateway
  * @param[in] gatewayPort UDP port number of the MQTT Gateway
  * @param[in] keepAliveTime time (in seconds) after which the gateway assumes the client is disconnected, if no message from client in that time is received
- * @param[in] pingPeriod minimum time between messages sent from the client. When no user messages are sent, PING should be sent instead. This value should be less than keepAliveTime
- * @param[in] willTopic topic to which will shall be published if gateway deems the client lost. Nullable if will is not used.
- * @param[in] willMsg message that shall be published if gateway deems the client lost. Nullable if will is not used.
+ * @param[in] pingPeriod minimum time between PING messages sent from the client to test the connection. This value should be less than keepAliveTime
+ * @param[in] willTopic topic to which the will message shall be published if gateway deems the client lost. Nullable if will is not used.
+ * @param[in] willMsg message that shall be published as the last will if gateway deems the client lost. Nullable if will is not used.
  *
  * @retval MQTTSN_CLIENT_RESULT_OK if the connection procedure started successfully
  * @retval MQTTSN_CLIENT_RESULT_INVALID_INPUT_ARGUMENT if one or more arguments are invalid
@@ -329,9 +352,9 @@ MQTTSNClientResult MQTTSN_CLIENT_Connect(MQTTSNClient*       client,
  * @param[in] gatewayAddress IPv6 address of the MQTT Gateway
  * @param[in] gatewayPort UDP port number of the MQTT Gateway
  * @param[in] keepAliveTime time (in seconds) after which the gateway assumes the client is disconnected, if no message from client in that time is received
- * @param[in] pingPeriod minimum time between messages sent from the client. When no user messages are sent, PING should be sent instead. This value should be less than keepAliveTime
- * @param[in] willTopic topic to which will shall be published if gateway deems the client lost. Nullable if will is not used.
- * @param[in] willMsg message that shall be published if gateway deems the client lost. Nullable if will is not used.
+ * @param[in] pingPeriod minimum time between PING messages sent from the client to test the connection. This value should be less than keepAliveTime
+ * @param[in] willTopic topic to which the will message shall be published if gateway deems the client lost. Nullable if will is not used.
+ * @param[in] willMsg message that shall be published as the last will if gateway deems the client lost. Nullable if will is not used.
  *
  * @retval MQTTSN_CLIENT_RESULT_OK if the connection procedure started successfully
  * @retval MQTTSN_CLIENT_RESULT_INVALID_INPUT_ARGUMENT if one or more arguments are invalid
@@ -439,6 +462,7 @@ MQTTSNClientResult MQTTSN_CLIENT_PublishMessageById(MQTTSNClient* client, MQTTSN
  *
  * @param[in] client pointer to the MQTT-SN client description structure
  * @param[in] topic string containing regular topic name
+ * @param[in] onTopicSubscribedByClient callback that will be called when the client subscribes to the topic
  * @param[in] onPublishReceivedCallback callback that will be called when a message is received on the topic
  *
  * @retval MQTTSN_CLIENT_RESULT_OK if the client subscribed successfully
@@ -448,7 +472,7 @@ MQTTSNClientResult MQTTSN_CLIENT_PublishMessageById(MQTTSNClient* client, MQTTSN
  * @retval MQTTSN_CLIENT_SUBSCRIBE_SERIALIZATION_ERROR if the subscribe request could not be serialized
  * @retval MQTTSN_CLIENT_RESULT_FAILED_TO_SEND_PACKET if the subscribe request could not be sent via UDP socket
  */
-MQTTSNClientResult MQTTSN_CLIENT_Subscribe(MQTTSNClient* client, const char* topic, MQTTSNOnPublishReceived onPublishReceivedCallback);
+MQTTSNClientResult MQTTSN_CLIENT_Subscribe(MQTTSNClient* client, const char* topic, MQTTSNOnTopicSubscribedByClient onTopicSubscribedByClient, MQTTSNOnPublishReceived onPublishReceivedCallback);
 
 /** @} */
 

@@ -1,0 +1,8 @@
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/wakaamaNode-master/src/network/mbedtls/include/mbedtls/pk.h:141:36:mbedtls_pk_rsa	16	static
+../wakaamaNode-master/src/network/mbedtls/library/pkparse.c:511:12:pk_get_rsapubkey	64	static
+../wakaamaNode-master/src/network/mbedtls/library/pkparse.c:566:12:pk_get_pk_alg	40	static
+../wakaamaNode-master/src/network/mbedtls/library/pkparse.c:599:5:mbedtls_pk_parse_subpubkey	56	static
+../wakaamaNode-master/src/network/mbedtls/library/pkparse.c:662:12:pk_parse_key_pkcs1_der	88	static
+../wakaamaNode-master/src/network/mbedtls/library/pkparse.c:927:12:pk_parse_key_pkcs8_unencrypted_der	64	static
+../wakaamaNode-master/src/network/mbedtls/library/pkparse.c:1142:5:mbedtls_pk_parse_key	32	static
+../wakaamaNode-master/src/network/mbedtls/library/pkparse.c:1349:5:mbedtls_pk_parse_public_key	48	static

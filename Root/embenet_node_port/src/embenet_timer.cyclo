@@ -1,0 +1,6 @@
+../embenet_node_port/src/embenet_timer.c:35:6:EMBENET_TIMER_Init	2
+../embenet_node_port/src/embenet_timer.c:67:6:EMBENET_TIMER_Deinit	1
+../embenet_node_port/src/embenet_timer.c:77:6:EMBENET_TIMER_SetCompare	2
+../embenet_node_port/src/embenet_timer.c:93:16:EMBENET_TIMER_ReadCounter	1
+../embenet_node_port/src/embenet_timer.c:98:16:EMBENET_TIMER_GetMaxCompareDuration	1
+../embenet_node_port/src/embenet_timer.c:103:6:TIM2_IRQHandler	3

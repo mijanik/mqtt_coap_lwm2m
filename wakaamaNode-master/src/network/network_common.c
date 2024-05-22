@@ -239,7 +239,7 @@ uint8_t lwm2m_buffer_send(void * sessionH,
 #ifndef LWM2M_WITH_DTLS
 inline void internal_close_connection_ssl(network_t* network, connection_t * t) {}
 inline void internal_network_close_ssl(network_t* network) {}
-void internal_check_timer(lwm2m_context_t *contextP, struct timeval* next_event) {}
+void internal_check_timer(lwm2m_context_t *contextP) {}
 
 void internal_network_read(lwm2m_context_t* contextP, void *dest, size_t len, connection_t *connection) {
     ssize_t r = mbedtls_net_recv(connection, dest, (size_t)len);

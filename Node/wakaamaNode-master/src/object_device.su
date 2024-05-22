@@ -1,0 +1,5 @@
+../wakaamaNode-master/src/object_device.c:35:40:prv_find_ressource	24	static
+../wakaamaNode-master/src/object_device.c:53:16:prv_device_read	56	static
+../wakaamaNode-master/src/object_device.c:126:9:prv_device_execute	40	static
+../wakaamaNode-master/src/object_device.c:161:6:init_device_object	96	static
+../wakaamaNode-master/src/object_device.c:175:13:lwm2m_device_res_has_changed	24	static

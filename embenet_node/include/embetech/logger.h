@@ -2,9 +2,9 @@
 /**
 @file
 @purpose   LOGGER Lightweight logging component
-@version   1.1.4417
-@license   Commercial
-@copyright (c) 2023 EMBETECH SP. Z O.O. All rights reserved.
+@version   $Revision$
+@license   $License$
+@copyright $Copyright$
 @brief     Logging component
 */
 

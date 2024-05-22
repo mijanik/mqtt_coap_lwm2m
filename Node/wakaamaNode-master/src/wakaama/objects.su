@@ -1,0 +1,17 @@
+../wakaamaNode-master/src/wakaama/objects.c:73:9:object_checkReadable	56	static
+../wakaamaNode-master/src/wakaama/objects.c:118:9:object_readData	56	static
+../wakaamaNode-master/src/wakaama/objects.c:187:9:object_read	48	static
+../wakaamaNode-master/src/wakaama/objects.c:220:9:object_write	56	static
+../wakaamaNode-master/src/wakaama/objects.c:260:9:object_execute	40	static
+../wakaamaNode-master/src/wakaama/objects.c:276:9:object_create	56	static
+../wakaamaNode-master/src/wakaama/objects.c:343:9:object_delete	40	static
+../wakaamaNode-master/src/wakaama/objects.c:388:9:object_discover	72	static
+../wakaamaNode-master/src/wakaama/objects.c:467:6:object_isInstanceNew	24	static
+../wakaamaNode-master/src/wakaama/objects.c:485:12:prv_getObjectTemplate	40	static
+../wakaamaNode-master/src/wakaama/objects.c:509:5:object_getRegisterPayloadBufferLength	64	static
+../wakaamaNode-master/src/wakaama/objects.c:578:5:object_getRegisterPayload	56	static
+../wakaamaNode-master/src/wakaama/objects.c:662:23:prv_findServerInstance	64	static
+../wakaamaNode-master/src/wakaama/objects.c:700:12:prv_getMandatoryInfo	56	static
+../wakaamaNode-master/src/wakaama/objects.c:740:5:object_getServers	88	static
+../wakaamaNode-master/src/wakaama/objects.c:869:9:object_createInstance	48	static
+../wakaamaNode-master/src/wakaama/objects.c:888:9:object_writeInstance	48	static

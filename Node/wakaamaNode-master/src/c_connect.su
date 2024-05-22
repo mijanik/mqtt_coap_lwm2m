@@ -1,0 +1,15 @@
+../wakaamaNode-master/src/network/network_common.h:167:26:network_from_context	16	static
+../wakaamaNode-master/src/network/network_common.h:177:23:lwm2m_due_time	16	static
+../wakaamaNode-master/src/c_connect.c:23:6:lwm2m_client_close	16	static
+../wakaamaNode-master/src/c_connect.c:50:29:lwm2m_get_security_object	16	static
+../wakaamaNode-master/src/c_connect.c:54:36:get_security_object_by_server_id	24	static
+../wakaamaNode-master/src/c_connect.c:63:13:lwm2m_get_server_uri	24	static
+../wakaamaNode-master/src/c_connect.c:69:6:lwm2m_unregister_server	24	static
+../wakaamaNode-master/src/c_connect.c:82:6:lwm2m_remove_unregistered_servers	48	static
+../wakaamaNode-master/src/c_connect.c:143:13:performUpdateRegistration	24	static
+../wakaamaNode-master/src/c_connect.c:148:6:lwm2m_add_server	40	static
+../wakaamaNode-master/src/c_connect.c:227:13:lwm2m_is_connected	16	static
+../wakaamaNode-master/src/c_connect.c:231:29:lwm2m_state	16	static
+../wakaamaNode-master/src/c_connect.c:235:13:lwm2m_process	16	static
+../wakaamaNode-master/src/c_connect.c:256:6:lwm2m_watch_and_reconnect	40	static
+../wakaamaNode-master/src/c_connect.c:272:9:lwm2m_client_init	40	static

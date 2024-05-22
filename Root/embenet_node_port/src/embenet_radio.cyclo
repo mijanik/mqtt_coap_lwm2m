@@ -1,0 +1,12 @@
+../embenet_node_port/src/embenet_radio.c:167:6:EMBENET_RADIO_SetCallbacks	1
+../embenet_node_port/src/embenet_radio.c:173:6:EMBENET_RADIO_Deinit	1
+../embenet_node_port/src/embenet_radio.c:178:22:EMBENET_RADIO_Idle	1
+../embenet_node_port/src/embenet_radio.c:102:22:EMBENET_RADIO_Init	6
+../embenet_node_port/src/embenet_radio.c:188:22:EMBENET_RADIO_TxEnable	1
+../embenet_node_port/src/embenet_radio.c:201:22:EMBENET_RADIO_TxNow	2
+../embenet_node_port/src/embenet_radio.c:215:22:EMBENET_RADIO_RxEnable	1
+../embenet_node_port/src/embenet_radio.c:226:22:EMBENET_RADIO_RxNow	1
+../embenet_node_port/src/embenet_radio.c:234:22:EMBENET_RADIO_GetReceivedFrame	3
+../embenet_node_port/src/embenet_radio.c:272:22:EMBENET_RADIO_StartContinuousTx	3
+../embenet_node_port/src/embenet_radio.c:286:35:EMBENET_RADIO_GetCapabilities	1
+../embenet_node_port/src/embenet_radio.c:324:6:SUBGHZ_Radio_IRQHandler	8

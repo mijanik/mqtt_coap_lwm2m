@@ -1,0 +1,5 @@
+../wakaamaNode-master/src/wakaama/uri.c:33:12:prv_parseNumber	32	static
+../wakaamaNode-master/src/wakaama/uri.c:63:5:uri_getNumber	24	static
+../wakaamaNode-master/src/wakaama/uri.c:72:15:uri_decode	32	static
+../wakaamaNode-master/src/wakaama/uri.c:184:5:lwm2m_stringToUri	40	static
+../wakaamaNode-master/src/wakaama/uri.c:250:5:uri_toString	64	static

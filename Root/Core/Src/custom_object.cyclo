@@ -1,0 +1,3 @@
+../Core/Src/custom_object.c:68:6:test_object_write_verify_cb	2
+../Core/Src/custom_object.c:55:17:get_screen_object	1
+../Core/Src/custom_object.c:59:15:get_an_instance	1

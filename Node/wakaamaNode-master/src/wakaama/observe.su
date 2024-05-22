@@ -1,0 +1,11 @@
+../wakaamaNode-master/src/wakaama/observe.c:65:27:prv_findObserved	24	static
+../wakaamaNode-master/src/wakaama/observe.c:83:13:prv_unlinkObserved	24	static
+../wakaamaNode-master/src/wakaama/observe.c:107:26:prv_findWatcher	24	static
+../wakaamaNode-master/src/wakaama/observe.c:122:26:prv_getWatcher	40	static
+../wakaamaNode-master/src/wakaama/observe.c:166:9:observe_handleRequest	48	static
+../wakaamaNode-master/src/wakaama/observe.c:243:6:observe_cancel	40	static
+../wakaamaNode-master/src/wakaama/observe.c:294:6:observe_clear	32	static
+../wakaamaNode-master/src/wakaama/observe.c:331:9:observe_setParameters	112	static
+../wakaamaNode-master/src/wakaama/observe.c:426:20:observe_findByUri	24	static
+../wakaamaNode-master/src/wakaama/observe.c:456:6:lwm2m_resource_value_changed	24	static
+../wakaamaNode-master/src/wakaama/observe.c:495:6:observe_step	360	static

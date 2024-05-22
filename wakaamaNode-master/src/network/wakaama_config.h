@@ -1,0 +1,4 @@
+#define LWM2M_CLIENT_MODE 1
+#define LWM2M_WITH_LOGS 1
+#define EMBENET 1
+#define MAX_PACKET_SIZE 60

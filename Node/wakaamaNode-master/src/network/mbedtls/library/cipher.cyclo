@@ -1,0 +1,17 @@
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/wakaamaNode-master/src/network/mbedtls/include/mbedtls/cipher.h:402:28:mbedtls_cipher_get_block_size	3
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/wakaamaNode-master/src/network/mbedtls/include/mbedtls/cipher.h:437:19:mbedtls_cipher_get_iv_size	4
+../wakaamaNode-master/src/network/mbedtls/library/cipher.c:66:12:mbedtls_cipher_list	3
+../wakaamaNode-master/src/network/mbedtls/library/cipher.c:87:30:mbedtls_cipher_info_from_type	3
+../wakaamaNode-master/src/network/mbedtls/library/cipher.c:98:30:mbedtls_cipher_info_from_string	4
+../wakaamaNode-master/src/network/mbedtls/library/cipher.c:112:30:mbedtls_cipher_info_from_values	5
+../wakaamaNode-master/src/network/mbedtls/library/cipher.c:127:6:mbedtls_cipher_init	1
+../wakaamaNode-master/src/network/mbedtls/library/cipher.c:132:6:mbedtls_cipher_free	3
+../wakaamaNode-master/src/network/mbedtls/library/cipher.c:152:5:mbedtls_cipher_setup	4
+../wakaamaNode-master/src/network/mbedtls/library/cipher.c:178:5:mbedtls_cipher_setkey	9
+../wakaamaNode-master/src/network/mbedtls/library/cipher.c:211:5:mbedtls_cipher_set_iv	7
+../wakaamaNode-master/src/network/mbedtls/library/cipher.c:240:5:mbedtls_cipher_reset	3
+../wakaamaNode-master/src/network/mbedtls/library/cipher.c:267:5:mbedtls_cipher_update	29
+../wakaamaNode-master/src/network/mbedtls/library/cipher.c:621:12:get_no_padding	3
+../wakaamaNode-master/src/network/mbedtls/library/cipher.c:633:5:mbedtls_cipher_finish	19
+../wakaamaNode-master/src/network/mbedtls/library/cipher.c:713:5:mbedtls_cipher_set_padding_mode	4
+../wakaamaNode-master/src/network/mbedtls/library/cipher.c:819:5:mbedtls_cipher_crypt	5

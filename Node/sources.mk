@@ -32,4 +32,12 @@ lobaro-coap/src \
 lobaro-coap/src/interface/debug \
 lobaro-coap/src/interface/network \
 lobaro-coap/src/option-types \
+wakaamaNode-master/src \
+wakaamaNode-master/src/network/mbedtls/library \
+wakaamaNode-master/src/network/mbedtls/platform \
+wakaamaNode-master/src/network \
+wakaamaNode-master/src/network/wepoll \
+wakaamaNode-master/src/platform \
+wakaamaNode-master/src/wakaama \
+wakaamaNode-master/src/wakaama/er-coap-13 \
 

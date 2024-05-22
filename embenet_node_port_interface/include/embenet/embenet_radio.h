@@ -1,8 +1,8 @@
 /**
 @file
-@license   Commercial
-@copyright (c) 2023 EMBETECH SP. Z O.O. All rights reserved.
-@version   1.1.4417
+@license   $License$
+@copyright $Copyright$
+@version   $Revision$
 @purpose   RADIO Transceiver Application Interface (API)
 The IDLE state is implementation defined. The assumption is to balance speed and energy consumption in cross-platform manner.
 Modern transceivers may not differentiate between SLEEP and STANDBY modes (or consumed power difference is miniscule), so we can prioritize minimizing energy consumption by assuming
@@ -114,6 +114,7 @@ typedef enum {
     EMBENET_RADIO_STATUS_GENERAL_ERROR       = -1,
     EMBENET_RADIO_STATUS_COMMUNICATION_ERROR = -2,
     EMBENET_RADIO_STATUS_WRONG_STATE         = -3,
+    EMEBNET_RADIO_STATUS_CHANNEL_BUSY        = -4,
 
     EMBENET_RADIO_STATUS_PARAMETER_NOT_IMPLEMENTED    = -30,
     EMBENET_RADIO_STATUS_PARAMETER_ARGS_WRONG_NUMBER  = -31,
@@ -125,7 +126,7 @@ typedef enum {
 
 
 enum {
-    EMBENET_RADIO_MAX_PSDU_LENGTH = 128,
+    EMBENET_RADIO_MAX_PSDU_LENGTH = 192,
     EMBENET_RADIO_MIN_PSDU_LENGTH = 1,
 };
 

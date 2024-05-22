@@ -1,0 +1,4 @@
+../wakaamaNode-master/src/wakaama/packet.c:103:13:handle_reset	1
+../wakaamaNode-master/src/wakaama/packet.c:113:16:handle_request	6
+../wakaamaNode-master/src/wakaama/packet.c:207:6:lwm2m_handle_packet	32
+../wakaamaNode-master/src/wakaama/packet.c:422:9:message_send	4

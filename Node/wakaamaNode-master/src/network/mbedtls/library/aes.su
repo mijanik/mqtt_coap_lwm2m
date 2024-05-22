@@ -1,0 +1,10 @@
+../wakaamaNode-master/src/network/mbedtls/library/aes.c:511:6:mbedtls_aes_init	16	static
+../wakaamaNode-master/src/network/mbedtls/library/aes.c:516:6:mbedtls_aes_free	16	static
+../wakaamaNode-master/src/network/mbedtls/library/aes.c:528:5:mbedtls_aes_setkey_enc	32	static
+../wakaamaNode-master/src/network/mbedtls/library/aes.c:642:5:mbedtls_aes_setkey_dec	328	static
+../wakaamaNode-master/src/network/mbedtls/library/aes.c:757:5:mbedtls_internal_aes_encrypt	64	static
+../wakaamaNode-master/src/network/mbedtls/library/aes.c:813:6:mbedtls_aes_encrypt	24	static
+../wakaamaNode-master/src/network/mbedtls/library/aes.c:825:5:mbedtls_internal_aes_decrypt	64	static
+../wakaamaNode-master/src/network/mbedtls/library/aes.c:881:6:mbedtls_aes_decrypt	24	static
+../wakaamaNode-master/src/network/mbedtls/library/aes.c:892:5:mbedtls_aes_crypt_ecb	24	static
+../wakaamaNode-master/src/network/mbedtls/library/aes.c:924:5:mbedtls_aes_crypt_cbc	56	static

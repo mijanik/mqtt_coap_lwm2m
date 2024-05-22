@@ -1,8 +1,8 @@
 /**
 @file
-@license   Commercial
-@copyright (c) 2023 EMBETECH SP. Z O.O. All rights reserved.
-@version   1.1.4417
+@license   $License$
+@copyright $Copyright$
+@version   $Revision$
 @purpose   embeNET Node port
 @brief     Definition of port capabilities for embeNET Node
 
@@ -14,12 +14,12 @@ Contains set of parameters for DEMO and FULL version separately. Define EMBENET_
 
 const EMBENET_MAC_Timings embenetMacTimings = {
     .TsTxOffsetUs     = 2000,       //
-    .TsTxAckDelayUs   = 2200,       //
+    .TsTxAckDelayUs   = 2500,       //
     .TsLongGTUs       = (2000 / 2), //
     .TsShortGTUs      = (300 / 2),  //
-    .TsSlotDurationUs = 35000,      //
+    .TsSlotDurationUs = 45000,      //
     .wdRadioTxUs      = 2000,       //
-    .wdDataDurationUs = 30000,      //
+    .wdDataDurationUs = 35000,      //
     .wdAckDurationUs  = 8000        //
 };
 
@@ -44,7 +44,6 @@ const uint32_t       embenetMacKaPeriodSlots         = ((15000000 / embenetMacTi
 const uint32_t       embenetMacDesyncTimeoutSlots    = ((180000000 / embenetMacTimings.TsSlotDurationUs) + 1);
 #endif
 
-const bool                      embenetMacTopologyActive = false;
-const EMBENET_MAC_TopologyEntry embenetMacTopologyList[] = {{0}};
-
-const size_t embenetMacTopologyListEntriesCount = sizeof(embenetMacTopologyList) / sizeof(EMBENET_MAC_TopologyEntry);
+__weak_symbol const bool                      embenetMacTopologyActive           = false;
+__weak_symbol const EMBENET_MAC_TopologyEntry embenetMacTopologyList[]           = {{0}};
+__weak_symbol const size_t                    embenetMacTopologyListEntriesCount = sizeof(embenetMacTopologyList) / sizeof(EMBENET_MAC_TopologyEntry);

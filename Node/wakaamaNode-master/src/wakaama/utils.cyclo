@@ -1,0 +1,14 @@
+../wakaamaNode-master/src/wakaama/utils.c:62:5:utils_textToInt	8
+../wakaamaNode-master/src/wakaama/utils.c:107:5:utils_textToFloat	14
+../wakaamaNode-master/src/wakaama/utils.c:171:8:utils_intToText	8
+../wakaamaNode-master/src/wakaama/utils.c:219:8:utils_floatToText	12
+../wakaamaNode-master/src/wakaama/utils.c:284:17:utils_stringToBinding	15
+../wakaamaNode-master/src/wakaama/utils.c:341:20:utils_convertMediaType	13
+../wakaamaNode-master/src/wakaama/utils.c:367:18:utils_findServer	3
+../wakaamaNode-master/src/wakaama/utils.c:383:18:utils_findBootstrapServer	3
+../wakaamaNode-master/src/wakaama/utils.c:406:5:utils_isAltPathValid	16
+../wakaamaNode-master/src/wakaama/utils.c:437:5:utils_stringCopy	4
+../wakaamaNode-master/src/wakaama/utils.c:465:13:prv_encodeBlock	1
+../wakaamaNode-master/src/wakaama/utils.c:474:8:utils_base64GetSize	2
+../wakaamaNode-master/src/wakaama/utils.c:484:8:utils_base64Encode	7
+../wakaamaNode-master/src/wakaama/utils.c:529:19:utils_depthToDatatype	3

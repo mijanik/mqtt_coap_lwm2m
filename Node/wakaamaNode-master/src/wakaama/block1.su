@@ -1,0 +1,2 @@
+../wakaamaNode-master/src/wakaama/block1.c:58:9:coap_block1_handler	40	static
+../wakaamaNode-master/src/wakaama/block1.c:148:6:free_block1_buffer	16	static

@@ -183,7 +183,7 @@ static void mqttsnServiceTask(EMBENET_TaskId taskId, EMBENET_NODE_TimeSource tim
             break;
         case SUBSCRIBE_TO_TOPIC:
             printf("MQTT-SN: Subscribing to topic: '%s'\n", ledControlTopic);
-            MQTTSN_CLIENT_Subscribe(&mqttsnClient, ledControlTopic, onLedcontrolUpdate);
+            MQTTSN_CLIENT_Subscribe(&mqttsnClient, ledControlTopic, NULL, onLedcontrolUpdate);
             // Move to normal state of operation
             serviceState = RUNNING;
             // Reschedule the task

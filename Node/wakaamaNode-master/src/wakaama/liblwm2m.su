@@ -1,0 +1,14 @@
+../wakaamaNode-master/src/wakaama/liblwm2m.c:37:19:lwm2m_init	24	static
+../wakaamaNode-master/src/wakaama/liblwm2m.c:55:6:lwm2m_deregister	24	static
+../wakaamaNode-master/src/wakaama/liblwm2m.c:67:13:prv_deleteServer	16	static
+../wakaamaNode-master/src/wakaama/liblwm2m.c:82:13:prv_deleteServerList	24	static
+../wakaamaNode-master/src/wakaama/liblwm2m.c:93:13:prv_deleteBootstrapServer	16	static
+../wakaamaNode-master/src/wakaama/liblwm2m.c:105:13:prv_deleteBootstrapServerList	24	static
+../wakaamaNode-master/src/wakaama/liblwm2m.c:116:13:prv_deleteObservedList	24	static
+../wakaamaNode-master/src/wakaama/liblwm2m.c:137:6:prv_deleteTransactionList	24	static
+../wakaamaNode-master/src/wakaama/liblwm2m.c:149:6:lwm2m_close	16	static
+../wakaamaNode-master/src/wakaama/liblwm2m.c:186:12:prv_refreshServerList	24	static
+../wakaamaNode-master/src/wakaama/liblwm2m.c:230:5:lwm2m_configure	48	static
+../wakaamaNode-master/src/wakaama/liblwm2m.c:299:5:lwm2m_add_object	24	static
+../wakaamaNode-master/src/wakaama/liblwm2m.c:319:5:lwm2m_remove_object	24	static
+../wakaamaNode-master/src/wakaama/liblwm2m.c:340:6:lwm2m_step	32	static

@@ -1,0 +1,12 @@
+../wakaamaNode-master/src/wakaama/utils.h:47:20:utils_int32Copy	24	static
+../wakaamaNode-master/src/wakaama/utils.h:62:20:utils_doubleCopy	24	static
+../wakaamaNode-master/src/wakaama/tlv.c:42:15:prv_encodeFloat	32	static
+../wakaamaNode-master/src/wakaama/tlv.c:64:15:prv_encodeInt	40	static
+../wakaamaNode-master/src/wakaama/tlv.c:100:16:prv_getHeaderType	16	static
+../wakaamaNode-master/src/wakaama/tlv.c:128:26:prv_getDataType	16	static
+../wakaamaNode-master/src/wakaama/tlv.c:150:12:prv_getHeaderLength	24	static
+../wakaamaNode-master/src/wakaama/tlv.c:178:12:prv_createHeader	32	static
+../wakaamaNode-master/src/wakaama/tlv.c:239:5:lwm2m_decode_TLV	24	static
+../wakaamaNode-master/src/wakaama/tlv.c:303:5:tlv_parse	72	static
+../wakaamaNode-master/src/wakaama/tlv.c:364:12:prv_getLength	48	static
+../wakaamaNode-master/src/wakaama/tlv.c:446:5:tlv_serialize	112	static

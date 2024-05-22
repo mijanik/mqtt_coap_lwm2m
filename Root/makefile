@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (10.3-2021.10)
+# Toolchain: GNU Tools for STM32 (11.3.rel1)
 ################################################################################
 
 -include ../makefile.init
@@ -9,6 +9,10 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include lobaro-coap/src/option-types/subdir.mk
+-include lobaro-coap/src/interface/network/subdir.mk
+-include lobaro-coap/src/interface/debug/subdir.mk
+-include lobaro-coap/src/subdir.mk
 -include embenet_node_port/src/subdir.mk
 -include embenet_node_bsp/subdir.mk
 -include Drivers/STM32WLxx_HAL_Driver/Src/subdir.mk

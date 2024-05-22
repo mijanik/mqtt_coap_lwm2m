@@ -1,0 +1,17 @@
+../wakaamaNode-master/src/wakaama/objects.c:73:9:object_checkReadable	13
+../wakaamaNode-master/src/wakaama/objects.c:118:9:object_readData	15
+../wakaamaNode-master/src/wakaama/objects.c:187:9:object_read	6
+../wakaamaNode-master/src/wakaama/objects.c:220:9:object_write	8
+../wakaamaNode-master/src/wakaama/objects.c:260:9:object_execute	7
+../wakaamaNode-master/src/wakaama/objects.c:276:9:object_create	14
+../wakaamaNode-master/src/wakaama/objects.c:343:9:object_delete	11
+../wakaamaNode-master/src/wakaama/objects.c:388:9:object_discover	17
+../wakaamaNode-master/src/wakaama/objects.c:467:6:object_isInstanceNew	3
+../wakaamaNode-master/src/wakaama/objects.c:485:12:prv_getObjectTemplate	4
+../wakaamaNode-master/src/wakaama/objects.c:509:5:object_getRegisterPayloadBufferLength	10
+../wakaamaNode-master/src/wakaama/objects.c:578:5:object_getRegisterPayload	17
+../wakaamaNode-master/src/wakaama/objects.c:662:23:prv_findServerInstance	6
+../wakaamaNode-master/src/wakaama/objects.c:700:12:prv_getMandatoryInfo	7
+../wakaamaNode-master/src/wakaama/objects.c:740:5:object_getServers	23
+../wakaamaNode-master/src/wakaama/objects.c:869:9:object_createInstance	6
+../wakaamaNode-master/src/wakaama/objects.c:888:9:object_writeInstance	6

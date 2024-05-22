@@ -1,0 +1,4 @@
+../wakaamaNode-master/src/object_security.c:47:16:prv_get_value	6
+../wakaamaNode-master/src/object_security.c:90:16:prv_security_read	7
+../wakaamaNode-master/src/object_security.c:139:6:display_security_object	3
+../wakaamaNode-master/src/object_security.c:154:6:init_security_object	1

@@ -52,7 +52,7 @@ bool CoAP_Posix_SendDatagram(SocketHandle_t socketHandle, NetPacket_t *pckt)
 	EMBENET_IPV6 borderRouterAddress;
 	EMBENET_NODE_GetBorderRouterAddress(&borderRouterAddress);
 	// send UDP packet using port 1234
-	if (EMBENET_RESULT_OK != EMBENET_UDP_Send(socket_ptr, &borderRouterAddress, 1234, pckt->pData, pckt->size)) {
+	if (EMBENET_RESULT_OK != EMBENET_UDP_Send(socket_ptr, &borderRouterAddress, 5683, pckt->pData, pckt->size)) {
 		printf("CUSTOM_SERVICE: Failed to send UDP packet\n");
 		return false;
 	}
@@ -90,7 +90,7 @@ static void customServiceTask(EMBENET_TaskId taskId, EMBENET_NODE_TimeSource tim
 
 	// Send a CoAP message
 	CoAP_Result_t result = CoAP_StartNewRequest(
-		REQ_POST,				// (CoAP_MessageCode_t)
+		REQ_PUT,				// (CoAP_MessageCode_t)
 		"/path/to/resource",	// (char*)
 		(SocketHandle_t)&customServiceSocket,				// (SocketHandle_t)
 		&serverEp,		// (NetEp_t*)
@@ -129,36 +129,6 @@ static void customServiceReceptionHandler(EMBENET_UDP_SocketDescriptor const *so
 	CoAP_HandleIncomingPacket(&socket, &pckt); 	// Feed the received packet to the CoAP library
 													// Note: this will copy the data to a new
 													// buffer (we can reuse the rxBuffer)
-
-//	// Retrieve command from datagram's payload
-//    char const *msg = (char const*) data;
-//
-//    if (dataSize >= 6) {
-//        // Perform action based on received command
-//        if (0 == strncmp(msg, "led1on", 6)) {
-//            printf("CUSTOM_SERVICE: Led 1 on\n");
-//            HAL_GPIO_WritePin(GPIOB, LED1_Pin, GPIO_PIN_SET);
-//        } else if (0 == strncmp(msg, "led1off", 7)) {
-//            printf("CUSTOM_SERVICE: Led 1 off\n");
-//            HAL_GPIO_WritePin(GPIOB, LED1_Pin, GPIO_PIN_RESET);
-//        } else if (0 == strncmp(msg, "led2on", 6)) {
-//            printf("CUSTOM_SERVICE: Led 2 on\n");
-//            HAL_GPIO_WritePin(GPIOB, LED2_Pin, GPIO_PIN_SET);
-//        } else if (0 == strncmp(msg, "led2off", 7)) {
-//            printf("CUSTOM_SERVICE: Led 2 off\n");
-//            HAL_GPIO_WritePin(GPIOB, LED2_Pin, GPIO_PIN_RESET);
-//        } else if (0 == strncmp(msg, "led3on", 6)) {
-//            printf("CUSTOM_SERVICE: Led 3 on\n");
-//            HAL_GPIO_WritePin(GPIOB, LED3_Pin, GPIO_PIN_SET);
-//        } else if (0 == strncmp(msg, "led3off", 7)) {
-//            printf("CUSTOM_SERVICE: Led 3 off\n");
-//            HAL_GPIO_WritePin(GPIOB, LED3_Pin, GPIO_PIN_RESET);
-//        } else {
-//            printf("CUSTOM_SERVICE: Unrecognized command with size: %d\n", (int)dataSize);
-//        }
-//    } else {
-//        printf("CUSTOM_SERVICE: Unrecognized command with size: %d\n", (int)dataSize);
-//    }
 }
 
 void custom_service_init(void) {

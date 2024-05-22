@@ -1,8 +1,8 @@
 /**
 @file
-@license   Commercial
-@copyright (c) 2023 EMBETECH SP. Z O.O. All rights reserved.
-@version   1.1.4417
+@license   $License$
+@copyright $Copyright$
+@version   $Revision$
 @purpose   embeNET UDP API
 @brief     embeNET UDP API
 */

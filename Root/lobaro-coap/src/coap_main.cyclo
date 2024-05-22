@@ -1,0 +1,7 @@
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/coap_main.c:28:6:hal_debug_puts	2
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/coap_main.c:269:27:CheckRespStatus	7
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/coap_main.c:224:27:SendResp.isra	4
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/coap_main.c:37:11:CoAP_HandleIncomingPacket	39
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/coap_main.c:354:16:CoAP_NewSocket	1
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/coap_main.c:684:11:CoAP_doWork	79
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/coap_main.c:728:11:CoAP_ClearPendingInteractions	1

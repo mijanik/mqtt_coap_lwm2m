@@ -1,0 +1,5 @@
+../wakaamaNode-master/src/object_device.c:35:40:prv_find_ressource	3
+../wakaamaNode-master/src/object_device.c:53:16:prv_device_read	8
+../wakaamaNode-master/src/object_device.c:126:9:prv_device_execute	4
+../wakaamaNode-master/src/object_device.c:161:6:init_device_object	1
+../wakaamaNode-master/src/object_device.c:175:13:lwm2m_device_res_has_changed	1

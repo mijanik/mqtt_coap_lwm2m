@@ -9,6 +9,14 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include wakaamaNode-master/src/wakaama/er-coap-13/subdir.mk
+-include wakaamaNode-master/src/wakaama/subdir.mk
+-include wakaamaNode-master/src/platform/subdir.mk
+-include wakaamaNode-master/src/network/wepoll/subdir.mk
+-include wakaamaNode-master/src/network/mbedtls/platform/subdir.mk
+-include wakaamaNode-master/src/network/mbedtls/library/subdir.mk
+-include wakaamaNode-master/src/network/subdir.mk
+-include wakaamaNode-master/src/subdir.mk
 -include lobaro-coap/src/option-types/subdir.mk
 -include lobaro-coap/src/interface/network/subdir.mk
 -include lobaro-coap/src/interface/debug/subdir.mk

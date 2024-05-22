@@ -1,0 +1,4 @@
+../wakaamaNode-master/src/wakaama/discover.c:39:29:prv_findAttributes	7
+../wakaamaNode-master/src/wakaama/discover.c:66:12:prv_serializeAttributes	33
+../wakaamaNode-master/src/wakaama/discover.c:160:12:prv_serializeLinkData	30
+../wakaamaNode-master/src/wakaama/discover.c:294:5:discover_serialize	32

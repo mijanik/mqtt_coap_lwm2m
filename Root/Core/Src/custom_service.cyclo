@@ -1,0 +1,10 @@
+../Core/Src/custom_service.c:27:5:generateRandom	1
+../Core/Src/custom_service.c:32:6:debugPuts	1
+../Core/Src/custom_service.c:37:10:elapsedTime_seconds	1
+../Core/Src/custom_service.c:44:6:CoAP_Posix_SendDatagram	2
+../Core/Src/custom_service.c:84:13:customServiceTask	1
+../Core/Src/custom_service.c:117:13:customServiceReceptionHandler	1
+../Core/Src/custom_service.c:63:15:CoAP_RespHandler_fn	2
+../Core/Src/custom_service.c:134:6:custom_service_init	4
+../Core/Src/custom_service.c:186:6:custom_service_start	1
+../Core/Src/custom_service.c:194:6:custom_service_stop	1

@@ -35,6 +35,7 @@
 // demo services
 #include "custom_service.h"
 #include "mqttsn_client_service.h"
+#include "lwm2m_service.h"
 // board and chip specific header files
 #include "usart.h"
 
@@ -91,6 +92,7 @@ static void onJoined(EMBENET_PANID panId, const EMBENET_NODE_QuickJoinCredential
 #if 1 != IS_ROOT
     // Start exemplary, user-defined custom service
     custom_service_start();
+    //lwm2m_service_start();
     // Start MQTT-SN demo service
     //mqttsn_client_service_start();
 #endif
@@ -221,6 +223,7 @@ int main(void)
 
     // Initialize exemplary, user-defined custom service
     custom_service_init();
+    //lwm2m_service_init();
     // Initialize MQTT-SN service
     //mqttsn_client_service_init();
 

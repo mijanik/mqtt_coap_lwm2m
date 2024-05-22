@@ -1,0 +1,13 @@
+../wakaamaNode-master/src/wakaama/registration.c:76:12:prv_getRegistrationQueryLength	10
+../wakaamaNode-master/src/wakaama/registration.c:127:12:prv_getRegistrationQuery	17
+../wakaamaNode-master/src/wakaama/registration.c:199:13:prv_handleRegistrationReply	7
+../wakaamaNode-master/src/wakaama/registration.c:232:16:prv_register	10
+../wakaamaNode-master/src/wakaama/registration.c:307:13:prv_handleRegistrationUpdateReply	7
+../wakaamaNode-master/src/wakaama/registration.c:336:12:prv_updateRegistration	8
+../wakaamaNode-master/src/wakaama/registration.c:393:5:lwm2m_update_registration	24
+../wakaamaNode-master/src/wakaama/registration.c:478:9:registration_init_connection	5
+../wakaamaNode-master/src/wakaama/registration.c:501:9:registration_start	6
+../wakaamaNode-master/src/wakaama/registration.c:529:16:registration_getStatus	7
+../wakaamaNode-master/src/wakaama/registration.c:567:13:prv_handleDeregistrationReply	3
+../wakaamaNode-master/src/wakaama/registration.c:582:6:registration_deregister	29
+../wakaamaNode-master/src/wakaama/registration.c:1319:6:registration_step	10

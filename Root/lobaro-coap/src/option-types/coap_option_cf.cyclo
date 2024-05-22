@@ -1,0 +1,4 @@
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/option-types/coap_option_cf.c:24:20:CoAP_AddCfOptionToMsg	1
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/option-types/coap_option_cf.c:29:20:CoAP_AddAcceptOptionToMsg	1
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/option-types/coap_option_cf.c:34:15:CoAP_GetAcceptOptionVal	5
+C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src/option-types/coap_option_cf.c:54:15:CoAP_GetAcceptOptionValFromMsg	3

@@ -24,9 +24,9 @@ typedef int make_iso_compilers_happy; // if not LWIP
 #include <stdlib.h>
 #include <string.h>
 
-#ifndef MAX_PACKET_SIZE
-#define MAX_PACKET_SIZE 1024
-#endif
+//#ifndef MAX_PACKET_SIZE
+//#define MAX_PACKET_SIZE 1024
+//#endif
 
 #include "lwip/api.h"
 #include "lwip/sys.h"

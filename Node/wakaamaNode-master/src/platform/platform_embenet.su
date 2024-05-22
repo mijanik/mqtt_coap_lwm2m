@@ -1,0 +1,6 @@
+../wakaamaNode-master/src/platform/platform_embenet.c:5:8:lwm2m_malloc	16	static
+../wakaamaNode-master/src/platform/platform_embenet.c:10:6:lwm2m_free	16	static
+../wakaamaNode-master/src/platform/platform_embenet.c:15:8:lwm2m_strdup	24	static
+../wakaamaNode-master/src/platform/platform_embenet.c:25:5:lwm2m_strncmp	24	static
+../wakaamaNode-master/src/platform/platform_embenet.c:32:8:lwm2m_gettime	24	static
+../wakaamaNode-master/src/platform/platform_embenet.c:45:28:lwm2m_printf	4	static

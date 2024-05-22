@@ -1,8 +1,8 @@
 /**
 @file
-@license   Commercial
-@copyright (c) 2023 EMBETECH SP. Z O.O. All rights reserved.
-@version   1.1.4417
+@license   $License$
+@copyright $Copyright$
+@version   $Revision$
 @purpose   embeNET API
 @brief     embeNET Node Trace API
 
@@ -173,12 +173,6 @@ typedef void (*EMBENET_TRACE_RankUpdate)(uint16_t rank);
 typedef void (*EMBENET_TRACE_QueueLength)(size_t length);
 
 /**
- * @brief Called every time the ENSM Status Indication Packet was sent.
- * @note Called in non-privileged mode.
- */
-typedef void (*EMBENET_TRACE_EnmsStatusSent)(void);
-
-/**
  * @brief Called every time radio is toggled from sleep to active state.
  * @note May be called in ISR.
  *
@@ -256,7 +250,6 @@ typedef struct {
     EMBENET_TRACE_NeighborRemoved    onNeighborRemoved;
     EMBENET_TRACE_RankUpdate         onRankUpdate;
     EMBENET_TRACE_QueueLength        onQueueLength;
-    EMBENET_TRACE_EnmsStatusSent     onEnmsStatusSent;
     EMBENET_TRACE_LinkLayerEvent     onLinkLayerEvent;
     EMBENET_TRACE_OnFreeSlots        onFreeSlots;
 

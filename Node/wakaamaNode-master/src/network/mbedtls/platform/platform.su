@@ -1,0 +1,2 @@
+../wakaamaNode-master/src/network/mbedtls/platform/platform.c:313:5:mbedtls_platform_setup	16	static
+../wakaamaNode-master/src/network/mbedtls/platform/platform.c:323:6:mbedtls_platform_teardown	16	static

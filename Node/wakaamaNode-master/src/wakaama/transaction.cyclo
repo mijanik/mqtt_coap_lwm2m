@@ -1,0 +1,7 @@
+../wakaamaNode-master/src/wakaama/transaction.c:76:12:prv_checkFinished	5
+../wakaamaNode-master/src/wakaama/transaction.c:103:23:transaction_new	14
+../wakaamaNode-master/src/wakaama/transaction.c:201:6:transaction_free	3
+../wakaamaNode-master/src/wakaama/transaction.c:213:6:transaction_remove	1
+../wakaamaNode-master/src/wakaama/transaction.c:220:6:transaction_handleResponse	18
+../wakaamaNode-master/src/wakaama/transaction.c:300:5:transaction_send	12
+../wakaamaNode-master/src/wakaama/transaction.c:379:6:transaction_step	6

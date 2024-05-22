@@ -1,8 +1,8 @@
 /**
 @file
-@license   Commercial
-@copyright (c) 2023 EMBETECH SP. Z O.O. All rights reserved.
-@version   1.1.4417
+@license   $License$
+@copyright $Copyright$
+@version   $Revision$
 @purpose   embeNET API
 @brief     Common API definitions
 */
@@ -21,11 +21,11 @@ extern "C" {
  */
 
 /// embeNET version number - high number
-#define EMBENET_VER_HI 1
+#define EMBENET_VER_HI 0
 /// embeNET version number - low number
-#define EMBENET_VER_LO 1
+#define EMBENET_VER_LO 0
 /// embeNET version number - revision number
-#define EMBENET_REVISION 4417
+#define EMBENET_REVISION 0
 
 /// Possible result codes
 typedef enum {

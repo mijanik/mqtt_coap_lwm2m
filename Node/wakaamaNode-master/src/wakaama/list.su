@@ -1,0 +1,5 @@
+../wakaamaNode-master/src/wakaama/list.c:21:16:lwm2m_list_add	24	static
+../wakaamaNode-master/src/wakaama/list.c:47:16:lwm2m_list_find	16	static
+../wakaamaNode-master/src/wakaama/list.c:61:16:lwm2m_list_remove	32	static
+../wakaamaNode-master/src/wakaama/list.c:98:10:lwm2m_list_newId	24	static
+../wakaamaNode-master/src/wakaama/list.c:115:6:lwm2m_list_free	24	static

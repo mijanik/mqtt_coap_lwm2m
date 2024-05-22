@@ -1,0 +1,6 @@
+../wakaamaNode-master/src/network/mbedtls/library/cipher_wrap.c:120:12:aes_crypt_ecb_wrap	1
+../wakaamaNode-master/src/network/mbedtls/library/cipher_wrap.c:127:12:aes_crypt_cbc_wrap	1
+../wakaamaNode-master/src/network/mbedtls/library/cipher_wrap.c:155:12:aes_setkey_dec_wrap	1
+../wakaamaNode-master/src/network/mbedtls/library/cipher_wrap.c:161:12:aes_setkey_enc_wrap	1
+../wakaamaNode-master/src/network/mbedtls/library/cipher_wrap.c:167:15:aes_ctx_alloc	2
+../wakaamaNode-master/src/network/mbedtls/library/cipher_wrap.c:179:13:aes_ctx_free	1

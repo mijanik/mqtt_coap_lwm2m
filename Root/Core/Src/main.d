@@ -53,8 +53,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../embenet_node/include/embenet_udp.h \
  ../embenet_node/include/enms_node.h ../embenet_node/include/enms_data.h \
  ../embenet_node/include/embenet_node_diag.h \
- ../embenet_node/include/embenet_udp.h ../Core/Inc/custom_service.h \
- ../Core/Inc/mqttsn_client_service.h ../Core/Inc/usart.h
+ ../embenet_node/include/embenet_udp.h ../Core/Inc/lwm2m_service.h \
+ ../Core/Inc/usart.h
 ../Core/Inc/main.h:
 ../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_hal.h:
 ../Core/Inc/stm32wlxx_hal_conf.h:
@@ -113,6 +113,5 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../embenet_node/include/enms_data.h:
 ../embenet_node/include/embenet_node_diag.h:
 ../embenet_node/include/embenet_udp.h:
-../Core/Inc/custom_service.h:
-../Core/Inc/mqttsn_client_service.h:
+../Core/Inc/lwm2m_service.h:
 ../Core/Inc/usart.h:

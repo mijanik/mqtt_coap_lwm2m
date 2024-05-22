@@ -1,0 +1,15 @@
+../wakaamaNode-master/src/network/network_common.h:167:26:network_from_context	16	static
+../wakaamaNode-master/src/network/network_common.c:25:9:decode_uri	48	static
+../wakaamaNode-master/src/network/network_common.c:68:6:lwm2m_session_is_equal	24	static
+../wakaamaNode-master/src/network/network_common.c:103:15:internal_create_server_connection	16	static
+../wakaamaNode-master/src/network/network_common.c:110:16:internal_connection_find	64	static
+../wakaamaNode-master/src/network/network_common.c:120:13:internal_network_add_conn	16	static
+../wakaamaNode-master/src/network/network_common.c:125:9:lwm2m_network_init	24	static
+../wakaamaNode-master/src/network/network_common.c:151:8:lwm2m_connect_server	296	static
+../wakaamaNode-master/src/network/network_common.c:211:9:lwm2m_buffer_send	32	static
+../wakaamaNode-master/src/network/network_common.c:240:13:internal_close_connection_ssl	16	static
+../wakaamaNode-master/src/network/network_common.c:241:13:internal_network_close_ssl	16	static
+../wakaamaNode-master/src/network/network_common.c:242:6:internal_check_timer	16	static
+../wakaamaNode-master/src/network/network_common.c:244:6:internal_network_read	32	static
+../wakaamaNode-master/src/network/network_common.c:260:6:lwm2m_close_connection	24	static
+../wakaamaNode-master/src/network/network_common.c:282:6:lwm2m_network_close	32	static

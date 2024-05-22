@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (10.3-2021.10)
+# Toolchain: GNU Tools for STM32 (11.3.rel1)
 ################################################################################
 
 # Add inputs and outputs from these tool invocations to the build variables 
@@ -16,7 +16,7 @@ S_DEPS += \
 
 # Each subdirectory must supply rules for building sources it contributes
 Core/Starup/%.o: ../Core/Starup/%.s Core/Starup/subdir.mk
-	arm-none-eabi-gcc -mcpu=cortex-m4 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@" "$<"
+	arm-none-eabi-gcc -mcpu=cortex-m4 -DDEBUG -c -I"C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap" -I"C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap/src" -I"C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/lobaro-coap" -I"C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/wakaamaNode-master/src/include" -I"C:/Users/Milosz/Desktop/magisterka/embenet_demo_src/wakaamaNode-master/src/network/mbedtls/include" -x assembler-with-cpp -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@" "$<"
 
 clean: clean-Core-2f-Starup
 

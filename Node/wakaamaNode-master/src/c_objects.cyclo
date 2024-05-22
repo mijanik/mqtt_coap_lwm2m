@@ -1,0 +1,13 @@
+../wakaamaNode-master/src/c_objects.c:22:28:lwm2m_resource_changed_event	1
+../wakaamaNode-master/src/c_objects.c:24:33:prv_find_ressource	3
+../wakaamaNode-master/src/c_objects.c:34:5:lwm2m_object_prepare_full_response	4
+../wakaamaNode-master/src/c_objects.c:51:9:lwm2m_object_assign_single_value	14
+../wakaamaNode-master/src/c_objects.c:137:16:prv_read	8
+../wakaamaNode-master/src/c_objects.c:173:16:prv_write	45
+../wakaamaNode-master/src/c_objects.c:322:16:prv_execute	5
+../wakaamaNode-master/src/c_objects.c:350:16:prv_discover	8
+../wakaamaNode-master/src/c_objects.c:392:16:prv_delete	2
+../wakaamaNode-master/src/c_objects.c:404:16:prv_create	3
+../wakaamaNode-master/src/c_objects.c:436:5:lwm2m_add_initialize_object	3
+../wakaamaNode-master/src/c_objects.c:458:5:lwm2m_object_instance_add	4
+../wakaamaNode-master/src/c_objects.c:470:15:lwm2m_object_instance_remove	3

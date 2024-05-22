@@ -25,7 +25,7 @@ extern "C" {
 #error "You cannot define LWIP and POSIX_NETWORK!"
 #endif
 
-#if !defined(LWIP) && !defined(POSIX_NETWORK)
+#if !defined(LWIP) && !defined(POSIX_NETWORK) && !defined(EMBENET)
     #if defined(_WIN32) || defined(__unix__) || defined(__posix__) || defined(__linux) || defined(linux)
     #define POSIX_NETWORK 1
     #else
@@ -52,6 +52,10 @@ extern "C" {
 
 #ifdef LWIP
 #include "network_lwip.h"
+#endif
+
+#ifdef EMBENET
+#include "network_embenet.h"
 #endif
 
 #include <stdint.h>
@@ -153,9 +157,9 @@ void connection_log_io(connection_t* conn, int length, bool sending);
 #define network_log_error(...)
 #endif
 
-#ifndef MAX_PACKET_SIZE
-#define MAX_PACKET_SIZE 1024
-#endif
+//#ifndef MAX_PACKET_SIZE
+//#define MAX_PACKET_SIZE 1024
+//#endif
 
 int mbedtls_net_send( void *ctx, const unsigned char *buf, size_t len );
 int mbedtls_net_recv( void *ctx, unsigned char *buf, size_t len );
