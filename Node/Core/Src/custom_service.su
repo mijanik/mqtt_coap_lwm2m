@@ -3,8 +3,8 @@
 ../Core/Src/custom_service.c:37:10:elapsedTime_seconds	16	static
 ../Core/Src/custom_service.c:44:6:CoAP_Posix_SendDatagram	48	static
 ../Core/Src/custom_service.c:63:15:CoAP_RespHandler_fn	24	static
-../Core/Src/custom_service.c:84:13:customServiceTask	64	static
-../Core/Src/custom_service.c:117:13:customServiceReceptionHandler	72	static
-../Core/Src/custom_service.c:134:6:custom_service_init	72	static
-../Core/Src/custom_service.c:186:6:custom_service_start	24	static
-../Core/Src/custom_service.c:194:6:custom_service_stop	8	static
+../Core/Src/custom_service.c:86:13:customServiceTask	64	static
+../Core/Src/custom_service.c:120:13:customServiceReceptionHandler	72	static
+../Core/Src/custom_service.c:137:6:custom_service_init	72	static
+../Core/Src/custom_service.c:196:6:custom_service_start	24	static
+../Core/Src/custom_service.c:205:6:custom_service_stop	8	static

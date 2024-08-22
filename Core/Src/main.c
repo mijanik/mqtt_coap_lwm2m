@@ -33,9 +33,9 @@
 #include "embenet_node.h"
 #include "enms_node.h"
 // demo services
-#include "custom_service.h"
+//#include "custom_service.h"
 #include "mqttsn_client_service.h"
-#include "lwm2m_service.h"
+//#include "lwm2m_service.h"
 // board and chip specific header files
 #include "usart.h"
 
@@ -91,10 +91,10 @@ static void onJoined(EMBENET_PANID panId, const EMBENET_NODE_QuickJoinCredential
 
 #if 1 != IS_ROOT
     // Start exemplary, user-defined custom service
-    custom_service_start();
+    //custom_service_start();
     //lwm2m_service_start();
     // Start MQTT-SN demo service
-    //mqttsn_client_service_start();
+    mqttsn_client_service_start();
 #endif
 }
 
@@ -113,9 +113,9 @@ static void onLeft(void) {
 
 #if 1 != IS_ROOT
     // Stop exemplary, user-defined custom service
-    custom_service_stop();
+    //custom_service_stop();
     // Stop MQTT-SN demo service
-    //mqttsn_client_service_stop();
+    mqttsn_client_service_stop();
 #endif
 
 }
@@ -222,14 +222,15 @@ int main(void)
     printf("Acting as node with UID: 0x%x%08x\n", (unsigned)(EMBENET_NODE_GetUID()>>32), (unsigned)(EMBENET_NODE_GetUID()));
 
     // Initialize exemplary, user-defined custom service
-    custom_service_init();
+    //custom_service_init();
     //lwm2m_service_init();
     // Initialize MQTT-SN service
-    //mqttsn_client_service_init();
+    mqttsn_client_service_init();
 
     // Additionally tell the ENMS what services are running
-    (void) ENMS_NODE_RegisterService(&enmsNode, "custom", 1);
+//    (void) ENMS_NODE_RegisterService(&enmsNode, "custom", 1);
     (void) ENMS_NODE_RegisterService(&enmsNode, "mqttsn", 1);
+//    (void) ENMS_NODE_RegisterService(&enmsNode, "lwm2m", 1);
 
     // embeNET network configuration:
     // K1 key, used to authenticate the network node should join and
@@ -253,7 +254,7 @@ int main(void)
         EMBENET_NODE_Proc();
 #if 1 != IS_ROOT
         // When acting as Node, run the MQTT-SN service process
-        //mqttsn_client_service_proc();
+        mqttsn_client_service_proc();
 #endif
     }
     /* USER CODE END WHILE */

@@ -1,0 +1,7 @@
+../wakaamaNode-master/src/network/network_embenet.c:17:13:ip_equal	1
+../wakaamaNode-master/src/network/network_embenet.c:22:9:internal_init_sockets	5
+../wakaamaNode-master/src/network/network_embenet.c:101:13:lwm2mServiceReceptionHandler	2
+../wakaamaNode-master/src/network/network_embenet.c:141:10:lwm2m_network_native_sock	2
+../wakaamaNode-master/src/network/network_embenet.c:147:28:lwm2m_network_process	17
+../wakaamaNode-master/src/network/network_embenet.c:205:5:mbedtls_net_send	17
+../wakaamaNode-master/src/network/network_embenet.c:276:16:internal_connection_create	2

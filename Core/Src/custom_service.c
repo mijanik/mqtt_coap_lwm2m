@@ -60,10 +60,12 @@ bool CoAP_Posix_SendDatagram(SocketHandle_t socketHandle, NetPacket_t *pckt)
 }
 
 // Response handler function
-CoAP_Result_t CoAP_RespHandler_fn(CoAP_Message_t* pRespMsg, CoAP_Message_t* pReqMsg, NetEp_t* sender)
+CoAP_Result_t CoAP_RespHandler_fn(CoAP_Message_t* pRespMsg,
+		CoAP_Message_t* pReqMsg, NetEp_t* sender)
 {
 	if(pRespMsg == NULL) {
-		printf("CoAP message transmission failed after all retries (timeout) for MessageId %d", pReqMsg->MessageID);
+		printf("CoAP message transmission failed after all retries (timeout) for MessageId %d",
+				pReqMsg->MessageID);
 		return COAP_OK;
 	}
 
@@ -81,7 +83,8 @@ CoAP_Result_t CoAP_RespHandler_fn(CoAP_Message_t* pRespMsg, CoAP_Message_t* pReq
  * @param[in] t time at which the task was scheduled to run
  * @param[in] context generic, user-defined context
  */
-static void customServiceTask(EMBENET_TaskId taskId, EMBENET_NODE_TimeSource timeSource, uint64_t t, void *context) {
+static void customServiceTask(EMBENET_TaskId taskId, EMBENET_NODE_TimeSource timeSource,
+		uint64_t t, void *context) {
     // Process any pending work
     CoAP_doWork();
 
@@ -132,6 +135,7 @@ static void customServiceReceptionHandler(EMBENET_UDP_SocketDescriptor const *so
 }
 
 void custom_service_init(void) {
+
 	// Bind system functions to the CoAP library
 	CoAP_API_t api = {
 		.malloc = malloc,				// Function for allocating memory
@@ -144,21 +148,27 @@ void custom_service_init(void) {
 	CoAP_Init(api);
 	printf("CUSTOM_SERVICE: CoAP Initialized\n");
 
-//    // Initialize UDP socket on node's unicast address, and port 1234. Upon datagram reception, customServiceReceptionHandler will be called)
+    // Initialize UDP socket on node's unicast address, and port 5683.
+	// Upon datagram reception, customServiceReceptionHandler will be called
+
     customServiceSocket = (EMBENET_UDP_SocketDescriptor ) {
         .port = 5683,
         .groupId = 0, // GroupId is ignored, when using EMBENET_UDP_TRAFFIC_UNICAST
         .handledTraffic = EMBENET_UDP_TRAFFIC_UNICAST,
         .rxDataHandler = customServiceReceptionHandler,
-        .userContext = NULL // userContext is not needed in this example, however user may pass it to callback invocation
+        .userContext = NULL // userContext is not needed in this example,
+							// however user may pass it to callback invocation
     };
 
     // Register UDP socket. Registering socket enables datagram reception/transmission
-    EMBENET_Result customServiceSocketRegistrationStatus = EMBENET_UDP_RegisterSocket(&customServiceSocket);
+    EMBENET_Result customServiceSocketRegistrationStatus =
+    		EMBENET_UDP_RegisterSocket(&customServiceSocket);
     if (EMBENET_RESULT_OK == customServiceSocketRegistrationStatus) {
-        printf("CUSTOM_SERVICE: Socket %d registered successfully\n", (int)customServiceSocket.port);
+        printf("CUSTOM_SERVICE: Socket %d registered successfully\n",
+        		(int)customServiceSocket.port);
     } else {
-        printf("CUSTOM_SERVICE: Registering socket failed with status %d\n", (int)customServiceSocketRegistrationStatus);
+        printf("CUSTOM_SERVICE: Registering socket failed, status %d\n",
+        		(int)customServiceSocketRegistrationStatus);
         return;
     }
 
@@ -188,7 +198,8 @@ void custom_service_start(void) {
     // Get current time
     uint64_t current_time = EMBENET_NODE_GetLocalTime();
     // Schedule task using node's local time (invoke it after 2 seconds)
-    EMBENET_NODE_TaskSchedule(customServiceTaskId, EMBENET_NODE_TIME_SOURCE_LOCAL, current_time + 2000);
+    EMBENET_NODE_TaskSchedule(customServiceTaskId,
+    		EMBENET_NODE_TIME_SOURCE_LOCAL, current_time + 2000);
 }
 
 void custom_service_stop(void) {
