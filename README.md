@@ -2,6 +2,7 @@
 ## for STM32 EmbeNET Node network
 ## **Sharing, copying full or a part of project is strictly prohibited**
 Google Slides - project description [PL] (20.09.2024) https://docs.google.com/presentation/d/1Z-rlvH5L5WxhMZ4jai3aUcdPBF50T83Pxhtv7MIKrZg/edit?usp=sharing
+Master's thesis with detailed project description [PL] https://drive.google.com/file/d/1baA6rWexkmiFCm8SGg68tbLzjkFmJ3Kp/view?usp=sharing
 
 ###### Project purpose
 The aim of this work was to review, implement and analyze the possibilities of using **application layer protocols** in Internet of Things (IoT) devices built on the basis of ARM Cortex-M microcontrollers. The work focused on examining the usability of these protocols in the context of resource-constrained devices operating in a low-throughput wireless mesh network, characteristic of IoT systems.
