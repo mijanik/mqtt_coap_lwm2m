@@ -1,6 +1,5 @@
 # MQTT-SN, COAP and LwM2M protocols implementation
-## for STM32 EmbeNET network
-## Created by Miłosz Janik
+## for STM32 EmbeNET Node network
 ## **Sharing, copying full or a part of project is strictly prohibited**
 Google Slides - project description [PL] (20.09.2024) https://docs.google.com/presentation/d/1Z-rlvH5L5WxhMZ4jai3aUcdPBF50T83Pxhtv7MIKrZg/edit?usp=sharing
 
@@ -15,7 +14,7 @@ The first chapter of the work presents the purpose of the study and an overview 
 
 ###### Tech Stack
 - C
-- EmbeNET Node Networking Stack (WSN)
+- EmbeNET Node Networking Stack (WSN, UDP, 802.15.4e-TSCH)
 - STM32 Microcontroller
 - MQTT-SN, CoAP and LwM2M Application Protocols
 - Wireshark, Build Analyzer, Linux Protocol Servers and other testing environment
