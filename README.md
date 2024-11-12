@@ -2,6 +2,7 @@
 ## for STM32 EmbeNET Node network
 ## **Sharing, copying full or a part of project is strictly prohibited**
 Google Slides - project description [PL] (20.09.2024) https://docs.google.com/presentation/d/1Z-rlvH5L5WxhMZ4jai3aUcdPBF50T83Pxhtv7MIKrZg/edit?usp=sharing
+
 Master's thesis with detailed project description [PL] https://drive.google.com/file/d/1baA6rWexkmiFCm8SGg68tbLzjkFmJ3Kp/view?usp=sharing
 
 ###### Project purpose
