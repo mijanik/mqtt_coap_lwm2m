@@ -21,7 +21,7 @@
 
 More details in links below
 
-## Project physical components
+## Hardware
 - **STM32 NUCLEO-WL55JC1** development boards
 - Raspberry Pi with Linux for testing purposes
 
